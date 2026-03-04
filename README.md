@@ -1,0 +1,89 @@
+# 100 Days JavaScript Discipline
+
+A collection of 100+ JavaScript projects built with Vanilla JavaScript, and later rebuilt the same set of project in React.js to demonstrate progressive learning and mastery.
+
+## 🎯 Project Goals
+
+- Build 100 projects using Vanilla JavaScript
+- Deploy all projects for live demonstration
+- Document learning journey and best practices
+
+## 📁 Project Structure
+
+```
+100-Days-javascript-decipline/
+├── README.md
+├── index.html (Landing page)
+├── assets/
+│   ├── css/
+│   │   └── landing.css
+│   └── js/
+│       └── landing.js
+├── projects/
+│   ├── 01-project-name/
+│   │   ├── index.html
+│   │   ├── style.css
+│   │   ├── script.js
+│   │   ├── README.md
+│   │   └── preview.png
+│   └── ...
+└── .gitignore
+```
+
+## 📋 Projects List
+
+<!-- Update this table as you complete projects -->
+
+| #   | Project Name    | Status       | Live Demo | Source Code                     |
+| --- | --------------- | ------------ | --------- | ------------------------------- |
+| 001 | [To do](#)      | ✅ Completed | [Demo](#) | [Code](./projects/001-todo-app) |
+| 002 | [Calculator](#) | ⏳ Pending   | -         | -                               |
+
+## 🚀 Getting Started
+
+1. Clone this repository
+2. Navigate to any project folder
+3. Open `index.html` in your browser
+4. Each project is self-contained and ready to run
+
+## 🛠️ Technologies Used
+
+- **Vanilla JavaScript** - ES6+ features
+- **HTML5** - Semantic markup
+- **CSS3** - Modern styling, Flexbox, Grid
+
+## 📝 Project Template
+
+Each project follows this structure:
+
+- `index.html` - Main HTML file
+- `style.css` - Styling
+- `script.js` - JavaScript logic
+- `README.md` - Project-specific documentation
+- `preview.png` - Screenshot for project page
+
+## 🌐 Deployment
+
+Projects are deployed on:
+
+- **GitHub Pages**: [URL will be added]
+- **Netlify**: [URL will be added]
+
+## 📈 Progress Tracker
+
+- **Completed**: 0/100
+- **In Progress**: 0/100
+- **Pending**: 100/100
+
+## 👤 Author
+
+[Abhimanyu Kumar Roy]
+
+- GitHub: [@yourusername](#)
+- LinkedIn: [your-website.com]
+
+## 📄 License
+
+MIT License - feel free to use these projects for learning!
+
+---
