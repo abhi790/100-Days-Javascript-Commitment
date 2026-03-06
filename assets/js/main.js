@@ -1,4 +1,65 @@
-console.log(
-  "Main javascript file to implement the dynamic project list in the landing page",
-);
-console.log("this file will take list of project from projects.js file");
+const container = document.querySelector(".card-container");
+container.innerHTML = "";
+
+const completedProjects = projects.filter((pro) => pro.status === "completed");
+
+function createProjectCard(project, index) {
+  const tagColors = {
+    HTML: "card__tag--html",
+    CSS: "card__tag--css",
+    Javascript: "card__tag--javascript",
+    React: "card__tag--react",
+    Node: "card__tag--node",
+  };
+
+  const tagSpans = project.technologies
+    .map((tech) => {
+      const colorClass = tagColors[tech] || "card__tag--default";
+      return `<span class="card__tag ${colorClass}">${tech}</span>`;
+    })
+    .join("");
+
+  return `<div class="card">
+      <img
+        src="${project.imgUrl}"
+        alt="${project.name}"
+        onerror="this.src = 'https://picsum.photos/280/200'"
+      />
+      <div class="card-content">
+      <div class="temp">
+        <span>${project.emoji}</span>
+        <h2>${project.name}</h2>
+      </div>
+        <p>${project.description}</p>
+
+        <div class="tech-row">
+            ${tagSpans}
+        </div>
+        <div class="btn-container">
+            <button class="btn btn-github"><a href="${project.github || "#"}" >Github</a></button>
+            <button class="btn btn-live"><a href="${project.live || "#"}" >Live</a></button>
+        </div>
+      </div>
+    </div>`;
+}
+
+function updateStats() {
+  document.querySelector(".completed").textContent = completedProjects.length;
+  document.querySelector(".remaining").textContent =
+    100 - completedProjects.length;
+  document.querySelector(".progress").textContent =
+    completedProjects.length + "%";
+}
+
+function renderProjects() {
+  completedProjects.forEach((project, index) => {
+    const card = document.createElement("div");
+    card.innerHTML = createProjectCard(project, index);
+
+    container.insertAdjacentElement("beforeend", card);
+  });
+}
+
+updateStats();
+renderProjects();
+document.querySelector("#year").textContent = new Date().getFullYear();

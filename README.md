@@ -1,4 +1,4 @@
-# 100 Days JavaScript Discipline
+# 100 Days JavaScript Commitment
 
 A collection of 100+ JavaScript projects built with Vanilla JavaScript, and later rebuilt the same set of project in React.js to demonstrate progressive learning and mastery.
 
@@ -11,14 +11,20 @@ A collection of 100+ JavaScript projects built with Vanilla JavaScript, and late
 ## 📁 Project Structure
 
 ```
-100-Days-javascript-decipline/
+100-Days-javascript-commitment/
 ├── README.md
-├── index.html (Landing page)
+├── index.html (Homepage)
 ├── assets/
 │   ├── css/
 │   │   └── landing.css
-│   └── js/
-│       └── landing.js
+│   ├── js/
+│   │   └── landing.js
+│   └── images/
+│       ├── images1.png
+│       ├── images2.png
+│       ├── images3.png
+│       └── ...
+│
 ├── projects/
 │   ├── 01-project-name/
 │   │   ├── index.html
@@ -79,8 +85,10 @@ Projects are deployed on:
 
 [Abhimanyu Kumar Roy]
 
-- GitHub: [@yourusername](#)
-- LinkedIn: [your-website.com]
+- GitHub: [[Github](https://github.com/abhi790)]
+- LinkedIn: [[LinkedIn](https://www.linkedin.com/in/abhideveloper/)]
+
+## ![HomePage Preview Image](./assets/images/homepage.png)
 
 ## 📄 License
 
