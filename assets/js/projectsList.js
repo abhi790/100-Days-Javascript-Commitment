@@ -10,7 +10,7 @@ const projects = [
     folder: "001-counter-app",
     imgUrl: "./assets/images/001.png",
     github:
-      "https://github.com/username/repo/tree/main/projects/001-counter-app/",
+      "https://github.com/abhi790/100-Days-Javascript-Commitment/tree/main/projects/001-counter-app/",
     live: "./projects/001-counter-app/",
     status: "completed",
   },
@@ -25,7 +25,7 @@ const projects = [
     folder: "002-color-flipper",
     imgUrl: "./assets/images/002.png",
     github:
-      "https://github.com/username/repo/tree/main/projects/002-color-flipper",
+      "https://github.com/abhi790/100-Days-Javascript-Commitment/tree/main/projects/002-color-flipper/",
     live: "./projects/002-color-flipper/",
     status: "completed",
   },
