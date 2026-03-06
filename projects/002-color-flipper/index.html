@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      /* Card ka outer box */
+      .card {
+        width: 280px;
+        border-radius: 16px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        overflow: hidden; /* ← yeh important hai! */
+        background: #fdf8f3;
+      }
+
+      /* Image */
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover; /* ← yeh bhi important! */
+      }
+
+      /* Text wala hissa */
+      .card-content {
+        padding: 16px;
+      }
+
+      .card-content h2 {
+        font-size: 20px;
+        margin: 0 0 4px 0;
+        /*  */
+      }
+
+      /* Author text */
+      .card-content p {
+        color: #888;
+        font-size: 14px;
+        margin: 0 0 12px 0;
+      }
+
+      /* Info rows - side by side */
+      .info-row {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 6px;
+        font-size: 13px;
+        color: #555;
+      }
+
+      /* Button */
+      .btn {
+        width: 100%;
+        padding: 12px;
+        margin-top: 14px;
+        background: #1a1a1a;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img src="https://picsum.photos/280/200" alt="Course" />
+      <div class="card-content">
+        <h2>Digital Landscapes</h2>
+        <p>Course by <strong>Pierre Deschamps</strong></p>
+
+        <!-- Info Section -->
+        <div class="info-row">
+          <span>📚 11 Lessons</span>
+          <span>📈 Intermediate</span>
+        </div>
+        <div class="info-row">
+          <span>⏱ 23 Hours</span>
+        </div>
+
+        <button class="btn">Course Details</button>
+      </div>
+    </div>
+  </body>
+</html>

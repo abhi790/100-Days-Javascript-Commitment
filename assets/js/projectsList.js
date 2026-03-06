@@ -9,8 +9,9 @@ const projects = [
     technologies: ["HTML", "CSS", "JavaScript"],
     folder: "001-counter-app",
     imgUrl: "./assets/images/001.png",
-    github: "https://github.com/abhi790",
-    live: "https://github.com/abhi790",
+    github:
+      "https://github.com/username/repo/tree/main/projects/001-counter-app/",
+    live: "./projects/001-counter-app/",
     status: "completed",
   },
   {
@@ -23,8 +24,9 @@ const projects = [
     technologies: ["HTML", "CSS", "JavaScript"],
     folder: "002-color-flipper",
     imgUrl: "./assets/images/002.png",
-    github: "",
-    live: "",
-    status: "",
+    github:
+      "https://github.com/username/repo/tree/main/projects/002-color-flipper",
+    live: "./projects/002-color-flipper/",
+    status: "completed",
   },
 ];
