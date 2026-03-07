@@ -78,7 +78,7 @@ Each project follows this structure:
 
 Projects are deployed on:
 
-- **GitHub Pages**: [github](https://github.com/abhi790/100-Days-Javascript-Commitment/tree/main)
+- **GitHub Pages**: [github](https://abhi790.github.io/100-Days-Javascript-Commitment/)
 - **Netlify**: [netlify](https://100-days-javascript-commitment.netlify.app/)
 
 ## 📈 Progress Tracker
