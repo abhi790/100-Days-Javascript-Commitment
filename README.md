@@ -40,10 +40,10 @@ A collection of 100+ JavaScript projects built with Vanilla JavaScript, and late
 
 <!-- Update this table as you complete projects -->
 
-| #   | Project Name    | Status       | Live Demo | Source Code                     |
-| --- | --------------- | ------------ | --------- | ------------------------------- |
-| 001 | [To do](#)      | ✅ Completed | [Demo](#) | [Code](./projects/001-todo-app) |
-| 002 | [Calculator](#) | ⏳ Pending   | -         | -                               |
+| #   | Project Name    | Status       | Live Demo                                                                            | Source Code                        |
+| --- | --------------- | ------------ | ------------------------------------------------------------------------------------ | ---------------------------------- |
+| 001 | [Counter App]() | ✅ Completed | [Demo](https://100-days-javascript-commitment.netlify.app/projects/001-counter-app/) | [Code](./projects/001-counter-app) |
+| 002 | []()            | ⏳           | -                                                                                    | -                                  |
 
 ## 🚀 Getting Started
 
@@ -72,8 +72,8 @@ Each project follows this structure:
 
 Projects are deployed on:
 
-- **GitHub Pages**: [URL will be added]
-- **Netlify**: [URL will be added]
+- **GitHub Pages**: [github](https://github.com/abhi790/100-Days-Javascript-Commitment/tree/main)
+- **Netlify**: [netlify](https://100-days-javascript-commitment.netlify.app/)
 
 ## 📈 Progress Tracker
 
@@ -83,10 +83,10 @@ Projects are deployed on:
 
 ## 👤 Author
 
-[Abhimanyu Kumar Roy]
+# Abhimanyu Kumar Roy
 
-- GitHub: [[Github](https://github.com/abhi790)]
-- LinkedIn: [[LinkedIn](https://www.linkedin.com/in/abhideveloper/)]
+- [GitHub](https://github.com/abhi790)
+- [LinkedIn](https://www.linkedin.com/in/abhideveloper/)
 
 ## ![HomePage Preview Image](./assets/images/homepage.png)
 

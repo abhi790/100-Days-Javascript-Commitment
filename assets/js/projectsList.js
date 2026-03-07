@@ -11,7 +11,7 @@ const projects = [
     imgUrl: "./assets/images/001.png",
     github:
       "https://github.com/abhi790/100-Days-Javascript-Commitment/tree/main/projects/001-counter-app/",
-    live: "./projects/001-counter-app/",
+    live: "https://100-days-javascript-commitment.netlify.app/projects/001-counter-app/",
     status: "completed",
   },
   {
@@ -26,7 +26,7 @@ const projects = [
     imgUrl: "./assets/images/002.png",
     github:
       "https://github.com/abhi790/100-Days-Javascript-Commitment/tree/main/projects/002-color-flipper/",
-    live: "./projects/002-color-flipper/",
+    live: "https://100-days-javascript-commitment.netlify.app/projects/002-color-flipper/",
     status: "completed",
   },
 ];
