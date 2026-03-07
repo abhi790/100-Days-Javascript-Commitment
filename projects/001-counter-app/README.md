@@ -21,7 +21,7 @@ Simple counter with increment and decrement.
 
 ## Live Demo
 
-🔗 [View Live](insert link after deployment)
+🔗 [View Live](https://100-days-javascript-commitment.netlify.app/projects/001-counter-app/)
 
 ## 📚 What I Learned
 
@@ -34,7 +34,7 @@ Simple counter with increment and decrement.
 
 <!-- change this with original project image file after completion of the project -->
 
-## ![Todo App Preview Image](../../assets/images/001-.png)
+## ![Counter App Preview Image](../../assets/images/001.png)
 
 **Day**: 1/100
 **Time Spent**: ~2 hours

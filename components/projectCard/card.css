@@ -99,31 +99,29 @@
 /* Button */
 .btn {
   width: 100%;
-  text-align: center;
-  padding: 12px;
-  /* margin-top: 14px; */
-  background: grey;
-  color: white;
   border: none;
-  border-radius: 50px;
-  font-size: 15px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  background: none;
 }
-.btn:hover {
+.btn a {
+  display: block;
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 50px;
+  background: grey;
+  font-size: 15px;
+  color: white;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.btn a:hover {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.45);
 }
-.btn-github:hover {
+.btn-github a:hover {
   background-color: grey;
 }
-.btn-live:hover {
+.btn-live a:hover {
   background-color: green;
-}
-
-.btn a {
-  text-decoration: none;
-  color: white;
-  width: 100%;
 }
 
 @media (max-width: 768px) {
