@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  background: #8edbff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 1200px;
+  padding: 10%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+.card {
+  width: 550px;
+  min-height: 450px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+  box-shadow: 20px 25px 20px rgba(225, 0, 255, 0.25);
+  text-align: center;
+}
+.card h1 {
+  font-size: 46px;
+}
+.card .horizontal-line {
+  border: 1px solid rgb(189, 189, 189);
+  width: 90%;
+}
+.card h2 {
+  font-size: 36px;
+  background-color: rgb(226, 226, 226);
+  border-radius: 15px;
+  padding: 1rem;
+}
+.card p {
+  padding: 0 1rem 1rem;
+  font-size: 70px;
+  color: white;
+  background-color: rgb(142, 219, 255);
+  border-radius: 15px;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  padding: 15px 30px;
+  border-radius: 50px;
+  background: rgb(8, 66, 255);
+  font-size: 15px;
+  color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.65);
+}
+.copy-feedback {
+  position: absolute;
+  top: 300px;
+  background: rgba(0, 0, 0, 0.8);
+  color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  animation: fadeOut 1.5s;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 300px;
+  }
+  .card h1 {
+    font-size: 30px;
+  }
+  .card h2 {
+    font-size: 30px;
+    background-color: rgb(226, 226, 226);
+    border-radius: 15px;
+    padding: 0.8rem;
+  }
+  .card p {
+    padding: 0 0.8rem 0.8rem;
+    font-size: 40px;
+  }
+}
