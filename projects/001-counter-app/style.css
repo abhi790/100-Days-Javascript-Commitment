@@ -3,16 +3,95 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #45577a 0%, #6192e7 100%);
   min-height: 100vh;
-  padding: 40px 20px;
-  line-height: 1.6;
+  background: rgb(142, 219, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 1200px;
+  padding: 10%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+.card {
+  width: 550px;
+  min-height: 450px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 20px 25px 20px rgba(225, 0, 255, 0.25);
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+.heading {
+  font-size: 46px;
+  padding: 10px 30px;
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.15);
+}
+.display {
+  font-size: 200px;
+  margin-bottom: 20px;
+  text-shadow: 10px 10px 3px rgba(0, 0, 0, 0.25);
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+/* Designing button */
+.btn {
+  border: none;
+  cursor: pointer;
+  padding: 12px 24px;
+  border-radius: 50px;
+  background: grey;
+  font-size: 15px;
+  color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.65);
+}
+/* button backgrond color */
+.btn-increase {
+  background-color: rgb(1, 141, 1);
+}
+.btn-decrease {
+  background-color: rgb(255, 30, 30);
+}
+.btn-reset {
+  background-color: rgb(49, 49, 49);
+}
+/* making color class */
+.text-red {
+  color: red;
+}
+.text-green {
+  color: green;
+}
+.text-black {
+  color: black;
+}
+
+@media (max-width: 700px) {
+  .card {
+    width: 500px;
+  }
+  .button-container {
+    margin-bottom: 0px;
+  }
 }

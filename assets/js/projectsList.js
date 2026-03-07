@@ -27,6 +27,6 @@ const projects = [
     github:
       "https://github.com/abhi790/100-Days-Javascript-Commitment/tree/main/projects/002-color-flipper/",
     live: "https://100-days-javascript-commitment.netlify.app/projects/002-color-flipper/",
-    status: "completed",
+    status: "",
   },
 ];

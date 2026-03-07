@@ -2,7 +2,7 @@
 
 # Counter App
 
-Simple counter with increment and decrement.
+Simple counter with increment, decrement and reset functionality.
 
 ## Features
 
@@ -25,18 +25,18 @@ Simple counter with increment and decrement.
 
 ## 📚 What I Learned
 
-- Event listeners
+- 'click' Event listeners
 - Variable manipulation
 - DOM updates
 - Button click handling
+- Clean UI using CSS only
+- Simple Design
+- adding class dynamically and removing it using classList
 
 ## 📸 Preview
 
 <!-- change this with original project image file after completion of the project -->
 
-## ![Counter App Preview Image](../../assets/images/001.png)
-
-**Day**: 1/100
-**Time Spent**: ~2 hours
+## ![Counter App Preview Image](./counter.png)
 
 ---

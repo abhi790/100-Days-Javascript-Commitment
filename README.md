@@ -83,13 +83,13 @@ Projects are deployed on:
 
 ## 📈 Progress Tracker
 
-- **Completed**: 0/100
-- **In Progress**: 0/100
-- **Pending**: 100/100
+- **Completed**: 1/100
+- **Remaining**: 99/100
+- **Progress**: 2%
 
 ## 👤 Author
 
-# Abhimanyu Kumar Roy
+## Abhimanyu Kumar Roy
 
 - [GitHub](https://github.com/abhi790)
 - [LinkedIn](https://www.linkedin.com/in/abhideveloper/)
