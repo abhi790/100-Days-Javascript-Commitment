@@ -2,6 +2,10 @@ const container = document.querySelector(".card-container");
 container.innerHTML = "";
 
 const completedProjects = projects.filter((pro) => pro.status === "completed");
+const githubBaseUrl =
+  "https://github.com/abhi790/100-Days-Javascript-Commitment/tree/main/projects/";
+const netlifyBaseUrl =
+  "https://100-days-javascript-commitment.netlify.app/projects/";
 
 function createProjectCard(project, index) {
   const tagColors = {
@@ -36,8 +40,8 @@ function createProjectCard(project, index) {
             ${tagSpans}
         </div>
         <div class="btn-container">
-            <button class="btn btn-github"><a href="${project.github || "#"}" >Github</a></button>
-            <button class="btn btn-live"><a href="${project.live || "#"}" >Live</a></button>
+            <button class="btn btn-github"><a href="${githubBaseUrl}${project.folder}/" >Github</a></button>
+            <button class="btn btn-live"><a href="${netlifyBaseUrl}${project.folder}/" >Live</a></button>
         </div>
       </div>
     </div>`;

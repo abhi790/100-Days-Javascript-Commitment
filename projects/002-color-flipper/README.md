@@ -34,7 +34,4 @@ Simple counter with increment and decrement.
 
 ## ![Counter App Preview Image](../../assets/images/002.png)
 
-**Day**: 1/100
-**Time Spent**: ~2 hours
-
 ---
