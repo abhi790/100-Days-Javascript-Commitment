@@ -26,7 +26,13 @@ A collection of 100+ JavaScript projects built with Vanilla JavaScript, and late
 │       └── ...
 │
 ├── projects/
-│   ├── 01-project-name/
+│   ├── 01-counter-app/
+│   │   ├── index.html
+│   │   ├── style.css
+│   │   ├── script.js
+│   │   ├── README.md
+│   │   └── preview.png
+│   ├── 02-calculator/
 │   │   ├── index.html
 │   │   ├── style.css
 │   │   ├── script.js
@@ -42,8 +48,8 @@ A collection of 100+ JavaScript projects built with Vanilla JavaScript, and late
 
 | #   | Project Name    | Status       | Live Demo                                                                            | Source Code                        |
 | --- | --------------- | ------------ | ------------------------------------------------------------------------------------ | ---------------------------------- |
-| 001 | [Counter App]() | ✅ Completed | [Demo](https://100-days-javascript-commitment.netlify.app/projects/001-counter-app/) | [Code](./projects/001-counter-app) |
-| 002 | []()            | ⏳           | -                                                                                    | -                                  |
+| 001 | **Counter App** | ✅ Completed | [Demo](https://100-days-javascript-commitment.netlify.app/projects/001-counter-app/) | [Code](./projects/001-counter-app) |
+| 002 | **Next**        | ⏳           | -                                                                                    | -                                  |
 
 ## 🚀 Getting Started
 
