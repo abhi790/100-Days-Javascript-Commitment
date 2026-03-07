@@ -1,7 +1,7 @@
 const projects = [
   {
     number: "001",
-    name: "Demo",
+    name: "Counter App",
     emoji: "🔢",
     description:
       "A simple interactive counter that increments, decrements, and resets values with button clicks",
