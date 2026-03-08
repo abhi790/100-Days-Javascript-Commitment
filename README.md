@@ -51,7 +51,8 @@ A collection of 100+ JavaScript projects built with Vanilla JavaScript, and late
 | 001 | **Counter App**       | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/001-counter-app/)    | [Code](./projects/001-counter-app)    |
 | 002 | **Color Flipper App** | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/002-color-flipper/)  | [Code](./projects/002-color-flipper)  |
 | 003 | **Tip Calculator**    | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/003-tip-calculator/) | [Code](./projects/003-tip-calculator) |
-| 004 | **Next**              | ⏳           | -                                                                                       | -                                     |
+| 004 | **Random Quote**      | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/004-random-quote/)   | [Code](./projects/004-random-quote)   |
+| 005 | **Next**              | ⏳           | -                                                                                       | -                                     |
 
 ## 🚀 Getting Started
 
@@ -85,9 +86,9 @@ Projects are deployed on:
 
 ## 📈 Progress Tracker
 
-- **Completed**: 3/100
-- **Remaining**: 97/100
-- **Progress**: 3%
+- **Completed**: 4/100
+- **Remaining**: 96/100
+- **Progress**: 4%
 
 ## 👤 Author
 
