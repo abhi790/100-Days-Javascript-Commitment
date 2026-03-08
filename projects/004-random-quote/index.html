@@ -130,9 +130,7 @@
         <div class="display-quote">
           <i class="fa-solid fa-quote-left inverted"></i>
           <p class="quote">
-            <q
-              ></i>It is never too
-              late to be what you might have been</q>
+            <q> It is never too late to be what you might have been</q>
           </p>
           <h3 class="author">~George Elliot</h3>
         </div>
@@ -4262,15 +4260,33 @@
       const btnNew = document.querySelector(".btn-new");
       const btnCopy = document.querySelector(".btn-copy");
       const btnShare = document.querySelector(".btn-share");
-      function generateRandom() {
-        return Math.floor(Math.random() * 1000);
-      }
-      //
-      btnNew.addEventListener("click", () => {
-        const index = generateRandom();
-        const randomQuote = quotes[index];
+
+      const randomQuote = generateRandomQuote();
+      displayRandomQuote(randomQuote);
+
+      //   display random quote on the display
+      function displayRandomQuote(randomQuote) {
         quote.textContent = `\u201C${randomQuote.quote}\u201D`;
         author.textContent = `~ ${randomQuote.author}`;
+      }
+      // generate random quote
+      function generateRandomQuote() {
+        const index = Math.floor(Math.random() * 1000);
+        const quote = quotes[index];
+        return quote;
+      }
+
+      //random quote shown
+      btnNew.addEventListener("click", () => {
+        const randomQuote = generateRandomQuote();
+        displayRandomQuote(randomQuote);
+      });
+
+      //   copy functionality
+      btnCopy.addEventListener("click", () => {
+        navigator.clipboard.writeText(
+          `${quote.textContent} by ${author.textContent}`,
+        );
       });
     </script>
   </body>
