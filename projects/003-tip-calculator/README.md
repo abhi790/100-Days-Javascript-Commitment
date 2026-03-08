@@ -39,4 +39,4 @@ Calculate tip and total amount.
 
 ## 📸 Preview
 
-## ![Counter App Preview Image](./tip-calculator.png)
+## ![Preview Image](./003-tip-calculator.png)
