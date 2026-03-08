@@ -8,7 +8,6 @@ const projects = [
     difficulty: "Beginner",
     technologies: ["HTML", "CSS", "JavaScript"],
     folder: "001-counter-app",
-    imgUrl: "../../projects/001-counter-app/counter.png",
     status: "completed",
   },
   {
@@ -20,7 +19,6 @@ const projects = [
     difficulty: "Beginner",
     technologies: ["HTML", "CSS", "JavaScript"],
     folder: "002-color-flipper",
-    imgUrl: "../../projects/002-color-flipper/color_flipper.png",
     status: "completed",
   },
   {
@@ -32,7 +30,6 @@ const projects = [
     difficulty: "Beginner",
     technologies: ["HTML", "CSS", "JavaScript"],
     folder: "003-tip-calculator",
-    imgUrl: "../../projects/003-tip-calculator/tip-calculator.png",
     status: "completed",
   },
 ];

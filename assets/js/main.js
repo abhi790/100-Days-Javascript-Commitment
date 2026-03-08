@@ -6,6 +6,7 @@ const githubBaseUrl =
   "https://github.com/abhi790/100-Days-Javascript-Commitment/tree/main/projects/";
 const netlifyBaseUrl =
   "https://100-days-javascript-commitment.netlify.app/projects/";
+const imageBaseLink = "../../projects/";
 
 function createProjectCard(project, index) {
   const tagColors = {
@@ -25,7 +26,7 @@ function createProjectCard(project, index) {
 
   return `<div class="card">
       <img
-        src="${project.imgUrl}"
+        src="${imageBaseLink}${project.folder}/${project.folder}.png"
         alt="${project.name}"
         onerror="this.src = 'https://picsum.photos/280/200'"
       />
