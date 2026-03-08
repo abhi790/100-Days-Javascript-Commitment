@@ -1,4 +1,4 @@
-/* * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -21,48 +21,122 @@ body {
   border-radius: 30px;
 }
 .card {
-  width: 550px;
-  min-height: 450px;
+  width: 600px;
+  min-height: 550px;
   background-color: rgb(255, 255, 255);
   border-radius: 20px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 0.5rem 2rem;
+  color: rgb(56, 56, 56);
+  /* align-items: center; */
+  /* justify-content: center; */
   box-shadow: 20px 25px 20px rgba(225, 0, 255, 0.25);
 }
+.card h1 {
+  text-align: center;
+  font-size: 36px;
+  padding: 0.2rem;
+  margin-top: 10px;
+}
+.card .horizontal-line {
+  border: 1px solid rgb(189, 189, 189);
+  width: 90%;
+  margin: 0 auto;
+  opacity: 0.3;
+}
+
+.card .bill {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.bill p {
+  font-size: 20px;
+  font-weight: 700;
+}
+.bill_amount {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+}
+.bill_amount .money {
+  width: 5%;
+  background-color: rgb(214, 214, 214);
+  text-align: center;
+  border-radius: 5px;
+  padding: 0.4rem;
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
+}
+.card input {
+  flex: 1;
+  padding: 0.45rem;
+  border: 1px solid grey;
+  font-size: 20px;
+  border-start-end-radius: 5px;
+  border-end-end-radius: 5px;
+}
+.result_container {
+  margin: 20px 0;
+  display: flex;
+  gap: 20px;
+}
+.result_container .result_box {
+  background-color: rgba(0, 255, 55, 0.2);
+  width: 50%;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 15px;
+}
+.result_container .result_box .amount {
+  font-size: 40px;
+  color: green;
+}
+.button-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
 .btn {
   border: none;
   cursor: pointer;
   padding: 12px 24px;
-  border-radius: 50px;
-  background: grey;
+  border-radius: 20px;
+  background: rgb(211, 211, 211);
   font-size: 15px;
-  color: white;
+  color: rgb(83, 83, 83);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease;
+  font-size: 25px;
 }
 .btn:hover {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.65);
 }
-
-/* showing some */
-/* .copy-feedback {
-  position: absolute;
-  top: 300px;
-  background: rgba(0, 0, 0, 0.8);
-  color: rgb(255, 255, 255);
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 16px;
-  animation: fadeOut 1.5s;
+.btn-active {
+  background-color: green;
+  color: white;
 }
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
+
+@media (max-width: 768px) {
+  .card {
+    width: 400px;
+    min-height: 540px;
   }
-  100% {
-    opacity: 0;
+  .card h1 {
+    font-size: 30px;
   }
-} */
+  .result_container .result_box .amount {
+    font-size: 25px;
+  }
+
+  /* .card p {
+    padding: 0 0.8rem 0.8rem;
+    font-size: 40px;
+  } */
+}

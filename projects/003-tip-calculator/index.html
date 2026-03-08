@@ -8,176 +8,8 @@
       content="100 Days JavaScript Commitment - A collection of 100 JavaScript projects"
     />
     <title>003 Tip Calculator</title>
-    <!-- <link rel="stylesheet" href="style.css" /> -->
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        min-height: 100vh;
-        background: rgb(142, 219, 255);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .container {
-        width: 1200px;
-        padding: 10%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 30px;
-      }
-      .card {
-        width: 600px;
-        min-height: 600px;
-        background-color: rgb(255, 255, 255);
-        border-radius: 20px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        padding: 0.5rem 2rem;
-        color: rgb(56, 56, 56);
-        /* align-items: center; */
-        /* justify-content: center; */
-        box-shadow: 20px 25px 20px rgba(225, 0, 255, 0.25);
-      }
-      .card h1 {
-        text-align: center;
-        font-size: 36px;
-        padding: 0.2rem;
-        margin-top: 10px;
-      }
-      .card .horizontal-line {
-        border: 1px solid rgb(189, 189, 189);
-        width: 90%;
-        margin: 0 auto;
-        opacity: 0.3;
-      }
-
-      .card .bill {
-        display: flex;
-        flex-direction: column;
-        margin-top: 20px;
-      }
-      .bill p {
-        font-size: 20px;
-        font-weight: 700;
-      }
-      .bill_amount {
-        font-size: 30px;
-        display: flex;
-        align-items: center;
-      }
-      .bill_amount .money {
-        width: 5%;
-        background-color: rgb(214, 214, 214);
-        text-align: center;
-        border-radius: 5px;
-        padding: 0.4rem;
-        border-start-end-radius: 0;
-        border-end-end-radius: 0;
-      }
-      .card input {
-        flex: 1;
-        padding: 0.45rem;
-        border: 1px solid grey;
-        font-size: 20px;
-        border-start-end-radius: 5px;
-        border-end-end-radius: 5px;
-      }
-
-      ul {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        margin-bottom: 10px;
-      }
-      ul li {
-        margin-top: 10px;
-        padding: 0.5rem 2rem;
-        background-color: rgba(0, 0, 0, 0.2);
-        border-radius: 10px;
-        color: black;
-        cursor: pointer;
-      }
-      .people_container {
-        margin-top: 2.5rem;
-        display: flex;
-        margin-bottom: 20px;
-        justify-content: space-between;
-      }
-      .people_container p {
-        font-size: 20px;
-        font-weight: 700;
-      }
-      .number-input {
-        display: flex;
-        width: 70px;
-        height: 40px;
-        border: 1px solid #ddd;
-        border-radius: 6px;
-        overflow: hidden;
-        width: fit-content;
-      }
-      .number-input button {
-        width: 40px;
-        height: 40px;
-        border: none;
-        background: #f5f5f5;
-        cursor: pointer;
-        font-size: 18px;
-        color: #00bfa6;
-      }
-      .number-input input {
-        width: 60px;
-        border: none;
-        text-align: center;
-        font-size: 16px;
-      }
-      /* Input arrows hatana */
-      input::-webkit-outer-spin-button,
-      input::-webkit-inner-spin-button {
-        display: none;
-      }
-      .result_container {
-        margin: 20px 0;
-        display: flex;
-        gap: 20px;
-      }
-      .result_container .result_box {
-        background-color: rgba(0, 255, 55, 0.2);
-        width: 50%;
-        padding: 1rem;
-        text-align: center;
-        border-radius: 15px;
-      }
-      .result_container .result_box .amount {
-        font-size: 40px;
-        color: green;
-      }
-
-      .btn {
-        border: none;
-        cursor: pointer;
-        padding: 12px 24px;
-        border-radius: 20px;
-        background: rgb(211, 211, 211);
-        font-size: 15px;
-        color: rgb(83, 83, 83);
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
-        transition: all 0.3s ease;
-        font-size: 25px;
-      }
-      .btn:hover {
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.65);
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <style></style>
   </head>
   <body>
     <main class="container">
@@ -188,24 +20,21 @@
           <p>Bill</p>
           <div class="bill_amount" style="display: flex">
             <p class="money">$</p>
-            <input type="number" name="bill_amount" value="50" />
+            <input
+              class="billInput"
+              type="number"
+              name="bill_amount"
+              value="0"
+            />
           </div>
         </div>
         <div class="bill">
-          <p>Select Tip %</p>
-          <ul class="tip_percentage">
-            <li>5%</li>
-            <li>10%</li>
-            <li>15%</li>
-            <li>custom</li>
-          </ul>
-        </div>
-        <div class="people_container">
-          <p>Number of people</p>
-          <div class="number-input">
-            <button>−</button>
-            <input type="number" value="2" />
-            <button>+</button>
+          <p>Select Tip (%)</p>
+          <div class="button-container">
+            <button class="btn tip-btn btn-active">5</button>
+            <button class="btn tip-btn">10</button>
+            <button class="btn tip-btn">15</button>
+            <button class="btn tip-btn">20</button>
           </div>
         </div>
 
@@ -213,14 +42,14 @@
         <div class="result_container">
           <div class="result_box">
             <p>Tip Amount</p>
-            <h2 class="amount">$7.50</h2>
+            <h2 class="amount tip-display">$0</h2>
           </div>
           <div class="result_box">
-            <p>Total per Person</p>
-            <h2 class="amount">$28.75</h2>
+            <p>Total Amount</p>
+            <h2 class="amount total-display">$0</h2>
           </div>
         </div>
-        <button class="btn">Reset</button>
+        <button class="btn btn-calculate">Calculate</button>
       </div>
     </main>
     <script src="script.js"></script>

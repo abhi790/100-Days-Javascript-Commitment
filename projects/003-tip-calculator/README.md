@@ -11,7 +11,6 @@ Calculate tip and total amount.
 ✅ Preset tip buttons
 ✅ Calculate tip
 ✅ Show total
-✅ Per-person split
 ✅ Responsive design
 
 ## 🛠️ Technologies Used
