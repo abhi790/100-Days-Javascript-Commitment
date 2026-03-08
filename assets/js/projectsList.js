@@ -32,4 +32,15 @@ const projects = [
     folder: "003-tip-calculator",
     status: "completed",
   },
+  {
+    number: "004",
+    name: "Random Quote Generator",
+    emoji: "💭",
+    description:
+      "Display inspirational quotes randomly with author attribution and share functionality",
+    difficulty: "Beginner",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    folder: "004-random-quote",
+    status: "completed",
+  },
 ];
