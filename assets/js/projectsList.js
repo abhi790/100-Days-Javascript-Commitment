@@ -23,4 +23,16 @@ const projects = [
     imgUrl: "../../projects/002-color-flipper/color_flipper.png",
     status: "completed",
   },
+  {
+    number: "003",
+    name: "Tip Calculator",
+    emoji: "💰",
+    description:
+      "Calculate tip amounts and total bill based on service quality and number of people",
+    difficulty: "Beginner",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    folder: "003-tip-calculator",
+    imgUrl: "../../projects/002-color-flipper/color_flipper.png",
+    status: "completed",
+  },
 ];
