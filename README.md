@@ -46,11 +46,12 @@ A collection of 100+ JavaScript projects built with Vanilla JavaScript, and late
 
 <!-- Update this table as you complete projects -->
 
-| #   | Project Name          | Status       | Live Demo                                                                              | Source Code                          |
-| --- | --------------------- | ------------ | -------------------------------------------------------------------------------------- | ------------------------------------ |
-| 001 | **Counter App**       | ✅ Completed | [Demo](https://100-days-javascript-commitment.netlify.app/projects/001-counter-app/)   | [Code](./projects/001-counter-app)   |
-| 001 | **Color Flipper App** | ✅ Completed | [Demo](https://100-days-javascript-commitment.netlify.app/projects/002-color-flipper/) | [Code](./projects/002-color-flipper) |
-| 002 | **Next**              | ⏳           | -                                                                                      | -                                    |
+| #   | Project Name          | Status       | Live                                                                                    | Source Code                           |
+| --- | --------------------- | ------------ | --------------------------------------------------------------------------------------- | ------------------------------------- |
+| 001 | **Counter App**       | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/001-counter-app/)    | [Code](./projects/001-counter-app)    |
+| 002 | **Color Flipper App** | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/002-color-flipper/)  | [Code](./projects/002-color-flipper)  |
+| 003 | **Tip Calculator**    | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/003-tip-calculator/) | [Code](./projects/003-tip-calculator) |
+| 004 | **Next**              | ⏳           | -                                                                                       | -                                     |
 
 ## 🚀 Getting Started
 
@@ -84,9 +85,9 @@ Projects are deployed on:
 
 ## 📈 Progress Tracker
 
-- **Completed**: 2/100
-- **Remaining**: 98/100
-- **Progress**: 2%
+- **Completed**: 3/100
+- **Remaining**: 97/100
+- **Progress**: 3%
 
 ## 👤 Author
 
