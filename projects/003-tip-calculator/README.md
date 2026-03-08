@@ -22,7 +22,7 @@ Calculate tip and total amount.
 
 ## Live Demo
 
-🔗 [View Live](https://100-days-javascript-commitment.netlify.app/projects/003-tip-calcultor)
+🔗 [View Live](https://100-days-javascript-commitment.netlify.app/projects/003-tip-calculator/)
 
 ## What I Learned
 

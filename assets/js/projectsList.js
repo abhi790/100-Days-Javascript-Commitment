@@ -32,7 +32,7 @@ const projects = [
     difficulty: "Beginner",
     technologies: ["HTML", "CSS", "JavaScript"],
     folder: "003-tip-calculator",
-    imgUrl: "../../projects/002-color-flipper/color_flipper.png",
+    imgUrl: "../../projects/003-tip-calculator/tip-calculator.png",
     status: "completed",
   },
 ];
