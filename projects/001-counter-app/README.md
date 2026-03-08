@@ -37,6 +37,6 @@ Simple counter with increment, decrement and reset functionality.
 
 <!-- change this with original project image file after completion of the project -->
 
-## ![Counter App Preview Image](./counter.png)
+## ![Counter App Preview Image](./001-counter-app.png)
 
 ---

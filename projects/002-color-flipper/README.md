@@ -42,4 +42,4 @@ Change background color randomly.
 
 <!-- change this with original project image file after completion of the project -->
 
-## ![Preview Image](./color_flipper.png)
+## ![Preview Image](./002-color-flipper.png)
