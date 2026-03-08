@@ -1,1 +1,4052 @@
-const quote = [{ quote: "hi his is abhi", author: "abhi" }];
+const quotes = [
+  {
+    quote: "The magic of living is in the journey itself.",
+    author: "Leo Tolstoy",
+  },
+  {
+    quote: "Believe in yourself more than you believe doubts.",
+    author: "Oprah Winfrey",
+  },
+  {
+    quote: "Your strength comes from facing challenges bravely.",
+    author: "Swami Vivekananda",
+  },
+  {
+    quote: "The strongest path forward is the one you choose.",
+    author: "Confucius",
+  },
+  {
+    quote: "The world is waiting for you to shine.",
+    author: "Michelangelo",
+  },
+  {
+    quote: "Every great person mastered their craft through dedication.",
+    author: "Confucius",
+  },
+  {
+    quote: "Excellence comes from mastering the craft with passion daily.",
+    author: "Frida Kahlo",
+  },
+  {
+    quote: "Change the world by living with intention and truth.",
+    author: "Victor Hugo",
+  },
+  {
+    quote: "Your potential awakens when you take action.",
+    author: "Albert Camus",
+  },
+  {
+    quote: "Life teaches that love is the ultimate purpose.",
+    author: "Walt Whitman",
+  },
+  {
+    quote: "Success is the result of discipline and effort.",
+    author: "Oprah Winfrey",
+  },
+  {
+    quote: "Success whispers to those who listen with open hearts.",
+    author: "Victor Hugo",
+  },
+  {
+    quote: "Great things happen when you combine passion with work.",
+    author: "Pierre Blanc",
+  },
+  {
+    quote: "Believe in the impossible and it becomes possible.",
+    author: "Hans Mueller",
+  },
+  {
+    quote: "The strongest force is human determination.",
+    author: "Aristotle",
+  },
+  {
+    quote: "Your voice carries more power than you imagine.",
+    author: "Gustave Flaubert",
+  },
+  {
+    quote: "The greatest victory is overcoming your fears.",
+    author: "Emily Dickinson",
+  },
+  {
+    quote: "Progress requires stepping outside your comfort zone.",
+    author: "Elena Rodriguez",
+  },
+  {
+    quote: "Your authenticity is your greatest strength.",
+    author: "Elena Rodriguez",
+  },
+  {
+    quote: "Your dreams deserve your time and attention.",
+    author: "Tanaka Hiroshi",
+  },
+  {
+    quote: "Life is a journey of becoming, not being.",
+    author: "Pierre Blanc",
+  },
+  {
+    quote: "The strongest people are those who rise again after falling.",
+    author: "Vikram Desai",
+  },
+  {
+    quote: "The key to happiness is learning to be present always.",
+    author: "Cristiano Ronaldo",
+  },
+  {
+    quote: "Nothing is impossible if you believe in your potential.",
+    author: "Jean-Paul Sartre",
+  },
+  {
+    quote: "Believe in your potential and watch miracles happen.",
+    author: "Rabindranath Tagore",
+  },
+  {
+    quote: "Excellence emerges from passion and dedication.",
+    author: "Pablo Picasso",
+  },
+  {
+    quote: "Transformation occurs when you commit to personal growth.",
+    author: "Mahatma Gandhi",
+  },
+  {
+    quote: "Your impact matters more than you imagine.",
+    author: "Pierre Blanc",
+  },
+  {
+    quote: "The breakthrough comes when you refuse to give up.",
+    author: "Confucius",
+  },
+  {
+    quote: "Success is a mindset that you choose daily.",
+    author: "Winston Churchill",
+  },
+  {
+    quote: "Your courage inspires others to be brave.",
+    author: "Bob Proctor",
+  },
+  {
+    quote: "The key to success is doing what you love.",
+    author: "Roger Federer",
+  },
+  {
+    quote: "The secret of life is persistent effort.",
+    author: "Priya Malhotra",
+  },
+  {
+    quote: "Life is better when you help others.",
+    author: "Bob Proctor",
+  },
+  {
+    quote: "Excellence requires showing up every day with purpose.",
+    author: "Jack Ma",
+  },
+  {
+    quote: "Life rewards those who face challenges head on.",
+    author: "Albert Camus",
+  },
+  {
+    quote: "Your dreams are valid and worth fighting for.",
+    author: "Oprah Winfrey",
+  },
+  {
+    quote: "Your legacy is built on the values you uphold faithfully.",
+    author: "Mark Twain",
+  },
+  {
+    quote: "Your legacy will be shaped by your choices.",
+    author: "Marie Curie",
+  },
+  {
+    quote: "Be the person others turn to for inspiration.",
+    author: "Aristotle",
+  },
+  {
+    quote: "Life is precious, so live it with intention.",
+    author: "J.K. Rowling",
+  },
+  {
+    quote: "Your dreams become reality through persistent action.",
+    author: "Plato",
+  },
+  {
+    quote: "Each day offers a new opportunity to become your best self.",
+    author: "Arun Krishnan",
+  },
+  {
+    quote: "The strongest people choose kindness always.",
+    author: "Marcus Aurelius",
+  },
+  {
+    quote: "Nothing limits you except the fears you refuse to face.",
+    author: "Vikram Desai",
+  },
+  {
+    quote: "Build your empire on the foundation of integrity.",
+    author: "Lao Tzu",
+  },
+  {
+    quote: "Your voice echoes through eternity eternally.",
+    author: "Tanaka Hiroshi",
+  },
+  {
+    quote: "The magic of life is found in small moments.",
+    author: "Albert Camus",
+  },
+  {
+    quote: "The key to happiness is gratitude always.",
+    author: "Walt Whitman",
+  },
+  {
+    quote: "The secret to happiness is accepting yourself and loving others.",
+    author: "Oscar Wilde",
+  },
+  {
+    quote: "Success comes to those who never stop learning.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote:
+      "Success comes to those who persist through difficulties with determination.",
+    author: "Confucius",
+  },
+  {
+    quote: "The path to greatness is paved with actions.",
+    author: "Priya Malhotra",
+  },
+  {
+    quote: "The greatest victory is achieved through consistency.",
+    author: "Marcus Aurelius",
+  },
+  {
+    quote: "The secret to greatness is consistency in all things.",
+    author: "Hans Mueller",
+  },
+  {
+    quote: "Life's deepest joy comes from loving and being loved.",
+    author: "Satya Nadella",
+  },
+  {
+    quote: "Success is sweeter when achieved with integrity.",
+    author: "Plato",
+  },
+  {
+    quote: "The universe celebrates those who act with authenticity.",
+    author: "George Orwell",
+  },
+  {
+    quote: "The greatest wisdom comes from experience.",
+    author: "Jules Verne",
+  },
+  {
+    quote: "Nothing in life is as important as character.",
+    author: "Aristotle",
+  },
+  {
+    quote: "Your choices define who you become today.",
+    author: "Roald Dahl",
+  },
+  {
+    quote: "The greatest gift you can give is presence.",
+    author: "Munshi Premchand",
+  },
+  {
+    quote: "What separates the great from the ordinary is pure persistence.",
+    author: "Aristotle",
+  },
+  {
+    quote: "The world needs your unique gifts.",
+    author: "Paulo Coelho",
+  },
+  {
+    quote: "The greatest love is the love you give yourself.",
+    author: "Buddha",
+  },
+  {
+    quote: "Life is a gift, so treasure every moment.",
+    author: "Vincent van Gogh",
+  },
+  {
+    quote: "In chaos, finding your purpose becomes your greatest superpower.",
+    author: "Epictetus",
+  },
+  {
+    quote: "Excellence is not a destination, it is a journey.",
+    author: "Emily Dickinson",
+  },
+  {
+    quote: "Your impact grows as you build trust through integrity.",
+    author: "Maya Angelou",
+  },
+  {
+    quote: "The world needs people who dare to dream and act.",
+    author: "Pablo Picasso",
+  },
+  {
+    quote:
+      "The greatest gift is to embrace your fears and grow stronger daily.",
+    author: "Marie Curie",
+  },
+  {
+    quote: "Success is built one small victory at a time.",
+    author: "Elon Musk",
+  },
+  {
+    quote:
+      "Every moment teaches you something valuable if you listen carefully.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote: "Life teaches that serving others brings the deepest fulfillment.",
+    author: "Leo Tolstoy",
+  },
+  {
+    quote: "Time rewards those who work hard and stay focused on goals.",
+    author: "Jules Verne",
+  },
+  {
+    quote: "The answer to success is hidden in daily effort.",
+    author: "Wayne Dyer",
+  },
+  {
+    quote:
+      "The path to greatness requires courage, faith, and unwavering commitment.",
+    author: "Elena Rodriguez",
+  },
+  {
+    quote: "The future belongs to those who believe in themselves.",
+    author: "Zig Ziglar",
+  },
+  {
+    quote: "Never underestimate your power to inspire others.",
+    author: "Warren Buffett",
+  },
+  {
+    quote: "Your voice matters more than you know.",
+    author: "Maya Angelou",
+  },
+  {
+    quote: "Your potential is boundless if you believe.",
+    author: "Bob Proctor",
+  },
+  {
+    quote: "Success comes from passion and belief.",
+    author: "Walt Whitman",
+  },
+  {
+    quote: "Your impact on others ripples through eternity.",
+    author: "Margaret Atwood",
+  },
+  {
+    quote: "Life is about creating memories with loved ones.",
+    author: "Aristotle",
+  },
+  {
+    quote: "Success follows those who align actions with values.",
+    author: "Albert Einstein",
+  },
+  {
+    quote: "Every moment is an opportunity to grow.",
+    author: "Tanaka Hiroshi",
+  },
+  {
+    quote:
+      "Life is about believing in yourself and taking the first step forward.",
+    author: "Pierre Blanc",
+  },
+  {
+    quote: "Your potential is unlimited if you develop it.",
+    author: "Albert Einstein",
+  },
+  {
+    quote: "True power comes from knowing when to speak and listen.",
+    author: "Bob Proctor",
+  },
+  {
+    quote: "Every hero started by making one courageous decision.",
+    author: "Richard Branson",
+  },
+  {
+    quote: "Life rewards those who work with purpose.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote: "Your potential grows with every new challenge.",
+    author: "Bob Proctor",
+  },
+  {
+    quote: "Your greatest victory comes from conquering your doubts.",
+    author: "Roger Federer",
+  },
+  {
+    quote: "The greatest achievement is becoming who you wanted.",
+    author: "Tony Robbins",
+  },
+  {
+    quote: "Your destiny is shaped by the choices you make every day.",
+    author: "Vikram Desai",
+  },
+  {
+    quote: "The magic of living is in the journey itself.",
+    author: "Rajesh Sharma",
+  },
+  {
+    quote: "Believe in yourself more than you believe doubts.",
+    author: "Zig Ziglar",
+  },
+  {
+    quote: "Your strength comes from facing challenges bravely.",
+    author: "Marcus Aurelius",
+  },
+  {
+    quote: "The strongest path forward is the one you choose.",
+    author: "Jules Verne",
+  },
+  {
+    quote: "The world is waiting for you to shine.",
+    author: "Victor Hugo",
+  },
+  {
+    quote: "Every great person mastered their craft through dedication.",
+    author: "Jean-Pierre Dubois",
+  },
+  {
+    quote: "Excellence comes from mastering the craft with passion daily.",
+    author: "Tanaka Hiroshi",
+  },
+  {
+    quote: "Change the world by living with intention and truth.",
+    author: "Elena Rodriguez",
+  },
+  {
+    quote: "Your potential awakens when you take action.",
+    author: "Gustave Flaubert",
+  },
+  {
+    quote: "Life teaches that love is the ultimate purpose.",
+    author: "Roald Dahl",
+  },
+  {
+    quote: "Success is the result of discipline and effort.",
+    author: "J.K. Rowling",
+  },
+  {
+    quote: "Success whispers to those who listen with open hearts.",
+    author: "Warren Buffett",
+  },
+  {
+    quote: "Great things happen when you combine passion with work.",
+    author: "J.K. Rowling",
+  },
+  {
+    quote: "Believe in the impossible and it becomes possible.",
+    author: "Martin Luther King Jr.",
+  },
+  {
+    quote: "The strongest force is human determination.",
+    author: "Anna Schmidt",
+  },
+  {
+    quote: "Your voice carries more power than you imagine.",
+    author: "Munshi Premchand",
+  },
+  {
+    quote: "The greatest victory is overcoming your fears.",
+    author: "Margaret Atwood",
+  },
+  {
+    quote: "Progress requires stepping outside your comfort zone.",
+    author: "Rajesh Sharma",
+  },
+  {
+    quote: "Your authenticity is your greatest strength.",
+    author: "Wayne Dyer",
+  },
+  {
+    quote: "Your dreams deserve your time and attention.",
+    author: "Leo Tolstoy",
+  },
+  {
+    quote: "Life is a journey of becoming, not being.",
+    author: "Lao Tzu",
+  },
+  {
+    quote: "The strongest people are those who rise again after falling.",
+    author: "Robert Frost",
+  },
+  {
+    quote: "The key to happiness is learning to be present always.",
+    author: "Satya Nadella",
+  },
+  {
+    quote: "Nothing is impossible if you believe in your potential.",
+    author: "Charles Dickens",
+  },
+  {
+    quote: "Believe in your potential and watch miracles happen.",
+    author: "Bach",
+  },
+  {
+    quote: "Excellence emerges from passion and dedication.",
+    author: "Yamamoto Sakura",
+  },
+  {
+    quote: "Transformation occurs when you commit to personal growth.",
+    author: "Robert Frost",
+  },
+  {
+    quote: "Your impact matters more than you imagine.",
+    author: "Pierre Blanc",
+  },
+  {
+    quote: "The breakthrough comes when you refuse to give up.",
+    author: "Richard Branson",
+  },
+  {
+    quote: "Success is a mindset that you choose daily.",
+    author: "Yamamoto Sakura",
+  },
+  {
+    quote: "Your courage inspires others to be brave.",
+    author: "Michael Jordan",
+  },
+  {
+    quote: "The key to success is doing what you love.",
+    author: "Elena Rodriguez",
+  },
+  {
+    quote: "The secret of life is persistent effort.",
+    author: "Frederic Chopin",
+  },
+  {
+    quote: "Life is better when you help others.",
+    author: "Jean-Paul Sartre",
+  },
+  {
+    quote: "Excellence requires showing up every day with purpose.",
+    author: "Arun Krishnan",
+  },
+  {
+    quote: "Life rewards those who face challenges head on.",
+    author: "Plato",
+  },
+  {
+    quote: "Your dreams are valid and worth fighting for.",
+    author: "Emily Dickinson",
+  },
+  {
+    quote: "Your legacy is built on the values you uphold faithfully.",
+    author: "Leo Tolstoy",
+  },
+  {
+    quote: "Your legacy will be shaped by your choices.",
+    author: "Richard Branson",
+  },
+  {
+    quote: "Be the person others turn to for inspiration.",
+    author: "Victor Hugo",
+  },
+  {
+    quote: "Life is precious, so live it with intention.",
+    author: "Jean-Paul Sartre",
+  },
+  {
+    quote: "Your dreams become reality through persistent action.",
+    author: "Buddha",
+  },
+  {
+    quote: "Each day offers a new opportunity to become your best self.",
+    author: "Jules Verne",
+  },
+  {
+    quote: "The strongest people choose kindness always.",
+    author: "Roger Federer",
+  },
+  {
+    quote: "Nothing limits you except the fears you refuse to face.",
+    author: "Stephen Hawking",
+  },
+  {
+    quote: "Build your empire on the foundation of integrity.",
+    author: "Marie Curie",
+  },
+  {
+    quote: "Your voice echoes through eternity eternally.",
+    author: "Haruki Murakami",
+  },
+  {
+    quote: "The magic of life is found in small moments.",
+    author: "Nelson Mandela",
+  },
+  {
+    quote: "The key to happiness is gratitude always.",
+    author: "Elena Rodriguez",
+  },
+  {
+    quote: "The secret to happiness is accepting yourself and loving others.",
+    author: "Gustave Flaubert",
+  },
+  {
+    quote: "Success comes to those who never stop learning.",
+    author: "Frederic Chopin",
+  },
+  {
+    quote:
+      "Success comes to those who persist through difficulties with determination.",
+    author: "Munshi Premchand",
+  },
+  {
+    quote: "The path to greatness is paved with actions.",
+    author: "Arun Krishnan",
+  },
+  {
+    quote: "The greatest victory is achieved through consistency.",
+    author: "Elena Rodriguez",
+  },
+  {
+    quote: "The secret to greatness is consistency in all things.",
+    author: "Satya Nadella",
+  },
+  {
+    quote: "Life's deepest joy comes from loving and being loved.",
+    author: "Charles Dickens",
+  },
+  {
+    quote: "Success is sweeter when achieved with integrity.",
+    author: "Gustave Flaubert",
+  },
+  {
+    quote: "The universe celebrates those who act with authenticity.",
+    author: "Martin Luther King Jr.",
+  },
+  {
+    quote: "The greatest wisdom comes from experience.",
+    author: "Warren Buffett",
+  },
+  {
+    quote: "Nothing in life is as important as character.",
+    author: "Pablo Picasso",
+  },
+  {
+    quote: "Your choices define who you become today.",
+    author: "Charles Dickens",
+  },
+  {
+    quote: "The greatest gift you can give is presence.",
+    author: "Satya Nadella",
+  },
+  {
+    quote: "What separates the great from the ordinary is pure persistence.",
+    author: "Pablo Picasso",
+  },
+  {
+    quote: "The world needs your unique gifts.",
+    author: "Rajesh Sharma",
+  },
+  {
+    quote: "The greatest love is the love you give yourself.",
+    author: "Stephen Hawking",
+  },
+  {
+    quote: "Life is a gift, so treasure every moment.",
+    author: "Richard Branson",
+  },
+  {
+    quote: "In chaos, finding your purpose becomes your greatest superpower.",
+    author: "Oscar Wilde",
+  },
+  {
+    quote: "Excellence is not a destination, it is a journey.",
+    author: "Roald Dahl",
+  },
+  {
+    quote: "Your impact grows as you build trust through integrity.",
+    author: "Pierre Blanc",
+  },
+  {
+    quote: "The world needs people who dare to dream and act.",
+    author: "Priya Malhotra",
+  },
+  {
+    quote:
+      "The greatest gift is to embrace your fears and grow stronger daily.",
+    author: "Frida Kahlo",
+  },
+  {
+    quote: "Success is built one small victory at a time.",
+    author: "Lao Tzu",
+  },
+  {
+    quote:
+      "Every moment teaches you something valuable if you listen carefully.",
+    author: "Michael Jordan",
+  },
+  {
+    quote: "Life teaches that serving others brings the deepest fulfillment.",
+    author: "Mark Twain",
+  },
+  {
+    quote: "Time rewards those who work hard and stay focused on goals.",
+    author: "Gustave Flaubert",
+  },
+  {
+    quote: "The answer to success is hidden in daily effort.",
+    author: "Elon Musk",
+  },
+  {
+    quote:
+      "The path to greatness requires courage, faith, and unwavering commitment.",
+    author: "Vikram Desai",
+  },
+  {
+    quote: "The future belongs to those who believe in themselves.",
+    author: "Michelangelo",
+  },
+  {
+    quote: "Never underestimate your power to inspire others.",
+    author: "Paulo Coelho",
+  },
+  {
+    quote: "Your voice matters more than you know.",
+    author: "Arun Krishnan",
+  },
+  {
+    quote: "Your potential is boundless if you believe.",
+    author: "Elon Musk",
+  },
+  {
+    quote: "Success comes from passion and belief.",
+    author: "Elon Musk",
+  },
+  {
+    quote: "Your impact on others ripples through eternity.",
+    author: "Arthur Conan Doyle",
+  },
+  {
+    quote: "Life is about creating memories with loved ones.",
+    author: "Tony Robbins",
+  },
+  {
+    quote: "Success follows those who align actions with values.",
+    author: "Tanaka Hiroshi",
+  },
+  {
+    quote: "Every moment is an opportunity to grow.",
+    author: "Rajesh Sharma",
+  },
+  {
+    quote:
+      "Life is about believing in yourself and taking the first step forward.",
+    author: "Nikola Tesla",
+  },
+  {
+    quote: "Your potential is unlimited if you develop it.",
+    author: "Steve Jobs",
+  },
+  {
+    quote: "True power comes from knowing when to speak and listen.",
+    author: "Maya Angelou",
+  },
+  {
+    quote: "Every hero started by making one courageous decision.",
+    author: "Rabindranath Tagore",
+  },
+  {
+    quote: "Life rewards those who work with purpose.",
+    author: "J.K. Rowling",
+  },
+  {
+    quote: "Your potential grows with every new challenge.",
+    author: "Diego Rivera",
+  },
+  {
+    quote: "Your greatest victory comes from conquering your doubts.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote: "The greatest achievement is becoming who you wanted.",
+    author: "Plato",
+  },
+  {
+    quote: "Your destiny is shaped by the choices you make every day.",
+    author: "Yamamoto Sakura",
+  },
+  {
+    quote: "The magic of living is in the journey itself.",
+    author: "Albert Einstein",
+  },
+  {
+    quote: "Believe in yourself more than you believe doubts.",
+    author: "Paulo Coelho",
+  },
+  {
+    quote: "Your strength comes from facing challenges bravely.",
+    author: "Albert Camus",
+  },
+  {
+    quote: "The strongest path forward is the one you choose.",
+    author: "Elena Rodriguez",
+  },
+  {
+    quote: "The world is waiting for you to shine.",
+    author: "Steve Jobs",
+  },
+  {
+    quote: "Every great person mastered their craft through dedication.",
+    author: "Nelson Mandela",
+  },
+  {
+    quote: "Excellence comes from mastering the craft with passion daily.",
+    author: "Maya Angelou",
+  },
+  {
+    quote: "Change the world by living with intention and truth.",
+    author: "Maya Angelou",
+  },
+  {
+    quote: "Your potential awakens when you take action.",
+    author: "Arthur Conan Doyle",
+  },
+  {
+    quote: "Life teaches that love is the ultimate purpose.",
+    author: "Tony Robbins",
+  },
+  {
+    quote: "Success is the result of discipline and effort.",
+    author: "Bob Proctor",
+  },
+  {
+    quote: "Success whispers to those who listen with open hearts.",
+    author: "Michael Jordan",
+  },
+  {
+    quote: "Great things happen when you combine passion with work.",
+    author: "Beethoven",
+  },
+  {
+    quote: "Believe in the impossible and it becomes possible.",
+    author: "Musashi Miyamoto",
+  },
+  {
+    quote: "The strongest force is human determination.",
+    author: "Pablo Picasso",
+  },
+  {
+    quote: "Your voice carries more power than you imagine.",
+    author: "Margaret Atwood",
+  },
+  {
+    quote: "The greatest victory is overcoming your fears.",
+    author: "Immanuel Kant",
+  },
+  {
+    quote: "Progress requires stepping outside your comfort zone.",
+    author: "Vikram Desai",
+  },
+  {
+    quote: "Your authenticity is your greatest strength.",
+    author: "J.K. Rowling",
+  },
+  {
+    quote: "Your dreams deserve your time and attention.",
+    author: "Tony Robbins",
+  },
+  {
+    quote: "Life is a journey of becoming, not being.",
+    author: "Hans Mueller",
+  },
+  {
+    quote: "The strongest people are those who rise again after falling.",
+    author: "C.S. Lewis",
+  },
+  {
+    quote: "The key to happiness is learning to be present always.",
+    author: "Jean-Pierre Dubois",
+  },
+  {
+    quote: "Nothing is impossible if you believe in your potential.",
+    author: "Wayne Dyer",
+  },
+  {
+    quote: "Believe in your potential and watch miracles happen.",
+    author: "Arthur Conan Doyle",
+  },
+  {
+    quote: "Excellence emerges from passion and dedication.",
+    author: "Mahatma Gandhi",
+  },
+  {
+    quote: "Transformation occurs when you commit to personal growth.",
+    author: "Anna Schmidt",
+  },
+  {
+    quote: "Your impact matters more than you imagine.",
+    author: "Elena Rodriguez",
+  },
+  {
+    quote: "The breakthrough comes when you refuse to give up.",
+    author: "Margaret Atwood",
+  },
+  {
+    quote: "Success is a mindset that you choose daily.",
+    author: "Victor Hugo",
+  },
+  {
+    quote: "Your courage inspires others to be brave.",
+    author: "Victor Hugo",
+  },
+  {
+    quote: "The key to success is doing what you love.",
+    author: "Richard Branson",
+  },
+  {
+    quote: "The secret of life is persistent effort.",
+    author: "Stephen Hawking",
+  },
+  {
+    quote: "Life is better when you help others.",
+    author: "Michael Jordan",
+  },
+  {
+    quote: "Excellence requires showing up every day with purpose.",
+    author: "Nelson Mandela",
+  },
+  {
+    quote: "Life rewards those who face challenges head on.",
+    author: "Jean-Pierre Dubois",
+  },
+  {
+    quote: "Your dreams are valid and worth fighting for.",
+    author: "Matsuo Basho",
+  },
+  {
+    quote: "Your legacy is built on the values you uphold faithfully.",
+    author: "Deepak Chopra",
+  },
+  {
+    quote: "Your legacy will be shaped by your choices.",
+    author: "Bach",
+  },
+  {
+    quote: "Be the person others turn to for inspiration.",
+    author: "Beethoven",
+  },
+  {
+    quote: "Life is precious, so live it with intention.",
+    author: "J.K. Rowling",
+  },
+  {
+    quote: "Your dreams become reality through persistent action.",
+    author: "Zig Ziglar",
+  },
+  {
+    quote: "Each day offers a new opportunity to become your best self.",
+    author: "Jean-Pierre Dubois",
+  },
+  {
+    quote: "The strongest people choose kindness always.",
+    author: "Nelson Mandela",
+  },
+  {
+    quote: "Nothing limits you except the fears you refuse to face.",
+    author: "Cristiano Ronaldo",
+  },
+  {
+    quote: "Build your empire on the foundation of integrity.",
+    author: "Mark Twain",
+  },
+  {
+    quote: "Your voice echoes through eternity eternally.",
+    author: "Swami Vivekananda",
+  },
+  {
+    quote: "The magic of life is found in small moments.",
+    author: "Albert Einstein",
+  },
+  {
+    quote: "The key to happiness is gratitude always.",
+    author: "Winston Churchill",
+  },
+  {
+    quote: "The secret to happiness is accepting yourself and loving others.",
+    author: "Vincent van Gogh",
+  },
+  {
+    quote: "Success comes to those who never stop learning.",
+    author: "Bob Proctor",
+  },
+  {
+    quote:
+      "Success comes to those who persist through difficulties with determination.",
+    author: "Vincent van Gogh",
+  },
+  {
+    quote: "The path to greatness is paved with actions.",
+    author: "Michelangelo",
+  },
+  {
+    quote: "The greatest victory is achieved through consistency.",
+    author: "Gustave Flaubert",
+  },
+  {
+    quote: "The secret to greatness is consistency in all things.",
+    author: "Charles Dickens",
+  },
+  {
+    quote: "Life's deepest joy comes from loving and being loved.",
+    author: "Haruki Murakami",
+  },
+  {
+    quote: "Success is sweeter when achieved with integrity.",
+    author: "Immanuel Kant",
+  },
+  {
+    quote: "The universe celebrates those who act with authenticity.",
+    author: "Tanaka Hiroshi",
+  },
+  {
+    quote: "The greatest wisdom comes from experience.",
+    author: "Nikola Tesla",
+  },
+  {
+    quote: "Nothing in life is as important as character.",
+    author: "Munshi Premchand",
+  },
+  {
+    quote: "Your choices define who you become today.",
+    author: "Arthur Conan Doyle",
+  },
+  {
+    quote: "The greatest gift you can give is presence.",
+    author: "Wayne Dyer",
+  },
+  {
+    quote: "What separates the great from the ordinary is pure persistence.",
+    author: "Mahatma Gandhi",
+  },
+  {
+    quote: "The world needs your unique gifts.",
+    author: "Immanuel Kant",
+  },
+  {
+    quote: "The greatest love is the love you give yourself.",
+    author: "Martin Luther King Jr.",
+  },
+  {
+    quote: "Life is a gift, so treasure every moment.",
+    author: "Muhammad Ali",
+  },
+  {
+    quote: "In chaos, finding your purpose becomes your greatest superpower.",
+    author: "Munshi Premchand",
+  },
+  {
+    quote: "Excellence is not a destination, it is a journey.",
+    author: "Victor Hugo",
+  },
+  {
+    quote: "Your impact grows as you build trust through integrity.",
+    author: "Richard Branson",
+  },
+  {
+    quote: "The world needs people who dare to dream and act.",
+    author: "Zig Ziglar",
+  },
+  {
+    quote:
+      "The greatest gift is to embrace your fears and grow stronger daily.",
+    author: "Rabindranath Tagore",
+  },
+  {
+    quote: "Success is built one small victory at a time.",
+    author: "Albert Einstein",
+  },
+  {
+    quote:
+      "Every moment teaches you something valuable if you listen carefully.",
+    author: "Marcus Aurelius",
+  },
+  {
+    quote: "Life teaches that serving others brings the deepest fulfillment.",
+    author: "Oscar Wilde",
+  },
+  {
+    quote: "Time rewards those who work hard and stay focused on goals.",
+    author: "Satya Nadella",
+  },
+  {
+    quote: "The answer to success is hidden in daily effort.",
+    author: "Mark Twain",
+  },
+  {
+    quote:
+      "The path to greatness requires courage, faith, and unwavering commitment.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote: "The future belongs to those who believe in themselves.",
+    author: "Charles Dickens",
+  },
+  {
+    quote: "Never underestimate your power to inspire others.",
+    author: "Vincent van Gogh",
+  },
+  {
+    quote: "Your voice matters more than you know.",
+    author: "Buddha",
+  },
+  {
+    quote: "Your potential is boundless if you believe.",
+    author: "Warren Buffett",
+  },
+  {
+    quote: "Success comes from passion and belief.",
+    author: "Vincent van Gogh",
+  },
+  {
+    quote: "Your impact on others ripples through eternity.",
+    author: "Mark Twain",
+  },
+  {
+    quote: "Life is about creating memories with loved ones.",
+    author: "Wayne Dyer",
+  },
+  {
+    quote: "Success follows those who align actions with values.",
+    author: "William Shakespeare",
+  },
+  {
+    quote: "Every moment is an opportunity to grow.",
+    author: "Winston Churchill",
+  },
+  {
+    quote:
+      "Life is about believing in yourself and taking the first step forward.",
+    author: "Munshi Premchand",
+  },
+  {
+    quote: "Your potential is unlimited if you develop it.",
+    author: "Rajesh Sharma",
+  },
+  {
+    quote: "True power comes from knowing when to speak and listen.",
+    author: "Aristotle",
+  },
+  {
+    quote: "Every hero started by making one courageous decision.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote: "Life rewards those who work with purpose.",
+    author: "Martin Luther King Jr.",
+  },
+  {
+    quote: "Your potential grows with every new challenge.",
+    author: "Musashi Miyamoto",
+  },
+  {
+    quote: "Your greatest victory comes from conquering your doubts.",
+    author: "Charles Dickens",
+  },
+  {
+    quote: "The greatest achievement is becoming who you wanted.",
+    author: "Pierre Blanc",
+  },
+  {
+    quote: "Your destiny is shaped by the choices you make every day.",
+    author: "Oprah Winfrey",
+  },
+  {
+    quote: "The magic of living is in the journey itself.",
+    author: "Elon Musk",
+  },
+  {
+    quote: "Believe in yourself more than you believe doubts.",
+    author: "Albert Camus",
+  },
+  {
+    quote: "Your strength comes from facing challenges bravely.",
+    author: "Leo Tolstoy",
+  },
+  {
+    quote: "The strongest path forward is the one you choose.",
+    author: "Jane Austen",
+  },
+  {
+    quote: "The world is waiting for you to shine.",
+    author: "Tony Robbins",
+  },
+  {
+    quote: "Every great person mastered their craft through dedication.",
+    author: "Confucius",
+  },
+  {
+    quote: "Excellence comes from mastering the craft with passion daily.",
+    author: "Michael Jordan",
+  },
+  {
+    quote: "Change the world by living with intention and truth.",
+    author: "Oscar Wilde",
+  },
+  {
+    quote: "Your potential awakens when you take action.",
+    author: "Charles Dickens",
+  },
+  {
+    quote: "Life teaches that love is the ultimate purpose.",
+    author: "Oscar Wilde",
+  },
+  {
+    quote: "Success is the result of discipline and effort.",
+    author: "Arthur Conan Doyle",
+  },
+  {
+    quote: "Success whispers to those who listen with open hearts.",
+    author: "Mozart",
+  },
+  {
+    quote: "Great things happen when you combine passion with work.",
+    author: "Nikola Tesla",
+  },
+  {
+    quote: "Believe in the impossible and it becomes possible.",
+    author: "Epictetus",
+  },
+  {
+    quote: "The strongest force is human determination.",
+    author: "Zig Ziglar",
+  },
+  {
+    quote: "Your voice carries more power than you imagine.",
+    author: "Jules Verne",
+  },
+  {
+    quote: "The greatest victory is overcoming your fears.",
+    author: "Socrates",
+  },
+  {
+    quote: "Progress requires stepping outside your comfort zone.",
+    author: "Charles Dickens",
+  },
+  {
+    quote: "Your authenticity is your greatest strength.",
+    author: "Gustave Flaubert",
+  },
+  {
+    quote: "Your dreams deserve your time and attention.",
+    author: "Stephen Hawking",
+  },
+  {
+    quote: "Life is a journey of becoming, not being.",
+    author: "Jean-Pierre Dubois",
+  },
+  {
+    quote: "The strongest people are those who rise again after falling.",
+    author: "Richard Branson",
+  },
+  {
+    quote: "The key to happiness is learning to be present always.",
+    author: "Roger Federer",
+  },
+  {
+    quote: "Nothing is impossible if you believe in your potential.",
+    author: "Munshi Premchand",
+  },
+  {
+    quote: "Believe in your potential and watch miracles happen.",
+    author: "Matsuo Basho",
+  },
+  {
+    quote: "Excellence emerges from passion and dedication.",
+    author: "Albert Camus",
+  },
+  {
+    quote: "Transformation occurs when you commit to personal growth.",
+    author: "Mark Twain",
+  },
+  {
+    quote: "Your impact matters more than you imagine.",
+    author: "Frida Kahlo",
+  },
+  {
+    quote: "The breakthrough comes when you refuse to give up.",
+    author: "Leonardo da Vinci",
+  },
+  {
+    quote: "Success is a mindset that you choose daily.",
+    author: "Mark Twain",
+  },
+  {
+    quote: "Your courage inspires others to be brave.",
+    author: "Michael Jordan",
+  },
+  {
+    quote: "The key to success is doing what you love.",
+    author: "Bach",
+  },
+  {
+    quote: "The secret of life is persistent effort.",
+    author: "Paulo Coelho",
+  },
+  {
+    quote: "Life is better when you help others.",
+    author: "Diego Rivera",
+  },
+  {
+    quote: "Excellence requires showing up every day with purpose.",
+    author: "Aristotle",
+  },
+  {
+    quote: "Life rewards those who face challenges head on.",
+    author: "Emily Dickinson",
+  },
+  {
+    quote: "Your dreams are valid and worth fighting for.",
+    author: "Musashi Miyamoto",
+  },
+  {
+    quote: "Your legacy is built on the values you uphold faithfully.",
+    author: "Jane Austen",
+  },
+  {
+    quote: "Your legacy will be shaped by your choices.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote: "Be the person others turn to for inspiration.",
+    author: "Hans Mueller",
+  },
+  {
+    quote: "Life is precious, so live it with intention.",
+    author: "Elon Musk",
+  },
+  {
+    quote: "Your dreams become reality through persistent action.",
+    author: "Zig Ziglar",
+  },
+  {
+    quote: "Each day offers a new opportunity to become your best self.",
+    author: "Walt Whitman",
+  },
+  {
+    quote: "The strongest people choose kindness always.",
+    author: "Buddha",
+  },
+  {
+    quote: "Nothing limits you except the fears you refuse to face.",
+    author: "Haruki Murakami",
+  },
+  {
+    quote: "Build your empire on the foundation of integrity.",
+    author: "Confucius",
+  },
+  {
+    quote: "Your voice echoes through eternity eternally.",
+    author: "Marie Curie",
+  },
+  {
+    quote: "The magic of life is found in small moments.",
+    author: "Arun Krishnan",
+  },
+  {
+    quote: "The key to happiness is gratitude always.",
+    author: "Frida Kahlo",
+  },
+  {
+    quote: "The secret to happiness is accepting yourself and loving others.",
+    author: "Elena Rodriguez",
+  },
+  {
+    quote: "Success comes to those who never stop learning.",
+    author: "Elon Musk",
+  },
+  {
+    quote:
+      "Success comes to those who persist through difficulties with determination.",
+    author: "Wayne Dyer",
+  },
+  {
+    quote: "The path to greatness is paved with actions.",
+    author: "Albert Camus",
+  },
+  {
+    quote: "The greatest victory is achieved through consistency.",
+    author: "Mark Twain",
+  },
+  {
+    quote: "The secret to greatness is consistency in all things.",
+    author: "Jane Austen",
+  },
+  {
+    quote: "Life's deepest joy comes from loving and being loved.",
+    author: "Steve Jobs",
+  },
+  {
+    quote: "Success is sweeter when achieved with integrity.",
+    author: "Matsuo Basho",
+  },
+  {
+    quote: "The universe celebrates those who act with authenticity.",
+    author: "Leo Tolstoy",
+  },
+  {
+    quote: "The greatest wisdom comes from experience.",
+    author: "Nikola Tesla",
+  },
+  {
+    quote: "Nothing in life is as important as character.",
+    author: "Gustave Flaubert",
+  },
+  {
+    quote: "Your choices define who you become today.",
+    author: "Cristiano Ronaldo",
+  },
+  {
+    quote: "The greatest gift you can give is presence.",
+    author: "Paulo Coelho",
+  },
+  {
+    quote: "What separates the great from the ordinary is pure persistence.",
+    author: "Yamamoto Sakura",
+  },
+  {
+    quote: "The world needs your unique gifts.",
+    author: "Warren Buffett",
+  },
+  {
+    quote: "The greatest love is the love you give yourself.",
+    author: "Albert Camus",
+  },
+  {
+    quote: "Life is a gift, so treasure every moment.",
+    author: "Anton Chekhov",
+  },
+  {
+    quote: "In chaos, finding your purpose becomes your greatest superpower.",
+    author: "Musashi Miyamoto",
+  },
+  {
+    quote: "Excellence is not a destination, it is a journey.",
+    author: "Jane Austen",
+  },
+  {
+    quote: "Your impact grows as you build trust through integrity.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote: "The world needs people who dare to dream and act.",
+    author: "Vikram Desai",
+  },
+  {
+    quote:
+      "The greatest gift is to embrace your fears and grow stronger daily.",
+    author: "Marie Curie",
+  },
+  {
+    quote: "Success is built one small victory at a time.",
+    author: "Cristiano Ronaldo",
+  },
+  {
+    quote:
+      "Every moment teaches you something valuable if you listen carefully.",
+    author: "Jane Austen",
+  },
+  {
+    quote: "Life teaches that serving others brings the deepest fulfillment.",
+    author: "Dr. B.R. Ambedkar",
+  },
+  {
+    quote: "Time rewards those who work hard and stay focused on goals.",
+    author: "Haruki Murakami",
+  },
+  {
+    quote: "The answer to success is hidden in daily effort.",
+    author: "Epictetus",
+  },
+  {
+    quote:
+      "The path to greatness requires courage, faith, and unwavering commitment.",
+    author: "Lao Tzu",
+  },
+  {
+    quote: "The future belongs to those who believe in themselves.",
+    author: "Arthur Conan Doyle",
+  },
+  {
+    quote: "Never underestimate your power to inspire others.",
+    author: "Buddha",
+  },
+  {
+    quote: "Your voice matters more than you know.",
+    author: "Jane Austen",
+  },
+  {
+    quote: "Your potential is boundless if you believe.",
+    author: "Martin Luther King Jr.",
+  },
+  {
+    quote: "Success comes from passion and belief.",
+    author: "Emily Dickinson",
+  },
+  {
+    quote: "Your impact on others ripples through eternity.",
+    author: "Roald Dahl",
+  },
+  {
+    quote: "Life is about creating memories with loved ones.",
+    author: "Pablo Picasso",
+  },
+  {
+    quote: "Success follows those who align actions with values.",
+    author: "William Shakespeare",
+  },
+  {
+    quote: "Every moment is an opportunity to grow.",
+    author: "Musashi Miyamoto",
+  },
+  {
+    quote:
+      "Life is about believing in yourself and taking the first step forward.",
+    author: "Charles Dickens",
+  },
+  {
+    quote: "Your potential is unlimited if you develop it.",
+    author: "Nikola Tesla",
+  },
+  {
+    quote: "True power comes from knowing when to speak and listen.",
+    author: "Plato",
+  },
+  {
+    quote: "Every hero started by making one courageous decision.",
+    author: "Dr. B.R. Ambedkar",
+  },
+  {
+    quote: "Life rewards those who work with purpose.",
+    author: "Charles Dickens",
+  },
+  {
+    quote: "Your potential grows with every new challenge.",
+    author: "Pablo Picasso",
+  },
+  {
+    quote: "Your greatest victory comes from conquering your doubts.",
+    author: "Cristiano Ronaldo",
+  },
+  {
+    quote: "The greatest achievement is becoming who you wanted.",
+    author: "Robert Frost",
+  },
+  {
+    quote: "Your destiny is shaped by the choices you make every day.",
+    author: "Deepak Chopra",
+  },
+  {
+    quote: "The magic of living is in the journey itself.",
+    author: "Aristotle",
+  },
+  {
+    quote: "Believe in yourself more than you believe doubts.",
+    author: "Epictetus",
+  },
+  {
+    quote: "Your strength comes from facing challenges bravely.",
+    author: "Elena Rodriguez",
+  },
+  {
+    quote: "The strongest path forward is the one you choose.",
+    author: "Leo Tolstoy",
+  },
+  {
+    quote: "The world is waiting for you to shine.",
+    author: "Cristiano Ronaldo",
+  },
+  {
+    quote: "Every great person mastered their craft through dedication.",
+    author: "Arthur Conan Doyle",
+  },
+  {
+    quote: "Excellence comes from mastering the craft with passion daily.",
+    author: "Elena Rodriguez",
+  },
+  {
+    quote: "Change the world by living with intention and truth.",
+    author: "Bach",
+  },
+  {
+    quote: "Your potential awakens when you take action.",
+    author: "Paulo Coelho",
+  },
+  {
+    quote: "Life teaches that love is the ultimate purpose.",
+    author: "Mozart",
+  },
+  {
+    quote: "Success is the result of discipline and effort.",
+    author: "Matsuo Basho",
+  },
+  {
+    quote: "Success whispers to those who listen with open hearts.",
+    author: "Plato",
+  },
+  {
+    quote: "Great things happen when you combine passion with work.",
+    author: "Jane Austen",
+  },
+  {
+    quote: "Believe in the impossible and it becomes possible.",
+    author: "Jane Austen",
+  },
+  {
+    quote: "The strongest force is human determination.",
+    author: "Michael Jordan",
+  },
+  {
+    quote: "Your voice carries more power than you imagine.",
+    author: "Bach",
+  },
+  {
+    quote: "The greatest victory is overcoming your fears.",
+    author: "Beethoven",
+  },
+  {
+    quote: "Progress requires stepping outside your comfort zone.",
+    author: "Vikram Desai",
+  },
+  {
+    quote: "Your authenticity is your greatest strength.",
+    author: "Oscar Wilde",
+  },
+  {
+    quote: "Your dreams deserve your time and attention.",
+    author: "Rabindranath Tagore",
+  },
+  {
+    quote: "Life is a journey of becoming, not being.",
+    author: "Jack Ma",
+  },
+  {
+    quote: "The strongest people are those who rise again after falling.",
+    author: "Pierre Blanc",
+  },
+  {
+    quote: "The key to happiness is learning to be present always.",
+    author: "Cristiano Ronaldo",
+  },
+  {
+    quote: "Nothing is impossible if you believe in your potential.",
+    author: "Oscar Wilde",
+  },
+  {
+    quote: "Believe in your potential and watch miracles happen.",
+    author: "Charles Dickens",
+  },
+  {
+    quote: "Excellence emerges from passion and dedication.",
+    author: "Winston Churchill",
+  },
+  {
+    quote: "Transformation occurs when you commit to personal growth.",
+    author: "Mark Twain",
+  },
+  {
+    quote: "Your impact matters more than you imagine.",
+    author: "Elena Rodriguez",
+  },
+  {
+    quote: "The breakthrough comes when you refuse to give up.",
+    author: "Epictetus",
+  },
+  {
+    quote: "Success is a mindset that you choose daily.",
+    author: "Confucius",
+  },
+  {
+    quote: "Your courage inspires others to be brave.",
+    author: "Vincent van Gogh",
+  },
+  {
+    quote: "The key to success is doing what you love.",
+    author: "Tanaka Hiroshi",
+  },
+  {
+    quote: "The secret of life is persistent effort.",
+    author: "Roald Dahl",
+  },
+  {
+    quote: "Life is better when you help others.",
+    author: "Winston Churchill",
+  },
+  {
+    quote: "Excellence requires showing up every day with purpose.",
+    author: "Jane Austen",
+  },
+  {
+    quote: "Life rewards those who face challenges head on.",
+    author: "Lao Tzu",
+  },
+  {
+    quote: "Your dreams are valid and worth fighting for.",
+    author: "Jack Ma",
+  },
+  {
+    quote: "Your legacy is built on the values you uphold faithfully.",
+    author: "Dr. B.R. Ambedkar",
+  },
+  {
+    quote: "Your legacy will be shaped by your choices.",
+    author: "Mark Twain",
+  },
+  {
+    quote: "Be the person others turn to for inspiration.",
+    author: "Musashi Miyamoto",
+  },
+  {
+    quote: "Life is precious, so live it with intention.",
+    author: "Nelson Mandela",
+  },
+  {
+    quote: "Your dreams become reality through persistent action.",
+    author: "Jean-Paul Sartre",
+  },
+  {
+    quote: "Each day offers a new opportunity to become your best self.",
+    author: "Marcus Aurelius",
+  },
+  {
+    quote: "The strongest people choose kindness always.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote: "Nothing limits you except the fears you refuse to face.",
+    author: "Muhammad Ali",
+  },
+  {
+    quote: "Build your empire on the foundation of integrity.",
+    author: "J.K. Rowling",
+  },
+  {
+    quote: "Your voice echoes through eternity eternally.",
+    author: "Yamamoto Sakura",
+  },
+  {
+    quote: "The magic of life is found in small moments.",
+    author: "Gustave Flaubert",
+  },
+  {
+    quote: "The key to happiness is gratitude always.",
+    author: "Charles Dickens",
+  },
+  {
+    quote: "The secret to happiness is accepting yourself and loving others.",
+    author: "Frida Kahlo",
+  },
+  {
+    quote: "Success comes to those who never stop learning.",
+    author: "Arthur Conan Doyle",
+  },
+  {
+    quote:
+      "Success comes to those who persist through difficulties with determination.",
+    author: "Roald Dahl",
+  },
+  {
+    quote: "The path to greatness is paved with actions.",
+    author: "Winston Churchill",
+  },
+  {
+    quote: "The greatest victory is achieved through consistency.",
+    author: "Nelson Mandela",
+  },
+  {
+    quote: "The secret to greatness is consistency in all things.",
+    author: "Maya Angelou",
+  },
+  {
+    quote: "Life's deepest joy comes from loving and being loved.",
+    author: "Robert Frost",
+  },
+  {
+    quote: "Success is sweeter when achieved with integrity.",
+    author: "Marie Curie",
+  },
+  {
+    quote: "The universe celebrates those who act with authenticity.",
+    author: "Leonardo da Vinci",
+  },
+  {
+    quote: "The greatest wisdom comes from experience.",
+    author: "Deepak Chopra",
+  },
+  {
+    quote: "Nothing in life is as important as character.",
+    author: "J.K. Rowling",
+  },
+  {
+    quote: "Your choices define who you become today.",
+    author: "Albert Camus",
+  },
+  {
+    quote: "The greatest gift you can give is presence.",
+    author: "Leonardo da Vinci",
+  },
+  {
+    quote: "What separates the great from the ordinary is pure persistence.",
+    author: "Frederic Chopin",
+  },
+  {
+    quote: "The world needs your unique gifts.",
+    author: "Michelangelo",
+  },
+  {
+    quote: "The greatest love is the love you give yourself.",
+    author: "Yamamoto Sakura",
+  },
+  {
+    quote: "Life is a gift, so treasure every moment.",
+    author: "Yamamoto Sakura",
+  },
+  {
+    quote: "In chaos, finding your purpose becomes your greatest superpower.",
+    author: "Bach",
+  },
+  {
+    quote: "Excellence is not a destination, it is a journey.",
+    author: "Rajesh Sharma",
+  },
+  {
+    quote: "Your impact grows as you build trust through integrity.",
+    author: "Victor Hugo",
+  },
+  {
+    quote: "The world needs people who dare to dream and act.",
+    author: "Vincent van Gogh",
+  },
+  {
+    quote:
+      "The greatest gift is to embrace your fears and grow stronger daily.",
+    author: "Leo Tolstoy",
+  },
+  {
+    quote: "Success is built one small victory at a time.",
+    author: "Yamamoto Sakura",
+  },
+  {
+    quote:
+      "Every moment teaches you something valuable if you listen carefully.",
+    author: "Haruki Murakami",
+  },
+  {
+    quote: "Life teaches that serving others brings the deepest fulfillment.",
+    author: "Confucius",
+  },
+  {
+    quote: "Time rewards those who work hard and stay focused on goals.",
+    author: "Jean-Pierre Dubois",
+  },
+  {
+    quote: "The answer to success is hidden in daily effort.",
+    author: "Victor Hugo",
+  },
+  {
+    quote:
+      "The path to greatness requires courage, faith, and unwavering commitment.",
+    author: "Winston Churchill",
+  },
+  {
+    quote: "The future belongs to those who believe in themselves.",
+    author: "Paulo Coelho",
+  },
+  {
+    quote: "Never underestimate your power to inspire others.",
+    author: "Frida Kahlo",
+  },
+  {
+    quote: "Your voice matters more than you know.",
+    author: "Socrates",
+  },
+  {
+    quote: "Your potential is boundless if you believe.",
+    author: "Warren Buffett",
+  },
+  {
+    quote: "Success comes from passion and belief.",
+    author: "Victor Hugo",
+  },
+  {
+    quote: "Your impact on others ripples through eternity.",
+    author: "Jules Verne",
+  },
+  {
+    quote: "Life is about creating memories with loved ones.",
+    author: "Bach",
+  },
+  {
+    quote: "Success follows those who align actions with values.",
+    author: "Frida Kahlo",
+  },
+  {
+    quote: "Every moment is an opportunity to grow.",
+    author: "Lao Tzu",
+  },
+  {
+    quote:
+      "Life is about believing in yourself and taking the first step forward.",
+    author: "Wayne Dyer",
+  },
+  {
+    quote: "Your potential is unlimited if you develop it.",
+    author: "Haruki Murakami",
+  },
+  {
+    quote: "True power comes from knowing when to speak and listen.",
+    author: "Dr. B.R. Ambedkar",
+  },
+  {
+    quote: "Every hero started by making one courageous decision.",
+    author: "Rabindranath Tagore",
+  },
+  {
+    quote: "Life rewards those who work with purpose.",
+    author: "C.S. Lewis",
+  },
+  {
+    quote: "Your potential grows with every new challenge.",
+    author: "Oprah Winfrey",
+  },
+  {
+    quote: "Your greatest victory comes from conquering your doubts.",
+    author: "Roger Federer",
+  },
+  {
+    quote: "The greatest achievement is becoming who you wanted.",
+    author: "Bach",
+  },
+  {
+    quote: "Your destiny is shaped by the choices you make every day.",
+    author: "Pablo Picasso",
+  },
+  {
+    quote: "The magic of living is in the journey itself.",
+    author: "Albert Camus",
+  },
+  {
+    quote: "Believe in yourself more than you believe doubts.",
+    author: "Zig Ziglar",
+  },
+  {
+    quote: "Your strength comes from facing challenges bravely.",
+    author: "Frida Kahlo",
+  },
+  {
+    quote: "The strongest path forward is the one you choose.",
+    author: "Bach",
+  },
+  {
+    quote: "The world is waiting for you to shine.",
+    author: "Mark Twain",
+  },
+  {
+    quote: "Every great person mastered their craft through dedication.",
+    author: "Epictetus",
+  },
+  {
+    quote: "Excellence comes from mastering the craft with passion daily.",
+    author: "Beethoven",
+  },
+  {
+    quote: "Change the world by living with intention and truth.",
+    author: "Robert Frost",
+  },
+  {
+    quote: "Your potential awakens when you take action.",
+    author: "Mozart",
+  },
+  {
+    quote: "Life teaches that love is the ultimate purpose.",
+    author: "Jean-Pierre Dubois",
+  },
+  {
+    quote: "Success is the result of discipline and effort.",
+    author: "Leo Tolstoy",
+  },
+  {
+    quote: "Success whispers to those who listen with open hearts.",
+    author: "Margaret Atwood",
+  },
+  {
+    quote: "Great things happen when you combine passion with work.",
+    author: "Munshi Premchand",
+  },
+  {
+    quote: "Believe in the impossible and it becomes possible.",
+    author: "Warren Buffett",
+  },
+  {
+    quote: "The strongest force is human determination.",
+    author: "Leonardo da Vinci",
+  },
+  {
+    quote: "Your voice carries more power than you imagine.",
+    author: "Frida Kahlo",
+  },
+  {
+    quote: "The greatest victory is overcoming your fears.",
+    author: "Frederic Chopin",
+  },
+  {
+    quote: "Progress requires stepping outside your comfort zone.",
+    author: "Marcus Aurelius",
+  },
+  {
+    quote: "Your authenticity is your greatest strength.",
+    author: "Munshi Premchand",
+  },
+  {
+    quote: "Your dreams deserve your time and attention.",
+    author: "Leo Tolstoy",
+  },
+  {
+    quote: "Life is a journey of becoming, not being.",
+    author: "Martin Luther King Jr.",
+  },
+  {
+    quote: "The strongest people are those who rise again after falling.",
+    author: "Marie Curie",
+  },
+  {
+    quote: "The key to happiness is learning to be present always.",
+    author: "Nelson Mandela",
+  },
+  {
+    quote: "Nothing is impossible if you believe in your potential.",
+    author: "Wayne Dyer",
+  },
+  {
+    quote: "Believe in your potential and watch miracles happen.",
+    author: "Hans Mueller",
+  },
+  {
+    quote: "Excellence emerges from passion and dedication.",
+    author: "Steve Jobs",
+  },
+  {
+    quote: "Transformation occurs when you commit to personal growth.",
+    author: "Nelson Mandela",
+  },
+  {
+    quote: "Your impact matters more than you imagine.",
+    author: "George Orwell",
+  },
+  {
+    quote: "The breakthrough comes when you refuse to give up.",
+    author: "Marcus Aurelius",
+  },
+  {
+    quote: "Success is a mindset that you choose daily.",
+    author: "Richard Branson",
+  },
+  {
+    quote: "Your courage inspires others to be brave.",
+    author: "Rajesh Sharma",
+  },
+  {
+    quote: "The key to success is doing what you love.",
+    author: "Winston Churchill",
+  },
+  {
+    quote: "The secret of life is persistent effort.",
+    author: "Muhammad Ali",
+  },
+  {
+    quote: "Life is better when you help others.",
+    author: "C.S. Lewis",
+  },
+  {
+    quote: "Excellence requires showing up every day with purpose.",
+    author: "Gustave Flaubert",
+  },
+  {
+    quote: "Life rewards those who face challenges head on.",
+    author: "Leonardo da Vinci",
+  },
+  {
+    quote: "Your dreams are valid and worth fighting for.",
+    author: "Plato",
+  },
+  {
+    quote: "Your legacy is built on the values you uphold faithfully.",
+    author: "Winston Churchill",
+  },
+  {
+    quote: "Your legacy will be shaped by your choices.",
+    author: "Elena Rodriguez",
+  },
+  {
+    quote: "Be the person others turn to for inspiration.",
+    author: "Robert Frost",
+  },
+  {
+    quote: "Life is precious, so live it with intention.",
+    author: "Margaret Atwood",
+  },
+  {
+    quote: "Your dreams become reality through persistent action.",
+    author: "J.K. Rowling",
+  },
+  {
+    quote: "Each day offers a new opportunity to become your best self.",
+    author: "Rajesh Sharma",
+  },
+  {
+    quote: "The strongest people choose kindness always.",
+    author: "Oscar Wilde",
+  },
+  {
+    quote: "Nothing limits you except the fears you refuse to face.",
+    author: "Pablo Picasso",
+  },
+  {
+    quote: "Build your empire on the foundation of integrity.",
+    author: "Satya Nadella",
+  },
+  {
+    quote: "Your voice echoes through eternity eternally.",
+    author: "Anton Chekhov",
+  },
+  {
+    quote: "The magic of life is found in small moments.",
+    author: "Warren Buffett",
+  },
+  {
+    quote: "The key to happiness is gratitude always.",
+    author: "Oscar Wilde",
+  },
+  {
+    quote: "The secret to happiness is accepting yourself and loving others.",
+    author: "Jane Austen",
+  },
+  {
+    quote: "Success comes to those who never stop learning.",
+    author: "Confucius",
+  },
+  {
+    quote:
+      "Success comes to those who persist through difficulties with determination.",
+    author: "Priya Malhotra",
+  },
+  {
+    quote: "The path to greatness is paved with actions.",
+    author: "Wayne Dyer",
+  },
+  {
+    quote: "The greatest victory is achieved through consistency.",
+    author: "Hans Mueller",
+  },
+  {
+    quote: "The secret to greatness is consistency in all things.",
+    author: "Swami Vivekananda",
+  },
+  {
+    quote: "Life's deepest joy comes from loving and being loved.",
+    author: "Dr. B.R. Ambedkar",
+  },
+  {
+    quote: "Success is sweeter when achieved with integrity.",
+    author: "Rajesh Sharma",
+  },
+  {
+    quote: "The universe celebrates those who act with authenticity.",
+    author: "Aristotle",
+  },
+  {
+    quote: "The greatest wisdom comes from experience.",
+    author: "Stephen Hawking",
+  },
+  {
+    quote: "Nothing in life is as important as character.",
+    author: "Stephen Hawking",
+  },
+  {
+    quote: "Your choices define who you become today.",
+    author: "Diego Rivera",
+  },
+  {
+    quote: "The greatest gift you can give is presence.",
+    author: "Pablo Picasso",
+  },
+  {
+    quote: "What separates the great from the ordinary is pure persistence.",
+    author: "Confucius",
+  },
+  {
+    quote: "The world needs your unique gifts.",
+    author: "Matsuo Basho",
+  },
+  {
+    quote: "The greatest love is the love you give yourself.",
+    author: "Margaret Atwood",
+  },
+  {
+    quote: "Life is a gift, so treasure every moment.",
+    author: "J.K. Rowling",
+  },
+  {
+    quote: "In chaos, finding your purpose becomes your greatest superpower.",
+    author: "Anton Chekhov",
+  },
+  {
+    quote: "Excellence is not a destination, it is a journey.",
+    author: "Rajesh Sharma",
+  },
+  {
+    quote: "Your impact grows as you build trust through integrity.",
+    author: "Zig Ziglar",
+  },
+  {
+    quote: "The world needs people who dare to dream and act.",
+    author: "Victor Hugo",
+  },
+  {
+    quote:
+      "The greatest gift is to embrace your fears and grow stronger daily.",
+    author: "Swami Vivekananda",
+  },
+  {
+    quote: "Success is built one small victory at a time.",
+    author: "Charles Dickens",
+  },
+  {
+    quote:
+      "Every moment teaches you something valuable if you listen carefully.",
+    author: "Warren Buffett",
+  },
+  {
+    quote: "Life teaches that serving others brings the deepest fulfillment.",
+    author: "William Shakespeare",
+  },
+  {
+    quote: "Time rewards those who work hard and stay focused on goals.",
+    author: "Beethoven",
+  },
+  {
+    quote: "The answer to success is hidden in daily effort.",
+    author: "Confucius",
+  },
+  {
+    quote:
+      "The path to greatness requires courage, faith, and unwavering commitment.",
+    author: "George Orwell",
+  },
+  {
+    quote: "The future belongs to those who believe in themselves.",
+    author: "Tony Robbins",
+  },
+  {
+    quote: "Never underestimate your power to inspire others.",
+    author: "Jane Austen",
+  },
+  {
+    quote: "Your voice matters more than you know.",
+    author: "Cristiano Ronaldo",
+  },
+  {
+    quote: "Your potential is boundless if you believe.",
+    author: "Satya Nadella",
+  },
+  {
+    quote: "Success comes from passion and belief.",
+    author: "Anton Chekhov",
+  },
+  {
+    quote: "Your impact on others ripples through eternity.",
+    author: "Cristiano Ronaldo",
+  },
+  {
+    quote: "Life is about creating memories with loved ones.",
+    author: "J.K. Rowling",
+  },
+  {
+    quote: "Success follows those who align actions with values.",
+    author: "Jules Verne",
+  },
+  {
+    quote: "Every moment is an opportunity to grow.",
+    author: "Steve Jobs",
+  },
+  {
+    quote:
+      "Life is about believing in yourself and taking the first step forward.",
+    author: "Wayne Dyer",
+  },
+  {
+    quote: "Your potential is unlimited if you develop it.",
+    author: "Zig Ziglar",
+  },
+  {
+    quote: "True power comes from knowing when to speak and listen.",
+    author: "Bach",
+  },
+  {
+    quote: "Every hero started by making one courageous decision.",
+    author: "J.K. Rowling",
+  },
+  {
+    quote: "Life rewards those who work with purpose.",
+    author: "Matsuo Basho",
+  },
+  {
+    quote: "Your potential grows with every new challenge.",
+    author: "Rajesh Sharma",
+  },
+  {
+    quote: "Your greatest victory comes from conquering your doubts.",
+    author: "Vikram Desai",
+  },
+  {
+    quote: "The greatest achievement is becoming who you wanted.",
+    author: "Oprah Winfrey",
+  },
+  {
+    quote: "Your destiny is shaped by the choices you make every day.",
+    author: "Immanuel Kant",
+  },
+  {
+    quote: "The magic of living is in the journey itself.",
+    author: "Jack Ma",
+  },
+  {
+    quote: "Believe in yourself more than you believe doubts.",
+    author: "Deepak Chopra",
+  },
+  {
+    quote: "Your strength comes from facing challenges bravely.",
+    author: "Oprah Winfrey",
+  },
+  {
+    quote: "The strongest path forward is the one you choose.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote: "The world is waiting for you to shine.",
+    author: "Leonardo da Vinci",
+  },
+  {
+    quote: "Every great person mastered their craft through dedication.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote: "Excellence comes from mastering the craft with passion daily.",
+    author: "Zig Ziglar",
+  },
+  {
+    quote: "Change the world by living with intention and truth.",
+    author: "Albert Einstein",
+  },
+  {
+    quote: "Your potential awakens when you take action.",
+    author: "Vincent van Gogh",
+  },
+  {
+    quote: "Life teaches that love is the ultimate purpose.",
+    author: "Pablo Picasso",
+  },
+  {
+    quote: "Success is the result of discipline and effort.",
+    author: "J.K. Rowling",
+  },
+  {
+    quote: "Success whispers to those who listen with open hearts.",
+    author: "Vincent van Gogh",
+  },
+  {
+    quote: "Great things happen when you combine passion with work.",
+    author: "Oprah Winfrey",
+  },
+  {
+    quote: "Believe in the impossible and it becomes possible.",
+    author: "Socrates",
+  },
+  {
+    quote: "The strongest force is human determination.",
+    author: "Nelson Mandela",
+  },
+  {
+    quote: "Your voice carries more power than you imagine.",
+    author: "Jean-Paul Sartre",
+  },
+  {
+    quote: "The greatest victory is overcoming your fears.",
+    author: "Frida Kahlo",
+  },
+  {
+    quote: "Progress requires stepping outside your comfort zone.",
+    author: "Elena Rodriguez",
+  },
+  {
+    quote: "Your authenticity is your greatest strength.",
+    author: "C.S. Lewis",
+  },
+  {
+    quote: "Your dreams deserve your time and attention.",
+    author: "William Shakespeare",
+  },
+  {
+    quote: "Life is a journey of becoming, not being.",
+    author: "Vikram Desai",
+  },
+  {
+    quote: "The strongest people are those who rise again after falling.",
+    author: "Bob Proctor",
+  },
+  {
+    quote: "The key to happiness is learning to be present always.",
+    author: "Oscar Wilde",
+  },
+  {
+    quote: "Nothing is impossible if you believe in your potential.",
+    author: "Epictetus",
+  },
+  {
+    quote: "Believe in your potential and watch miracles happen.",
+    author: "Immanuel Kant",
+  },
+  {
+    quote: "Excellence emerges from passion and dedication.",
+    author: "Gustave Flaubert",
+  },
+  {
+    quote: "Transformation occurs when you commit to personal growth.",
+    author: "Mark Twain",
+  },
+  {
+    quote: "Your impact matters more than you imagine.",
+    author: "Jean-Paul Sartre",
+  },
+  {
+    quote: "The breakthrough comes when you refuse to give up.",
+    author: "Charles Dickens",
+  },
+  {
+    quote: "Success is a mindset that you choose daily.",
+    author: "Jean-Paul Sartre",
+  },
+  {
+    quote: "Your courage inspires others to be brave.",
+    author: "Diego Rivera",
+  },
+  {
+    quote: "The key to success is doing what you love.",
+    author: "Albert Camus",
+  },
+  {
+    quote: "The secret of life is persistent effort.",
+    author: "Lao Tzu",
+  },
+  {
+    quote: "Life is better when you help others.",
+    author: "Roald Dahl",
+  },
+  {
+    quote: "Excellence requires showing up every day with purpose.",
+    author: "Maya Angelou",
+  },
+  {
+    quote: "Life rewards those who face challenges head on.",
+    author: "Lao Tzu",
+  },
+  {
+    quote: "Your dreams are valid and worth fighting for.",
+    author: "Roald Dahl",
+  },
+  {
+    quote: "Your legacy is built on the values you uphold faithfully.",
+    author: "Robert Frost",
+  },
+  {
+    quote: "Your legacy will be shaped by your choices.",
+    author: "Mozart",
+  },
+  {
+    quote: "Be the person others turn to for inspiration.",
+    author: "Dr. B.R. Ambedkar",
+  },
+  {
+    quote: "Life is precious, so live it with intention.",
+    author: "Socrates",
+  },
+  {
+    quote: "Your dreams become reality through persistent action.",
+    author: "Anna Schmidt",
+  },
+  {
+    quote: "Each day offers a new opportunity to become your best self.",
+    author: "Michael Jordan",
+  },
+  {
+    quote: "The strongest people choose kindness always.",
+    author: "Jean-Pierre Dubois",
+  },
+  {
+    quote: "Nothing limits you except the fears you refuse to face.",
+    author: "Tony Robbins",
+  },
+  {
+    quote: "Build your empire on the foundation of integrity.",
+    author: "Pablo Picasso",
+  },
+  {
+    quote: "Your voice echoes through eternity eternally.",
+    author: "Tony Robbins",
+  },
+  {
+    quote: "The magic of life is found in small moments.",
+    author: "Nelson Mandela",
+  },
+  {
+    quote: "The key to happiness is gratitude always.",
+    author: "Tanaka Hiroshi",
+  },
+  {
+    quote: "The secret to happiness is accepting yourself and loving others.",
+    author: "Immanuel Kant",
+  },
+  {
+    quote: "Success comes to those who never stop learning.",
+    author: "Maya Angelou",
+  },
+  {
+    quote:
+      "Success comes to those who persist through difficulties with determination.",
+    author: "Martin Luther King Jr.",
+  },
+  {
+    quote: "The path to greatness is paved with actions.",
+    author: "Charles Dickens",
+  },
+  {
+    quote: "The greatest victory is achieved through consistency.",
+    author: "Jean-Paul Sartre",
+  },
+  {
+    quote: "The secret to greatness is consistency in all things.",
+    author: "Gustave Flaubert",
+  },
+  {
+    quote: "Life's deepest joy comes from loving and being loved.",
+    author: "Yamamoto Sakura",
+  },
+  {
+    quote: "Success is sweeter when achieved with integrity.",
+    author: "Albert Camus",
+  },
+  {
+    quote: "The universe celebrates those who act with authenticity.",
+    author: "Roald Dahl",
+  },
+  {
+    quote: "The greatest wisdom comes from experience.",
+    author: "Immanuel Kant",
+  },
+  {
+    quote: "Nothing in life is as important as character.",
+    author: "Beethoven",
+  },
+  {
+    quote: "Your choices define who you become today.",
+    author: "Nikola Tesla",
+  },
+  {
+    quote: "The greatest gift you can give is presence.",
+    author: "C.S. Lewis",
+  },
+  {
+    quote: "What separates the great from the ordinary is pure persistence.",
+    author: "Immanuel Kant",
+  },
+  {
+    quote: "The world needs your unique gifts.",
+    author: "Plato",
+  },
+  {
+    quote: "The greatest love is the love you give yourself.",
+    author: "Muhammad Ali",
+  },
+  {
+    quote: "Life is a gift, so treasure every moment.",
+    author: "Arthur Conan Doyle",
+  },
+  {
+    quote: "In chaos, finding your purpose becomes your greatest superpower.",
+    author: "Gustave Flaubert",
+  },
+  {
+    quote: "Excellence is not a destination, it is a journey.",
+    author: "Nelson Mandela",
+  },
+  {
+    quote: "Your impact grows as you build trust through integrity.",
+    author: "Rajesh Sharma",
+  },
+  {
+    quote: "The world needs people who dare to dream and act.",
+    author: "Jane Austen",
+  },
+  {
+    quote:
+      "The greatest gift is to embrace your fears and grow stronger daily.",
+    author: "Cristiano Ronaldo",
+  },
+  {
+    quote: "Success is built one small victory at a time.",
+    author: "Aristotle",
+  },
+  {
+    quote:
+      "Every moment teaches you something valuable if you listen carefully.",
+    author: "Diego Rivera",
+  },
+  {
+    quote: "Life teaches that serving others brings the deepest fulfillment.",
+    author: "Victor Hugo",
+  },
+  {
+    quote: "Time rewards those who work hard and stay focused on goals.",
+    author: "Hans Mueller",
+  },
+  {
+    quote: "The answer to success is hidden in daily effort.",
+    author: "Swami Vivekananda",
+  },
+  {
+    quote:
+      "The path to greatness requires courage, faith, and unwavering commitment.",
+    author: "Tony Robbins",
+  },
+  {
+    quote: "The future belongs to those who believe in themselves.",
+    author: "Plato",
+  },
+  {
+    quote: "Never underestimate your power to inspire others.",
+    author: "Margaret Atwood",
+  },
+  {
+    quote: "Your voice matters more than you know.",
+    author: "Beethoven",
+  },
+  {
+    quote: "Your potential is boundless if you believe.",
+    author: "Leo Tolstoy",
+  },
+  {
+    quote: "Success comes from passion and belief.",
+    author: "Arun Krishnan",
+  },
+  {
+    quote: "Your impact on others ripples through eternity.",
+    author: "Socrates",
+  },
+  {
+    quote: "Life is about creating memories with loved ones.",
+    author: "Diego Rivera",
+  },
+  {
+    quote: "Success follows those who align actions with values.",
+    author: "Roger Federer",
+  },
+  {
+    quote: "Every moment is an opportunity to grow.",
+    author: "Jane Austen",
+  },
+  {
+    quote:
+      "Life is about believing in yourself and taking the first step forward.",
+    author: "Immanuel Kant",
+  },
+  {
+    quote: "Your potential is unlimited if you develop it.",
+    author: "Confucius",
+  },
+  {
+    quote: "True power comes from knowing when to speak and listen.",
+    author: "Marie Curie",
+  },
+  {
+    quote: "Every hero started by making one courageous decision.",
+    author: "Arun Krishnan",
+  },
+  {
+    quote: "Life rewards those who work with purpose.",
+    author: "Michelangelo",
+  },
+  {
+    quote: "Your potential grows with every new challenge.",
+    author: "Leo Tolstoy",
+  },
+  {
+    quote: "Your greatest victory comes from conquering your doubts.",
+    author: "Marcus Aurelius",
+  },
+  {
+    quote: "The greatest achievement is becoming who you wanted.",
+    author: "Priya Malhotra",
+  },
+  {
+    quote: "Your destiny is shaped by the choices you make every day.",
+    author: "Plato",
+  },
+  {
+    quote: "The magic of living is in the journey itself.",
+    author: "Aristotle",
+  },
+  {
+    quote: "Believe in yourself more than you believe doubts.",
+    author: "Immanuel Kant",
+  },
+  {
+    quote: "Your strength comes from facing challenges bravely.",
+    author: "Albert Camus",
+  },
+  {
+    quote: "The strongest path forward is the one you choose.",
+    author: "Musashi Miyamoto",
+  },
+  {
+    quote: "The world is waiting for you to shine.",
+    author: "Jean-Paul Sartre",
+  },
+  {
+    quote: "Every great person mastered their craft through dedication.",
+    author: "Martin Luther King Jr.",
+  },
+  {
+    quote: "Excellence comes from mastering the craft with passion daily.",
+    author: "Diego Rivera",
+  },
+  {
+    quote: "Change the world by living with intention and truth.",
+    author: "Bach",
+  },
+  {
+    quote: "Your potential awakens when you take action.",
+    author: "Swami Vivekananda",
+  },
+  {
+    quote: "Life teaches that love is the ultimate purpose.",
+    author: "Mark Twain",
+  },
+  {
+    quote: "Success is the result of discipline and effort.",
+    author: "Zig Ziglar",
+  },
+  {
+    quote: "Success whispers to those who listen with open hearts.",
+    author: "Priya Malhotra",
+  },
+  {
+    quote: "Great things happen when you combine passion with work.",
+    author: "Frederic Chopin",
+  },
+  {
+    quote: "Believe in the impossible and it becomes possible.",
+    author: "Marie Curie",
+  },
+  {
+    quote: "The strongest force is human determination.",
+    author: "Vincent van Gogh",
+  },
+  {
+    quote: "Your voice carries more power than you imagine.",
+    author: "Walt Whitman",
+  },
+  {
+    quote: "The greatest victory is overcoming your fears.",
+    author: "Frederic Chopin",
+  },
+  {
+    quote: "Progress requires stepping outside your comfort zone.",
+    author: "Immanuel Kant",
+  },
+  {
+    quote: "Your authenticity is your greatest strength.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote: "Your dreams deserve your time and attention.",
+    author: "Bob Proctor",
+  },
+  {
+    quote: "Life is a journey of becoming, not being.",
+    author: "Frederic Chopin",
+  },
+  {
+    quote: "The strongest people are those who rise again after falling.",
+    author: "Beethoven",
+  },
+  {
+    quote: "The key to happiness is learning to be present always.",
+    author: "Mozart",
+  },
+  {
+    quote: "Nothing is impossible if you believe in your potential.",
+    author: "Albert Einstein",
+  },
+  {
+    quote: "Believe in your potential and watch miracles happen.",
+    author: "Epictetus",
+  },
+  {
+    quote: "Excellence emerges from passion and dedication.",
+    author: "Cristiano Ronaldo",
+  },
+  {
+    quote: "Transformation occurs when you commit to personal growth.",
+    author: "Frederic Chopin",
+  },
+  {
+    quote: "Your impact matters more than you imagine.",
+    author: "Paulo Coelho",
+  },
+  {
+    quote: "The breakthrough comes when you refuse to give up.",
+    author: "Margaret Atwood",
+  },
+  {
+    quote: "Success is a mindset that you choose daily.",
+    author: "Zig Ziglar",
+  },
+  {
+    quote: "Your courage inspires others to be brave.",
+    author: "Charles Dickens",
+  },
+  {
+    quote: "The key to success is doing what you love.",
+    author: "Aristotle",
+  },
+  {
+    quote: "The secret of life is persistent effort.",
+    author: "Rabindranath Tagore",
+  },
+  {
+    quote: "Life is better when you help others.",
+    author: "Socrates",
+  },
+  {
+    quote: "Excellence requires showing up every day with purpose.",
+    author: "Swami Vivekananda",
+  },
+  {
+    quote: "Life rewards those who face challenges head on.",
+    author: "Mark Twain",
+  },
+  {
+    quote: "Your dreams are valid and worth fighting for.",
+    author: "Pierre Blanc",
+  },
+  {
+    quote: "Your legacy is built on the values you uphold faithfully.",
+    author: "Jean-Paul Sartre",
+  },
+  {
+    quote: "Your legacy will be shaped by your choices.",
+    author: "Haruki Murakami",
+  },
+  {
+    quote: "Be the person others turn to for inspiration.",
+    author: "Vincent van Gogh",
+  },
+  {
+    quote: "Life is precious, so live it with intention.",
+    author: "Vikram Desai",
+  },
+  {
+    quote: "Your dreams become reality through persistent action.",
+    author: "Robert Frost",
+  },
+  {
+    quote: "Each day offers a new opportunity to become your best self.",
+    author: "Socrates",
+  },
+  {
+    quote: "The strongest people choose kindness always.",
+    author: "Plato",
+  },
+  {
+    quote: "Nothing limits you except the fears you refuse to face.",
+    author: "Confucius",
+  },
+  {
+    quote: "Build your empire on the foundation of integrity.",
+    author: "Leo Tolstoy",
+  },
+  {
+    quote: "Your voice echoes through eternity eternally.",
+    author: "C.S. Lewis",
+  },
+  {
+    quote: "The magic of life is found in small moments.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote: "The key to happiness is gratitude always.",
+    author: "Aristotle",
+  },
+  {
+    quote: "The secret to happiness is accepting yourself and loving others.",
+    author: "Buddha",
+  },
+  {
+    quote: "Success comes to those who never stop learning.",
+    author: "Stephen Hawking",
+  },
+  {
+    quote:
+      "Success comes to those who persist through difficulties with determination.",
+    author: "Plato",
+  },
+  {
+    quote: "The path to greatness is paved with actions.",
+    author: "Roald Dahl",
+  },
+  {
+    quote: "The greatest victory is achieved through consistency.",
+    author: "Roger Federer",
+  },
+  {
+    quote: "The secret to greatness is consistency in all things.",
+    author: "Vikram Desai",
+  },
+  {
+    quote: "Life's deepest joy comes from loving and being loved.",
+    author: "Frida Kahlo",
+  },
+  {
+    quote: "Success is sweeter when achieved with integrity.",
+    author: "Mozart",
+  },
+  {
+    quote: "The universe celebrates those who act with authenticity.",
+    author: "Hans Mueller",
+  },
+  {
+    quote: "The greatest wisdom comes from experience.",
+    author: "Marcus Aurelius",
+  },
+  {
+    quote: "Nothing in life is as important as character.",
+    author: "Tanaka Hiroshi",
+  },
+  {
+    quote: "Your choices define who you become today.",
+    author: "Jean-Pierre Dubois",
+  },
+  {
+    quote: "The greatest gift you can give is presence.",
+    author: "Leo Tolstoy",
+  },
+  {
+    quote: "What separates the great from the ordinary is pure persistence.",
+    author: "Immanuel Kant",
+  },
+  {
+    quote: "The world needs your unique gifts.",
+    author: "Pablo Picasso",
+  },
+  {
+    quote: "The greatest love is the love you give yourself.",
+    author: "Vikram Desai",
+  },
+  {
+    quote: "Life is a gift, so treasure every moment.",
+    author: "Muhammad Ali",
+  },
+  {
+    quote: "In chaos, finding your purpose becomes your greatest superpower.",
+    author: "Marcus Aurelius",
+  },
+  {
+    quote: "Excellence is not a destination, it is a journey.",
+    author: "Albert Einstein",
+  },
+  {
+    quote: "Your impact grows as you build trust through integrity.",
+    author: "Cristiano Ronaldo",
+  },
+  {
+    quote: "The world needs people who dare to dream and act.",
+    author: "Wayne Dyer",
+  },
+  {
+    quote:
+      "The greatest gift is to embrace your fears and grow stronger daily.",
+    author: "Buddha",
+  },
+  {
+    quote: "Success is built one small victory at a time.",
+    author: "Hans Mueller",
+  },
+  {
+    quote:
+      "Every moment teaches you something valuable if you listen carefully.",
+    author: "Haruki Murakami",
+  },
+  {
+    quote: "Life teaches that serving others brings the deepest fulfillment.",
+    author: "Priya Malhotra",
+  },
+  {
+    quote: "Time rewards those who work hard and stay focused on goals.",
+    author: "Vikram Desai",
+  },
+  {
+    quote: "The answer to success is hidden in daily effort.",
+    author: "Munshi Premchand",
+  },
+  {
+    quote:
+      "The path to greatness requires courage, faith, and unwavering commitment.",
+    author: "Rajesh Sharma",
+  },
+  {
+    quote: "The future belongs to those who believe in themselves.",
+    author: "Anna Schmidt",
+  },
+  {
+    quote: "Never underestimate your power to inspire others.",
+    author: "Vincent van Gogh",
+  },
+  {
+    quote: "Your voice matters more than you know.",
+    author: "Munshi Premchand",
+  },
+  {
+    quote: "Your potential is boundless if you believe.",
+    author: "Aristotle",
+  },
+  {
+    quote: "Success comes from passion and belief.",
+    author: "Martin Luther King Jr.",
+  },
+  {
+    quote: "Your impact on others ripples through eternity.",
+    author: "Hans Mueller",
+  },
+  {
+    quote: "Life is about creating memories with loved ones.",
+    author: "Zig Ziglar",
+  },
+  {
+    quote: "Success follows those who align actions with values.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote: "Every moment is an opportunity to grow.",
+    author: "Arun Krishnan",
+  },
+  {
+    quote:
+      "Life is about believing in yourself and taking the first step forward.",
+    author: "Yamamoto Sakura",
+  },
+  {
+    quote: "Your potential is unlimited if you develop it.",
+    author: "Dr. B.R. Ambedkar",
+  },
+  {
+    quote: "True power comes from knowing when to speak and listen.",
+    author: "Michelangelo",
+  },
+  {
+    quote: "Every hero started by making one courageous decision.",
+    author: "Roald Dahl",
+  },
+  {
+    quote: "Life rewards those who work with purpose.",
+    author: "Leo Tolstoy",
+  },
+  {
+    quote: "Your potential grows with every new challenge.",
+    author: "Leonardo da Vinci",
+  },
+  {
+    quote: "Your greatest victory comes from conquering your doubts.",
+    author: "Beethoven",
+  },
+  {
+    quote: "The greatest achievement is becoming who you wanted.",
+    author: "Paulo Coelho",
+  },
+  {
+    quote: "Your destiny is shaped by the choices you make every day.",
+    author: "Gustave Flaubert",
+  },
+  {
+    quote: "The magic of living is in the journey itself.",
+    author: "Confucius",
+  },
+  {
+    quote: "Believe in yourself more than you believe doubts.",
+    author: "Maya Angelou",
+  },
+  {
+    quote: "Your strength comes from facing challenges bravely.",
+    author: "Albert Einstein",
+  },
+  {
+    quote: "The strongest path forward is the one you choose.",
+    author: "Hans Mueller",
+  },
+  {
+    quote: "The world is waiting for you to shine.",
+    author: "Charles Dickens",
+  },
+  {
+    quote: "Every great person mastered their craft through dedication.",
+    author: "Paulo Coelho",
+  },
+  {
+    quote: "Excellence comes from mastering the craft with passion daily.",
+    author: "Warren Buffett",
+  },
+  {
+    quote: "Change the world by living with intention and truth.",
+    author: "Anton Chekhov",
+  },
+  {
+    quote: "Your potential awakens when you take action.",
+    author: "Gustave Flaubert",
+  },
+  {
+    quote: "Life teaches that love is the ultimate purpose.",
+    author: "Haruki Murakami",
+  },
+  {
+    quote: "Success is the result of discipline and effort.",
+    author: "William Shakespeare",
+  },
+  {
+    quote: "Success whispers to those who listen with open hearts.",
+    author: "Swami Vivekananda",
+  },
+  {
+    quote: "Great things happen when you combine passion with work.",
+    author: "Maya Angelou",
+  },
+  {
+    quote: "Believe in the impossible and it becomes possible.",
+    author: "Jean-Paul Sartre",
+  },
+  {
+    quote: "The strongest force is human determination.",
+    author: "Bob Proctor",
+  },
+  {
+    quote: "Your voice carries more power than you imagine.",
+    author: "Aristotle",
+  },
+  {
+    quote: "The greatest victory is overcoming your fears.",
+    author: "Pierre Blanc",
+  },
+  {
+    quote: "Progress requires stepping outside your comfort zone.",
+    author: "Nelson Mandela",
+  },
+  {
+    quote: "Your authenticity is your greatest strength.",
+    author: "Maya Angelou",
+  },
+  {
+    quote: "Your dreams deserve your time and attention.",
+    author: "Cristiano Ronaldo",
+  },
+  {
+    quote: "Life is a journey of becoming, not being.",
+    author: "J.K. Rowling",
+  },
+  {
+    quote: "The strongest people are those who rise again after falling.",
+    author: "Mark Twain",
+  },
+  {
+    quote: "The key to happiness is learning to be present always.",
+    author: "Leo Tolstoy",
+  },
+  {
+    quote: "Nothing is impossible if you believe in your potential.",
+    author: "Anton Chekhov",
+  },
+  {
+    quote: "Believe in your potential and watch miracles happen.",
+    author: "Anton Chekhov",
+  },
+  {
+    quote: "Excellence emerges from passion and dedication.",
+    author: "Plato",
+  },
+  {
+    quote: "Transformation occurs when you commit to personal growth.",
+    author: "Haruki Murakami",
+  },
+  {
+    quote: "Your impact matters more than you imagine.",
+    author: "Munshi Premchand",
+  },
+  {
+    quote: "The breakthrough comes when you refuse to give up.",
+    author: "Margaret Atwood",
+  },
+  {
+    quote: "Success is a mindset that you choose daily.",
+    author: "Emily Dickinson",
+  },
+  {
+    quote: "Your courage inspires others to be brave.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote: "The key to success is doing what you love.",
+    author: "Aristotle",
+  },
+  {
+    quote: "The secret of life is persistent effort.",
+    author: "Munshi Premchand",
+  },
+  {
+    quote: "Life is better when you help others.",
+    author: "Plato",
+  },
+  {
+    quote: "Excellence requires showing up every day with purpose.",
+    author: "Richard Branson",
+  },
+  {
+    quote: "Life rewards those who face challenges head on.",
+    author: "Pierre Blanc",
+  },
+  {
+    quote: "Your dreams are valid and worth fighting for.",
+    author: "Paulo Coelho",
+  },
+  {
+    quote: "Your legacy is built on the values you uphold faithfully.",
+    author: "Frederic Chopin",
+  },
+  {
+    quote: "Your legacy will be shaped by your choices.",
+    author: "Epictetus",
+  },
+  {
+    quote: "Be the person others turn to for inspiration.",
+    author: "Anton Chekhov",
+  },
+  {
+    quote: "Life is precious, so live it with intention.",
+    author: "George Orwell",
+  },
+  {
+    quote: "Your dreams become reality through persistent action.",
+    author: "Vincent van Gogh",
+  },
+  {
+    quote: "Each day offers a new opportunity to become your best self.",
+    author: "Frida Kahlo",
+  },
+  {
+    quote: "The strongest people choose kindness always.",
+    author: "Zig Ziglar",
+  },
+  {
+    quote: "Nothing limits you except the fears you refuse to face.",
+    author: "Musashi Miyamoto",
+  },
+  {
+    quote: "Build your empire on the foundation of integrity.",
+    author: "Richard Branson",
+  },
+  {
+    quote: "Your voice echoes through eternity eternally.",
+    author: "Zig Ziglar",
+  },
+  {
+    quote: "The magic of life is found in small moments.",
+    author: "Swami Vivekananda",
+  },
+  {
+    quote: "The key to happiness is gratitude always.",
+    author: "Munshi Premchand",
+  },
+  {
+    quote: "The secret to happiness is accepting yourself and loving others.",
+    author: "Muhammad Ali",
+  },
+  {
+    quote: "Success comes to those who never stop learning.",
+    author: "Jane Austen",
+  },
+  {
+    quote:
+      "Success comes to those who persist through difficulties with determination.",
+    author: "Vikram Desai",
+  },
+  {
+    quote: "The path to greatness is paved with actions.",
+    author: "Bach",
+  },
+  {
+    quote: "The greatest victory is achieved through consistency.",
+    author: "Nelson Mandela",
+  },
+  {
+    quote: "The secret to greatness is consistency in all things.",
+    author: "Arthur Conan Doyle",
+  },
+  {
+    quote: "Life's deepest joy comes from loving and being loved.",
+    author: "Vincent van Gogh",
+  },
+  {
+    quote: "Success is sweeter when achieved with integrity.",
+    author: "Mahatma Gandhi",
+  },
+  {
+    quote: "The universe celebrates those who act with authenticity.",
+    author: "Deepak Chopra",
+  },
+  {
+    quote: "The greatest wisdom comes from experience.",
+    author: "Hans Mueller",
+  },
+  {
+    quote: "Nothing in life is as important as character.",
+    author: "Robert Frost",
+  },
+  {
+    quote: "Your choices define who you become today.",
+    author: "Tanaka Hiroshi",
+  },
+  {
+    quote: "The greatest gift you can give is presence.",
+    author: "Aristotle",
+  },
+  {
+    quote: "What separates the great from the ordinary is pure persistence.",
+    author: "Walt Whitman",
+  },
+  {
+    quote: "The world needs your unique gifts.",
+    author: "Rabindranath Tagore",
+  },
+  {
+    quote: "The greatest love is the love you give yourself.",
+    author: "Vikram Desai",
+  },
+  {
+    quote: "Life is a gift, so treasure every moment.",
+    author: "Albert Einstein",
+  },
+  {
+    quote: "In chaos, finding your purpose becomes your greatest superpower.",
+    author: "Muhammad Ali",
+  },
+  {
+    quote: "Excellence is not a destination, it is a journey.",
+    author: "Satya Nadella",
+  },
+  {
+    quote: "Your impact grows as you build trust through integrity.",
+    author: "Jules Verne",
+  },
+  {
+    quote: "The world needs people who dare to dream and act.",
+    author: "Yamamoto Sakura",
+  },
+  {
+    quote:
+      "The greatest gift is to embrace your fears and grow stronger daily.",
+    author: "Friedrich Nietzsche",
+  },
+  {
+    quote: "Success is built one small victory at a time.",
+    author: "Steve Jobs",
+  },
+  {
+    quote:
+      "Every moment teaches you something valuable if you listen carefully.",
+    author: "Michelangelo",
+  },
+  {
+    quote: "Life teaches that serving others brings the deepest fulfillment.",
+    author: "William Shakespeare",
+  },
+  {
+    quote: "Time rewards those who work hard and stay focused on goals.",
+    author: "Jack Ma",
+  },
+  {
+    quote: "The answer to success is hidden in daily effort.",
+    author: "Leonardo da Vinci",
+  },
+  {
+    quote:
+      "The path to greatness requires courage, faith, and unwavering commitment.",
+    author: "Oscar Wilde",
+  },
+  {
+    quote: "The future belongs to those who believe in themselves.",
+    author: "Diego Rivera",
+  },
+  {
+    quote: "Never underestimate your power to inspire others.",
+    author: "Plato",
+  },
+  {
+    quote: "Your voice matters more than you know.",
+    author: "Jean-Pierre Dubois",
+  },
+  {
+    quote: "Your potential is boundless if you believe.",
+    author: "Nelson Mandela",
+  },
+  {
+    quote: "Success comes from passion and belief.",
+    author: "Tony Robbins",
+  },
+  {
+    quote: "Your impact on others ripples through eternity.",
+    author: "Mozart",
+  },
+  {
+    quote: "Life is about creating memories with loved ones.",
+    author: "Confucius",
+  },
+  {
+    quote: "Success follows those who align actions with values.",
+    author: "Stephen Hawking",
+  },
+  {
+    quote: "Every moment is an opportunity to grow.",
+    author: "Jean-Pierre Dubois",
+  },
+  {
+    quote:
+      "Life is about believing in yourself and taking the first step forward.",
+    author: "C.S. Lewis",
+  },
+  {
+    quote: "Your potential is unlimited if you develop it.",
+    author: "Satya Nadella",
+  },
+  {
+    quote: "True power comes from knowing when to speak and listen.",
+    author: "Mahatma Gandhi",
+  },
+  {
+    quote: "Every hero started by making one courageous decision.",
+    author: "Zig Ziglar",
+  },
+  {
+    quote: "Life rewards those who work with purpose.",
+    author: "Tanaka Hiroshi",
+  },
+  {
+    quote: "Your potential grows with every new challenge.",
+    author: "Arun Krishnan",
+  },
+  {
+    quote: "Your greatest victory comes from conquering your doubts.",
+    author: "Vincent van Gogh",
+  },
+  {
+    quote: "The greatest achievement is becoming who you wanted.",
+    author: "Wayne Dyer",
+  },
+  {
+    quote: "Your destiny is shaped by the choices you make every day.",
+    author: "Rajesh Sharma",
+  },
+  {
+    quote: "The magic of living is in the journey itself.",
+    author: "George Orwell",
+  },
+  {
+    quote: "Believe in yourself more than you believe doubts.",
+    author: "Swami Vivekananda",
+  },
+  {
+    quote: "Your strength comes from facing challenges bravely.",
+    author: "Mark Twain",
+  },
+  {
+    quote: "The strongest path forward is the one you choose.",
+    author: "Rajesh Sharma",
+  },
+  {
+    quote: "The world is waiting for you to shine.",
+    author: "Plato",
+  },
+  {
+    quote: "Every great person mastered their craft through dedication.",
+    author: "Bach",
+  },
+  {
+    quote: "Excellence comes from mastering the craft with passion daily.",
+    author: "Leonardo da Vinci",
+  },
+  {
+    quote: "Change the world by living with intention and truth.",
+    author: "George Orwell",
+  },
+  {
+    quote: "Your potential awakens when you take action.",
+    author: "Paulo Coelho",
+  },
+  {
+    quote: "Life teaches that love is the ultimate purpose.",
+    author: "Marcus Aurelius",
+  },
+  {
+    quote: "Success is the result of discipline and effort.",
+    author: "Rajesh Sharma",
+  },
+  {
+    quote: "Success whispers to those who listen with open hearts.",
+    author: "Roger Federer",
+  },
+  {
+    quote: "Great things happen when you combine passion with work.",
+    author: "Victor Hugo",
+  },
+  {
+    quote: "Believe in the impossible and it becomes possible.",
+    author: "Vincent van Gogh",
+  },
+  {
+    quote: "The strongest force is human determination.",
+    author: "Socrates",
+  },
+  {
+    quote: "Your voice carries more power than you imagine.",
+    author: "Jane Austen",
+  },
+  {
+    quote: "The greatest victory is overcoming your fears.",
+    author: "Elena Rodriguez",
+  },
+  {
+    quote: "Progress requires stepping outside your comfort zone.",
+    author: "Leo Tolstoy",
+  },
+  {
+    quote: "Your authenticity is your greatest strength.",
+    author: "Mahatma Gandhi",
+  },
+  {
+    quote: "Your dreams deserve your time and attention.",
+    author: "Paulo Coelho",
+  },
+  {
+    quote: "Life is a journey of becoming, not being.",
+    author: "Haruki Murakami",
+  },
+  {
+    quote: "The strongest people are those who rise again after falling.",
+    author: "Aristotle",
+  },
+  {
+    quote: "The key to happiness is learning to be present always.",
+    author: "Richard Branson",
+  },
+  {
+    quote: "Nothing is impossible if you believe in your potential.",
+    author: "Richard Branson",
+  },
+  {
+    quote: "Believe in your potential and watch miracles happen.",
+    author: "Satya Nadella",
+  },
+  {
+    quote: "Excellence emerges from passion and dedication.",
+    author: "Epictetus",
+  },
+  {
+    quote: "Transformation occurs when you commit to personal growth.",
+    author: "Aristotle",
+  },
+  {
+    quote: "Your impact matters more than you imagine.",
+    author: "Walt Whitman",
+  },
+  {
+    quote: "The breakthrough comes when you refuse to give up.",
+    author: "Bach",
+  },
+  {
+    quote: "Success is a mindset that you choose daily.",
+    author: "Vikram Desai",
+  },
+  {
+    quote: "Your courage inspires others to be brave.",
+    author: "Jean-Paul Sartre",
+  },
+  {
+    quote: "The key to success is doing what you love.",
+    author: "Stephen Hawking",
+  },
+  {
+    quote: "The secret of life is persistent effort.",
+    author: "Socrates",
+  },
+  {
+    quote: "Life is better when you help others.",
+    author: "Paulo Coelho",
+  },
+  {
+    quote: "Excellence requires showing up every day with purpose.",
+    author: "Richard Branson",
+  },
+  {
+    quote: "Life rewards those who face challenges head on.",
+    author: "Muhammad Ali",
+  },
+  {
+    quote: "Your dreams are valid and worth fighting for.",
+    author: "Tony Robbins",
+  },
+  {
+    quote: "Your legacy is built on the values you uphold faithfully.",
+    author: "Zig Ziglar",
+  },
+  {
+    quote: "Your legacy will be shaped by your choices.",
+    author: "Michelangelo",
+  },
+  {
+    quote: "Be the person others turn to for inspiration.",
+    author: "Plato",
+  },
+  {
+    quote: "Life is precious, so live it with intention.",
+    author: "Warren Buffett",
+  },
+  {
+    quote: "Your dreams become reality through persistent action.",
+    author: "Marie Curie",
+  },
+  {
+    quote: "Each day offers a new opportunity to become your best self.",
+    author: "Warren Buffett",
+  },
+  {
+    quote: "The strongest people choose kindness always.",
+    author: "Epictetus",
+  },
+  {
+    quote: "Nothing limits you except the fears you refuse to face.",
+    author: "Frederic Chopin",
+  },
+  {
+    quote: "Build your empire on the foundation of integrity.",
+    author: "Stephen Hawking",
+  },
+  {
+    quote: "Your voice echoes through eternity eternally.",
+    author: "Bach",
+  },
+  {
+    quote: "The magic of life is found in small moments.",
+    author: "Musashi Miyamoto",
+  },
+  {
+    quote: "The key to happiness is gratitude always.",
+    author: "Roger Federer",
+  },
+  {
+    quote: "The secret to happiness is accepting yourself and loving others.",
+    author: "Albert Einstein",
+  },
+  {
+    quote: "Success comes to those who never stop learning.",
+    author: "Mozart",
+  },
+  {
+    quote:
+      "Success comes to those who persist through difficulties with determination.",
+    author: "Confucius",
+  },
+  {
+    quote: "The path to greatness is paved with actions.",
+    author: "Robert Frost",
+  },
+  {
+    quote: "The greatest victory is achieved through consistency.",
+    author: "Maya Angelou",
+  },
+  {
+    quote: "The secret to greatness is consistency in all things.",
+    author: "Walt Whitman",
+  },
+  {
+    quote: "Life's deepest joy comes from loving and being loved.",
+    author: "Socrates",
+  },
+  {
+    quote: "Success is sweeter when achieved with integrity.",
+    author: "Haruki Murakami",
+  },
+  {
+    quote: "The universe celebrates those who act with authenticity.",
+    author: "Satya Nadella",
+  },
+  {
+    quote: "The greatest wisdom comes from experience.",
+    author: "Maya Angelou",
+  },
+  {
+    quote: "Nothing in life is as important as character.",
+    author: "Muhammad Ali",
+  },
+  {
+    quote: "Your choices define who you become today.",
+    author: "Roald Dahl",
+  },
+  {
+    quote: "The greatest gift you can give is presence.",
+    author: "Rabindranath Tagore",
+  },
+  {
+    quote: "What separates the great from the ordinary is pure persistence.",
+    author: "Satya Nadella",
+  },
+  {
+    quote: "The world needs your unique gifts.",
+    author: "Frida Kahlo",
+  },
+  {
+    quote: "The greatest love is the love you give yourself.",
+    author: "Walt Whitman",
+  },
+  {
+    quote: "Life is a gift, so treasure every moment.",
+    author: "Richard Branson",
+  },
+  {
+    quote: "In chaos, finding your purpose becomes your greatest superpower.",
+    author: "Vincent van Gogh",
+  },
+  {
+    quote: "Excellence is not a destination, it is a journey.",
+    author: "Michael Jordan",
+  },
+  {
+    quote: "Your impact grows as you build trust through integrity.",
+    author: "Elena Rodriguez",
+  },
+  {
+    quote: "The world needs people who dare to dream and act.",
+    author: "Satya Nadella",
+  },
+  {
+    quote:
+      "The greatest gift is to embrace your fears and grow stronger daily.",
+    author: "Leo Tolstoy",
+  },
+  {
+    quote: "Success is built one small victory at a time.",
+    author: "Leo Tolstoy",
+  },
+  {
+    quote:
+      "Every moment teaches you something valuable if you listen carefully.",
+    author: "Arun Krishnan",
+  },
+  {
+    quote: "Life teaches that serving others brings the deepest fulfillment.",
+    author: "William Shakespeare",
+  },
+  {
+    quote: "Time rewards those who work hard and stay focused on goals.",
+    author: "Yamamoto Sakura",
+  },
+  {
+    quote: "The answer to success is hidden in daily effort.",
+    author: "Oprah Winfrey",
+  },
+  {
+    quote:
+      "The path to greatness requires courage, faith, and unwavering commitment.",
+    author: "Jack Ma",
+  },
+  {
+    quote: "The future belongs to those who believe in themselves.",
+    author: "Matsuo Basho",
+  },
+  {
+    quote: "Never underestimate your power to inspire others.",
+    author: "Priya Malhotra",
+  },
+  {
+    quote: "Your voice matters more than you know.",
+    author: "Priya Malhotra",
+  },
+  {
+    quote: "Your potential is boundless if you believe.",
+    author: "Dr. B.R. Ambedkar",
+  },
+  {
+    quote: "Success comes from passion and belief.",
+    author: "Marie Curie",
+  },
+  {
+    quote: "Your impact on others ripples through eternity.",
+    author: "Jules Verne",
+  },
+  {
+    quote: "Life is about creating memories with loved ones.",
+    author: "Michael Jordan",
+  },
+  {
+    quote: "Success follows those who align actions with values.",
+    author: "Jules Verne",
+  },
+  {
+    quote: "Every moment is an opportunity to grow.",
+    author: "Michael Jordan",
+  },
+  {
+    quote:
+      "Life is about believing in yourself and taking the first step forward.",
+    author: "Walt Whitman",
+  },
+  {
+    quote: "Your potential is unlimited if you develop it.",
+    author: "Pablo Picasso",
+  },
+  {
+    quote: "True power comes from knowing when to speak and listen.",
+    author: "Satya Nadella",
+  },
+  {
+    quote: "Every hero started by making one courageous decision.",
+    author: "Walt Whitman",
+  },
+  {
+    quote: "Life rewards those who work with purpose.",
+    author: "Marie Curie",
+  },
+  {
+    quote: "Your potential grows with every new challenge.",
+    author: "Charles Dickens",
+  },
+  {
+    quote: "Your greatest victory comes from conquering your doubts.",
+    author: "Anna Schmidt",
+  },
+  {
+    quote: "The greatest achievement is becoming who you wanted.",
+    author: "J.K. Rowling",
+  },
+  {
+    quote: "Your destiny is shaped by the choices you make every day.",
+    author: "Michelangelo",
+  },
+  {
+    quote: "The magic of living is in the journey itself.",
+    author: "Albert Camus",
+  },
+  {
+    quote: "Believe in yourself more than you believe doubts.",
+    author: "Warren Buffett",
+  },
+  {
+    quote: "Your strength comes from facing challenges bravely.",
+    author: "Steve Jobs",
+  },
+  {
+    quote: "The strongest path forward is the one you choose.",
+    author: "Bach",
+  },
+  {
+    quote: "The world is waiting for you to shine.",
+    author: "Pierre Blanc",
+  },
+  {
+    quote: "Every great person mastered their craft through dedication.",
+    author: "Tony Robbins",
+  },
+  {
+    quote: "Excellence comes from mastering the craft with passion daily.",
+    author: "C.S. Lewis",
+  },
+  {
+    quote: "Change the world by living with intention and truth.",
+    author: "Vincent van Gogh",
+  },
+  {
+    quote: "Your potential awakens when you take action.",
+    author: "Elena Rodriguez",
+  },
+  {
+    quote: "Life teaches that love is the ultimate purpose.",
+    author: "Tony Robbins",
+  },
+  {
+    quote: "Success is the result of discipline and effort.",
+    author: "Paulo Coelho",
+  },
+  {
+    quote: "Success whispers to those who listen with open hearts.",
+    author: "Confucius",
+  },
+  {
+    quote: "Great things happen when you combine passion with work.",
+    author: "Margaret Atwood",
+  },
+  {
+    quote: "Believe in the impossible and it becomes possible.",
+    author: "Frederic Chopin",
+  },
+  {
+    quote: "The strongest force is human determination.",
+    author: "Zig Ziglar",
+  },
+  {
+    quote: "Your voice carries more power than you imagine.",
+    author: "C.S. Lewis",
+  },
+  {
+    quote: "The greatest victory is overcoming your fears.",
+    author: "William Shakespeare",
+  },
+  {
+    quote: "Progress requires stepping outside your comfort zone.",
+    author: "Robert Frost",
+  },
+  {
+    quote: "Your authenticity is your greatest strength.",
+    author: "Robert Frost",
+  },
+  {
+    quote: "Your dreams deserve your time and attention.",
+    author: "Vikram Desai",
+  },
+  {
+    quote: "Life is a journey of becoming, not being.",
+    author: "Vincent van Gogh",
+  },
+  {
+    quote: "The strongest people are those who rise again after falling.",
+    author: "Paulo Coelho",
+  },
+  {
+    quote: "The key to happiness is learning to be present always.",
+    author: "Muhammad Ali",
+  },
+  {
+    quote: "Nothing is impossible if you believe in your potential.",
+    author: "Elon Musk",
+  },
+  {
+    quote: "Believe in your potential and watch miracles happen.",
+    author: "Bob Proctor",
+  },
+  {
+    quote: "Excellence emerges from passion and dedication.",
+    author: "Steve Jobs",
+  },
+  {
+    quote: "Transformation occurs when you commit to personal growth.",
+    author: "Mark Twain",
+  },
+  {
+    quote: "Your impact matters more than you imagine.",
+    author: "Arun Krishnan",
+  },
+  {
+    quote: "The breakthrough comes when you refuse to give up.",
+    author: "Leonardo da Vinci",
+  },
+  {
+    quote: "Success is a mindset that you choose daily.",
+    author: "Nikola Tesla",
+  },
+  {
+    quote: "Your courage inspires others to be brave.",
+    author: "Jean-Pierre Dubois",
+  },
+  {
+    quote: "The key to success is doing what you love.",
+    author: "Bob Proctor",
+  },
+  {
+    quote: "The secret of life is persistent effort.",
+    author: "Deepak Chopra",
+  },
+  {
+    quote: "Life is better when you help others.",
+    author: "Anton Chekhov",
+  },
+  {
+    quote: "Excellence requires showing up every day with purpose.",
+    author: "Tanaka Hiroshi",
+  },
+  {
+    quote: "Life rewards those who face challenges head on.",
+    author: "Jack Ma",
+  },
+  {
+    quote: "Your dreams are valid and worth fighting for.",
+    author: "Margaret Atwood",
+  },
+  {
+    quote: "Your legacy is built on the values you uphold faithfully.",
+    author: "J.K. Rowling",
+  },
+  {
+    quote: "Your legacy will be shaped by your choices.",
+    author: "Albert Camus",
+  },
+  {
+    quote: "Be the person others turn to for inspiration.",
+    author: "Aristotle",
+  },
+  {
+    quote: "Life is precious, so live it with intention.",
+    author: "Roald Dahl",
+  },
+  {
+    quote: "Your dreams become reality through persistent action.",
+    author: "Munshi Premchand",
+  },
+  {
+    quote: "Each day offers a new opportunity to become your best self.",
+    author: "Paulo Coelho",
+  },
+  {
+    quote: "The strongest people choose kindness always.",
+    author: "Deepak Chopra",
+  },
+  {
+    quote: "Nothing limits you except the fears you refuse to face.",
+    author: "Oscar Wilde",
+  },
+  {
+    quote: "Build your empire on the foundation of integrity.",
+    author: "Swami Vivekananda",
+  },
+  {
+    quote: "Your voice echoes through eternity eternally.",
+    author: "Walt Whitman",
+  },
+  {
+    quote: "The magic of life is found in small moments.",
+    author: "Elon Musk",
+  },
+  {
+    quote: "The key to happiness is gratitude always.",
+    author: "Deepak Chopra",
+  },
+  {
+    quote: "The secret to happiness is accepting yourself and loving others.",
+    author: "Haruki Murakami",
+  },
+];
