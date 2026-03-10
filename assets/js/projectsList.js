@@ -54,4 +54,15 @@ const projects = [
     folder: "005-modal-popup",
     status: "completed",
   },
+  {
+    number: "006",
+    name: "Accordion Menu",
+    emoji: "📋",
+    description:
+      "Expandable and collapsible content sections for organizing information in a compact format",
+    difficulty: "Beginner",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    folder: "006-accordion-menu",
+    status: "completed",
+  },
 ];

@@ -53,7 +53,8 @@ A collection of 100+ JavaScript projects built with Vanilla JavaScript, and late
 | 003 | **Tip Calculator**    | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/003-tip-calculator/) | [Code](./projects/003-tip-calculator) |
 | 004 | **Random Quote**      | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/004-random-quote/)   | [Code](./projects/004-random-quote)   |
 | 005 | **Modal Popup**       | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/005-modal-popup/)    | [Code](./projects/005-modal-popup)    |
-| 006 | **Next**              | ⏳           | -                                                                                       | -                                     |
+| 006 | **Accordian Menu**    | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/006-accordian-menu/) | [Code](./projects/006-accordian-menu) |
+| 007 | **Next**              | ⏳           | -                                                                                       | -                                     |
 
 ## 🚀 Getting Started
 
@@ -87,9 +88,9 @@ Projects are deployed on:
 
 ## 📈 Progress Tracker
 
-- **Completed**: 5/100
+- **Completed**: 6/100
 - **Remaining**: 96/100
-- **Progress**: 5%
+- **Progress**: 6%
 
 ## 👤 Author
 
