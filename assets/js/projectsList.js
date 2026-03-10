@@ -43,4 +43,15 @@ const projects = [
     folder: "004-random-quote",
     status: "completed",
   },
+  {
+    number: "005",
+    name: "Modal Popup",
+    emoji: "📦",
+    description:
+      "Create accessible modal dialogs that overlay content with smooth animations and close functionality",
+    difficulty: "Beginner",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    folder: "005-modal-popup",
+    status: "completed",
+  },
 ];
