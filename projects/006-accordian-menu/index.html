@@ -47,122 +47,117 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
         gap: 2px;
         box-shadow: 20px 25px 20px rgba(225, 0, 255, 0.25);
         padding: 1rem;
       }
       .accordian-item {
-        background-color: green;
+        /* background-color: green; */
         padding: 0.1rem;
         width: 100%;
       }
-      .heading {
-        background-color: rgb(255, 138, 138);
+      .accordian-header {
+        /* background-color: rgb(255, 138, 138); */
         padding: 0 0.5rem;
+        position: relative;
       }
-      .card {
-        background-color: rgb(181, 181, 181);
-        width: 100%;
-        padding: 1rem;
-        display: none;
+
+      .accordian-header:hover {
+        background-color: #f8f9fa;
+      }
+      .accordian-header.active {
+        background-color: #667eea;
+        color: white;
+        transition: all 0.8s ease;
+      }
+
+      .accordian-content {
+        background-color: #fafafa;
+        max-height: 0;
         overflow: hidden;
       }
-      .hidden {
-        display: none;
+
+      .accordian-content.active {
+        max-height: 500px;
+        padding: 20px 25px;
+        transition: all 0.8s ease;
       }
-      /* desingn of buttons */
-      .btn {
-        border: none;
-        cursor: pointer;
-        padding: 12px 24px;
-        border-radius: 10px;
-        background: rgb(255, 125, 125);
-        font-size: 15px;
-        color: white;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
-        transition: all 0.3s ease;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      .accordian-content p {
+        color: #555;
+        line-height: 1.8;
+        font-size: 0.95rem;
       }
-      .btn:hover {
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.65);
+      .accordian-header span {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 8px solid #667eea;
+        transition: all 0.8s ease;
+      }
+      .accordian-header.active span {
+        border-top: 8px solid white;
+        transform: rotate(180deg);
+        transition: all 0.8s ease;
+      }
+
+      .horizontal-line {
+        border: 1px solid rgb(12, 12, 12);
+        width: 100%;
+        margin: 0 auto;
+        opacity: 0.3;
       }
     </style>
   </head>
   <body>
     <main class="container">
       <div class="accordian">
-        <div class="accordian-item">
-          <h2 class="heading">Q1. What is your favorite animal?</h2>
-          <div class="card">
-            <p>
-              My favorite animal is the elephant. Elephants are intelligent,
-              social, and known for their strong memory. They live in groups and
-              care deeply for their families.
-            </p>
-          </div>
-        </div>
-
-        <div class="accordian-item">
-          <h2 class="heading">Q2. Why do people visit zoos?</h2>
-          <div class="card">
-            <p>
-              People visit zoos to see animals from different parts of the
-              world. Zoos also help in animal conservation and educate visitors
-              about wildlife and nature.
-            </p>
-          </div>
-        </div>
-
-        <div class="accordian-item">
-          <h2 class="heading">Q3. What do lions usually eat?</h2>
-          <div class="card">
-            <p>
-              Lions are carnivores, which means they eat meat. They usually hunt
-              animals like deer, zebras, and buffalo.
-            </p>
-          </div>
-        </div>
-
-        <div class="accordian-item">
-          <h2 class="heading">Q4. Why are forests important for animals?</h2>
-          <div class="card">
-            <p>
-              Forests provide animals with food, shelter, and a safe place to
-              live. Many species depend on forests for survival.
-            </p>
-          </div>
-        </div>
-
-        <div class="accordian-item">
-          <h2 class="heading">Q5. What makes pandas special?</h2>
-          <div class="card">
-            <p>
-              Pandas are special because of their unique black and white fur and
-              their diet of bamboo. They are also considered a symbol of
-              wildlife conservation.
-            </p>
-          </div>
-        </div>
+        <h1>Frequently asked Questions :</h1>
       </div>
       <!-- modal -->
     </main>
+    <script src="faqData.js"></script>
     <script>
-      const allHeading = document.querySelectorAll(".heading");
-      const allCard = document.querySelectorAll(".card");
-      allHeading.forEach(showMenu);
-      //   question.addEventListener("click", showMenu);
+      const accordian = document.querySelector(".accordian");
 
-      function showMenu(heading, index) {
-        console.log(allCard[index]);
+      //   create accordian when html page loads
+      function createAccordian() {
+        faqData.forEach((data) => {
+          const accordianItem = document.createElement("div");
+          accordianItem.className = "accordian-item";
 
-        console.log(index);
+          accordianItem.innerHTML = `<div class="accordian-header"><h3>${data.question}</h3> <span></span></div>
+           <div class="accordian-content"><p>${data.answer}</p>
+           </div>
+           <hr class="horizontal-line"/>
+           `;
 
-        // card.style.display = "flex";
+          accordian.appendChild(accordianItem);
+        });
       }
+      createAccordian();
+
+      const accordianHeaders = document.querySelectorAll(".accordian-header");
+
+      accordianHeaders.forEach((accordianHeader) => {
+        accordianHeader.addEventListener("click", () => {
+          const isActive = accordianHeader.classList.contains("active");
+          // remove all active class first
+          document.querySelectorAll(".accordian-header").forEach((header) => {
+            header.classList.remove("active");
+            header.nextElementSibling.classList.remove("active");
+          });
+
+          if (!isActive) {
+            accordianHeader.classList.add("active");
+            accordianHeader.nextElementSibling.classList.add("active");
+          }
+        });
+      });
     </script>
   </body>
 </html>
