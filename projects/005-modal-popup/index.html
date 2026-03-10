@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="100 Days JavaScript Commitment - A collection of 100 JavaScript projects"
+    />
+    <title>005 - Modal Popup</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="card">
+        <button class="btn btn-open">Open modal</button>
+      </div>
+      <!-- modal -->
+      <div class="modal-overlay">
+        <div class="modal-content">
+          <div class="first-row">
+            <span id="heading">Tiger Information</span>
+            <button class="cross">&times;</button>
+          </div>
+          <hr class="horizontal-line" />
+          <div class="content">
+            <p>
+              The tiger is the largest wild cat in the world. It is known for
+              its orange fur with black stripes and powerful body. Tigers are
+              carnivores and mainly hunt deer, wild boar, and other animals.
+            </p>
+
+            <p>
+              Tigers usually live in forests, grasslands, and mangrove swamps.
+              India has the largest population of wild tigers in the world. They
+              are important for maintaining the balance of the ecosystem.
+            </p>
+
+            <p>
+              Unfortunately, tigers are endangered due to habitat loss and
+              poaching. Wildlife conservation programs and national parks help
+              protect them.
+            </p>
+          </div>
+
+          <hr class="horizontal-line" />
+          <div class="btn-container">
+            <button class="btn btn-copy">
+              <i class="fa-solid fa-paste"></i>Copy
+            </button>
+            <button class="btn btn-share">
+              <i class="fa-brands fa-twitter"></i>Tweet
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="modal-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
