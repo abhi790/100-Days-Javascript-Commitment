@@ -65,4 +65,26 @@ const projects = [
     folder: "006-accordion-menu",
     status: "completed",
   },
+  {
+    number: "007",
+    name: "Todo List (Basic)",
+    emoji: "✅",
+    description:
+      "Add, mark complete, and delete tasks in a simple todo list interface",
+    difficulty: "Beginner",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    folder: "007-todo-basic",
+    status: "completed",
+  },
+  {
+    number: "008",
+    name: "Digital Clock",
+    emoji: "🕐",
+    description:
+      "Real-time digital clock displaying hours, minutes, and seconds with AM/PM format",
+    difficulty: "Beginner",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    folder: "008-digital-clock",
+    status: "inprogress",
+  },
 ];
