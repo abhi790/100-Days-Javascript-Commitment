@@ -3,6 +3,7 @@ const author = document.querySelector(".author");
 const btnNew = document.querySelector(".btn-new");
 const btnCopy = document.querySelector(".btn-copy");
 const btnShare = document.querySelector(".btn-share");
+const btnContainer = document.querySelector(".button-container");
 
 const randomQuote = generateRandomQuote();
 displayRandomQuote(randomQuote);
@@ -19,6 +20,25 @@ function generateRandomQuote() {
   return quote;
 }
 
+// detail implementation of copied text shown
+function showCopied() {
+  const feedback = document.createElement("span");
+  feedback.textContent = "✅ Copied";
+  feedback.classList.add("copy-feedback");
+  btnContainer.appendChild(feedback);
+
+  setTimeout(() => {
+    feedback.remove();
+  }, 1500);
+}
+
+// share to twitter
+function shareToTwitter() {
+  const tweet = `${quote.textContent} ${author.textContent}`;
+  const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweet)}`;
+  window.open(url, "_blank");
+}
+
 //random quote shown
 btnNew.addEventListener("click", () => {
   const randomQuote = generateRandomQuote();
@@ -30,4 +50,10 @@ btnCopy.addEventListener("click", () => {
   navigator.clipboard.writeText(
     `${quote.textContent} by ${author.textContent}`,
   );
+  showCopied();
+});
+
+// sharing functionality
+btnShare.addEventListener("click", () => {
+  shareToTwitter();
 });

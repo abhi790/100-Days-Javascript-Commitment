@@ -40,7 +40,11 @@ body {
 }
 
 .button-container {
+  background-color: rgb(240, 240, 240);
+  width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
   padding: 1rem;
 }
@@ -103,4 +107,16 @@ body {
 .small-quote {
   position: absolute;
   font-size: 10px;
+}
+
+.button-container {
+  position: relative;
+}
+
+.copy-feedback {
+  font-size: 26px;
+  position: absolute;
+  top: 25%;
+  right: 5px;
+  color: green;
 }
