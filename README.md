@@ -89,7 +89,7 @@ Projects are deployed on:
 ## 📈 Progress Tracker
 
 - **Completed**: 6/100
-- **Remaining**: 96/100
+- **Remaining**: 94/100
 - **Progress**: 6%
 
 ## 👤 Author
