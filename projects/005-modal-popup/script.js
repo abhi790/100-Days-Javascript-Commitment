@@ -11,16 +11,16 @@ modalOverlay.addEventListener("click", closeModal);
 modal.addEventListener("click", (e) => {
   e.stopPropagation();
 });
+let randomTweet = {};
 
 btnOpen.addEventListener("click", openModal);
 
 // Implement shared to twitter
 function shareToTwitter() {
-  const shareFeedback = document.createElement("span");
-  shareFeedback.innerHTML = `<i class="fa-brands fa-twitter"></i> Shared`;
-  shareFeedback.classList.add("share-feedback");
-  btnContainer.appendChild(shareFeedback);
-  setTimeout(() => shareFeedback.remove(), 1500);
+  const tweet = `${randomTweet.heading} \n\n ${randomTweet.description}`;
+  console.log(tweet);
+  const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweet)}`;
+  window.open(url, "_blank");
 }
 function renderData(randomData) {
   heading.textContent = randomData.heading;
@@ -28,6 +28,7 @@ function renderData(randomData) {
 }
 function getRandomData() {
   const randomIndex = Math.floor(Math.random() * data.length);
+  randomTweet = data[randomIndex];
   return data[randomIndex];
 }
 
