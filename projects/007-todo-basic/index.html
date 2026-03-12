@@ -15,11 +15,235 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        min-height: 100vh;
+        background: rgb(142, 219, 255);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        width: 1200px;
+        /* background-color: green; */
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .card {
+        position: relative;
+        background-color: #ffffff;
+        max-width: 700px;
+        min-height: 500px;
+        width: 100%;
+        border-radius: 15px;
+        padding: 1rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+      }
+      .heading {
+        font-size: 30px;
+        background-color: #f3f3f3;
+        width: 100%;
+        border-radius: 10px;
+        padding: 1rem 0;
+
+        color: #5e5e5e;
+      }
+      .input-container {
+        display: flex;
+        margin-top: 10px;
+        gap: 10px;
+      }
+      .input-container #input {
+        flex: 1;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        border: 1px solid grey;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      .todo-container {
+        flex: 1;
+        width: 100%;
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+        margin-top: 10px;
+      }
+      .todo-container .list-item {
+        background-color: rgb(228, 228, 228);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        padding: 0.5rem;
+      }
+      .list-item .item {
+        /* background-color: rgb(247, 247, 247); */
+        display: flex;
+        gap: 20px;
+        padding: 1rem;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .list-item span {
+        cursor: pointer;
+        padding: 1rem;
+        background-color: rgb(235, 235, 235);
+        border-radius: 5px;
+      }
+      .list-item span:hover {
+        background-color: rgb(216, 216, 216);
+      }
+
+      .input-container #add-btn {
+        background-color: #2f00ff;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        color: #ffffff;
+      }
+      .input-container #add-btn:hover {
+        background-color: #009499;
+        color: #ffffff;
+      }
+      .item i {
+        display: flex;
+        background-color: red;
+        padding: 1rem;
+      }
+      .summary {
+        display: flex;
+        background-color: rgb(240, 240, 240);
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        font-size: 20px;
+        margin-top: 20px;
+      }
+      .summary div {
+        display: flex;
+        gap: 20px;
+        padding: 0.4rem;
+        align-items: center;
+        background-color: rgb(221, 221, 221);
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .summary div:hover {
+        background-color: rgb(230, 230, 230);
+      }
+    </style>
     <style></style>
   </head>
   <body>
-    <main class="container"></main>
-    <script src="script.js"></script>
+    <div class="container">
+      <div class="card">
+        <h1 class="heading">Todos Basics</h1>
+        <div class="input-container">
+          <input id="input" type="" name="" value="" placeholder="Add a task" />
+          <button id="add-btn">Add task</button>
+        </div>
+        <div>
+          <ul class="todo-container"></ul>
+
+          <div class="summary">
+            <p><span class="count"></span> task left</p>
+            <div class="clear">
+              <p>clear all</p>
+              <span><i class="fa-solid fa-angle-right"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="script.js"></script> -->
+    <script>
+      const todoContainer = document.querySelector(".todo-container");
+      const btnAddTask = document.querySelector("#add-btn");
+      const input = document.querySelector("#input");
+      const count = document.querySelector(".count");
+      let todos = [];
+      count.textContent = 0;
+      //   update count
+      function updateCount() {
+        count.textContent = `${todos.length}`;
+      }
+      //   display todos and call updateCount
+      function displayTodos() {
+        todoContainer.innerHTML = "";
+        todos.forEach((todo) => {
+          const todoItem = ` <li class="list-item">
+              <div class="item">
+                <input type="checkbox" name="" value="" />
+                <p>${todo.task}</p>
+              </div>
+              <span class="delete-btn"><i class="fa-solid fa-trash"></i></span>
+            </li>`;
+
+          todoContainer.insertAdjacentHTML("beforeend", todoItem);
+        });
+        updateCount();
+      }
+
+      function createToDoObject(task) {
+        const id = todos.length > 0 ? todos[todos.length - 1].id + 1 : 1;
+        return { id, task, completed: false };
+      }
+
+      //   adding event liseners
+      const listItems = document.querySelectorAll(".list-item");
+      listItems.forEach((item, i) => {
+        item.addEventListener("click", () => console.log("clicked happened"));
+      });
+
+      //logic to add new todos to todoContainer and update todos array
+      function addToDos() {
+        const task = input.value.trim();
+        input.value = "";
+        if (!task) return;
+
+        const todoItem = ` <li class="list-item">
+              <div class="item">
+                <input type="checkbox" name="" value="" />
+                <p>${task}</p>
+              </div>
+              <span><i class="fa-solid fa-trash"></i></span>
+            </li>`;
+        todoContainer.insertAdjacentHTML("beforeend", todoItem);
+        // update the todos array
+        const todo = createToDoObject(task);
+        todos.push(todo);
+        displayTodos();
+      }
+
+      //   logic to implement clear all
+      function clearAllTodos() {
+        todos = [];
+        displayTodos();
+      }
+
+      //   add new task on button click
+      btnAddTask.addEventListener("click", addToDos);
+    </script>
   </body>
 </html>
