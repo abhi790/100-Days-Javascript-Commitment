@@ -55,7 +55,8 @@ A collection of 100+ JavaScript projects built with Vanilla JavaScript, and late
 | 005 | **Modal Popup**       | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/005-modal-popup/)    | [Code](./projects/005-modal-popup)    |
 | 006 | **Accordian Menu**    | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/006-accordion-menu/) | [Code](./projects/006-accordion-menu) |
 | 007 | **Todo List Basics**  | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/007-todo-basic/)     | [Code](./projects/007-todo-basic)     |
-| 008 | **Next**              | ⏳           | -                                                                                       | -                                     |
+| 008 | **Digital Clock**     | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/008-digital-clock/)  | [Code](./projects/008-digital-clock)  |
+| 009 | **Next**              | ⏳           | -                                                                                       | -                                     |
 
 ## 🚀 Getting Started
 
@@ -89,9 +90,9 @@ Projects are deployed on:
 
 ## 📈 Progress Tracker
 
-- **Completed**: 7/100
-- **Remaining**: 93/100
-- **Progress**: 7%
+- **Completed**: 8/100
+- **Remaining**: 92/100
+- **Progress**: 8%
 
 ## 👤 Author
 
