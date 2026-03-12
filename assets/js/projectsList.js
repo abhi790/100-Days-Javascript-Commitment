@@ -85,6 +85,6 @@ const projects = [
     difficulty: "Beginner",
     technologies: ["HTML", "CSS", "JavaScript"],
     folder: "008-digital-clock",
-    status: "inprogress",
+    status: "completed",
   },
 ];
