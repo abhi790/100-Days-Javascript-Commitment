@@ -237,7 +237,6 @@
           btn.addEventListener("click", () => {
             item.remove();
             const id = index + 1;
-
             deleteTodo(id);
           });
         });
@@ -254,16 +253,6 @@
         const task = input.value.trim();
         input.value = "";
         if (!task) return;
-
-        const todoItem = ` <li class="list-item">
-              <div class="item">
-                <input type="checkbox" name="" value="" />
-                <p>${task}</p>
-              </div>
-              <span class="delete-btn"><i class="fa-solid fa-trash"></i></span>
-            </li>`;
-        todoContainer.insertAdjacentHTML("beforeend", todoItem);
-
         // update the todos array
         const todo = createToDoObject(task);
         todos.push(todo);
