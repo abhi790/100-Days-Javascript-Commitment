@@ -208,39 +208,31 @@
       function renderTodos() {
         todoContainer.innerHTML = "";
         todos.forEach((todo) => {
-          const todoItem = ` <li class="list-item">
-              <div class="item">
+          const todoItem = document.createElement("li");
+          todoItem.className = "list-item";
+          todoItem.innerHTML = `<div class="item">
                 <input type="checkbox" name="" value="" />
                 <p>${todo.task}</p>
               </div>
-              <span class="delete-btn"><i class="fa-solid fa-trash"></i></span>
-            </li>`;
+              <span class="delete-btn"><i class="fa-solid fa-trash"></i></span>`;
 
-          todoContainer.insertAdjacentHTML("beforeend", todoItem);
+          todoContainer.insertAdjacentElement("beforeend", todoItem);
+
+          //   adding event listener on trash icon
+          const btn = todoItem.querySelector(".delete-btn");
+          btn.addEventListener("click", () => {
+            // console.log(btn);
+            todoItem.remove();
+            deleteTodo(todo.id);
+          });
         });
         updateCount();
-        // add evetn listeners to trash button
-        deleteTodos();
       }
 
       function deleteTodo(id) {
         // using filter to eliminate particular todo on which click occur
         todos = todos.filter((todo) => todo.id !== id);
         updateCount();
-      }
-
-      //   adding eventlisteners to all trash icon
-      function deleteTodos() {
-        const listItems = todoContainer.querySelectorAll(".list-item");
-        listItems.forEach((item, index) => {
-          const btn = item.querySelector(".delete-btn");
-          btn.addEventListener("click", () => {
-            item.remove();
-            const id = index + 1;
-            deleteTodo(id);
-          });
-        });
-        // console.log(listItems);
       }
 
       function createToDoObject(task) {
