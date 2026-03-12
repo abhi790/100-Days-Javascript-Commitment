@@ -38,7 +38,7 @@
         margin: 0 auto;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
       }
       .card {
@@ -80,6 +80,7 @@
 
       .todo-container {
         flex: 1;
+        /* background-color: green; */
         width: 100%;
         display: flex;
         gap: 5px;
@@ -163,15 +164,13 @@
           <input id="input" type="" name="" value="" placeholder="Add a task" />
           <button id="add-btn">Add task</button>
         </div>
-        <div>
-          <ul class="todo-container"></ul>
+        <ul class="todo-container"></ul>
 
-          <div class="summary">
-            <p><span class="count"></span> task left</p>
-            <div class="clear">
-              <p>clear all</p>
-              <span><i class="fa-solid fa-angle-right"></i></span>
-            </div>
+        <div class="summary">
+          <p><span class="count"></span> task left</p>
+          <div class="clear">
+            <p>clear all</p>
+            <span><i class="fa-solid fa-angle-right"></i></span>
           </div>
         </div>
       </div>
@@ -183,6 +182,7 @@
       const input = document.querySelector("#input");
       const count = document.querySelector(".count");
       let todos = [];
+      displayTodos();
       count.textContent = 0;
       //   update count
       function updateCount() {
@@ -210,12 +210,6 @@
         return { id, task, completed: false };
       }
 
-      //   adding event liseners
-      const listItems = document.querySelectorAll(".list-item");
-      listItems.forEach((item, i) => {
-        item.addEventListener("click", () => console.log("clicked happened"));
-      });
-
       //logic to add new todos to todoContainer and update todos array
       function addToDos() {
         const task = input.value.trim();
@@ -227,12 +221,22 @@
                 <input type="checkbox" name="" value="" />
                 <p>${task}</p>
               </div>
-              <span><i class="fa-solid fa-trash"></i></span>
+              <span class="delete-btn"><i class="fa-solid fa-trash"></i></span>
             </li>`;
         todoContainer.insertAdjacentHTML("beforeend", todoItem);
         // update the todos array
         const todo = createToDoObject(task);
         todos.push(todo);
+
+        // adding event listeners for buttons
+        todoContainer
+          .querySelectorAll(".delete-btn")
+          .forEach((btnDelete, index) => {
+            btnDelete.addEventListener("click", () => {
+              console.log(btnDelete);
+            });
+          });
+
         displayTodos();
       }
 
@@ -247,6 +251,8 @@
 
       //   clear all todos
       document.querySelector(".clear").addEventListener("click", clearAllTodos);
+
+      //
     </script>
   </body>
 </html>
