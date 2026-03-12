@@ -15,9 +15,141 @@ body {
 
 .container {
   width: 1200px;
+  /* background-color: green; */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+}
+.card {
+  position: relative;
+  background-color: #ffffff;
+  max-width: 700px;
+  min-height: 500px;
+  width: 100%;
+  border-radius: 15px;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.heading {
+  font-size: 30px;
+  background-color: #f3f3f3;
+  width: 100%;
+  border-radius: 10px;
+  padding: 1rem 0;
+
+  color: #5e5e5e;
+}
+.input-container {
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+}
+.input-container #input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+ul {
+  list-style: none;
+}
+
+.todo-container {
+  flex: 1;
+  /* background-color: green; */
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.todo-container .list-item {
+  background-color: rgb(228, 228, 228);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+.list-item .item {
+  /* background-color: rgb(247, 247, 247); */
+  display: flex;
+  gap: 20px;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.list-item span {
+  cursor: pointer;
+  padding: 1rem;
+  background-color: rgb(235, 235, 235);
+  border-radius: 5px;
+}
+.list-item span:hover {
+  background-color: rgb(216, 216, 216);
+  color: red;
+}
+
+.input-container #add-btn {
+  background-color: #2f00ff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+.input-container #add-btn:hover {
+  background-color: #009499;
+  color: #ffffff;
+}
+.item i {
+  display: flex;
+  background-color: red;
+  padding: 1rem;
+}
+.summary {
+  display: flex;
+  background-color: rgb(240, 240, 240);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.summary div {
+  display: flex;
+  gap: 20px;
+  padding: 0.4rem;
+  align-items: center;
+  background-color: rgb(221, 221, 221);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.summary div:hover {
+  background-color: rgb(230, 230, 230);
+  color: red;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; /* Circle shape */
+  cursor: pointer;
+  appearance: none; /* Remove default styling */
+  border: 2px solid #333;
+}
+
+input[type="checkbox"]:checked {
+  background: #333;
+  border-color: #333;
+}
+input[type="checkbox"]:hover {
+  background: #333;
 }
