@@ -252,7 +252,10 @@
       function addToDos() {
         const task = input.value.trim();
         input.value = "";
-        if (!task) return;
+        if (!task) {
+          alert("Please enter a todo.");
+          return;
+        }
         // update the todos array
         const todo = createToDoObject(task);
         todos.push(todo);
@@ -261,12 +264,18 @@
 
       //   logic to implement clear all
       function clearAllTodos() {
-        todos = [];
-        renderTodos();
+        if (confirm("Are you sure want to clear all todos?")) {
+          todos = [];
+          renderTodos();
+        }
       }
 
       //   add new task on button click
       btnAddTask.addEventListener("click", addToDos);
+      //   add new task on enter press
+      document.addEventListener("keypress", (event) => {
+        if (event.key === "Enter") addToDos();
+      });
 
       //   clear all todos
       document.querySelector(".clear").addEventListener("click", clearAllTodos);
