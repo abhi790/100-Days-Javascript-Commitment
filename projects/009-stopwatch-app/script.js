@@ -13,6 +13,9 @@ let counter = 0;
 let seconds = 0;
 let minutes = 0;
 let milliseconds = 0;
+const TICK_PER_SECOND = 10;
+const MAX_COUNTER = 24 * 60 * 60 * TICK_PER_SECOND;
+const INTERVAL_DURATION = 100;
 function pad(n) {
   return String(n).padStart(2, 0);
 }
@@ -27,16 +30,17 @@ function startTimer() {
     isRunning = true;
     intervalId = setInterval(() => {
       counter++;
-      seconds = Math.floor(counter / 10) % 60;
-      minutes = Math.floor(counter / 600) % 60;
-      hours = Math.floor(counter / 36000) % 60;
-      milliseconds = (counter % 10) * 10;
-      updateUI();
-      if (counter > 863999) {
-        console.log(counter);
-        resetTimer();
+      seconds = Math.floor(counter / TICK_PER_SECOND) % 60;
+      minutes = Math.floor(counter / (60 * TICK_PER_SECOND)) % 60;
+      hours = Math.floor(counter / (3600 * TICK_PER_SECOND)) % 60;
+      milliseconds = (counter % TICK_PER_SECOND) * 10;
+
+      if (counter > MAX_COUNTER) {
+        stopTimer();
+        return;
       }
-    }, 100);
+      updateUI();
+    }, INTERVAL_DURATION);
   }
 }
 function stopTimer() {
