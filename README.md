@@ -56,7 +56,8 @@ A collection of 100+ JavaScript projects built with Vanilla JavaScript, and late
 | 006 | **Accordian Menu**    | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/006-accordion-menu/) | [Code](./projects/006-accordion-menu) |
 | 007 | **Todo List Basics**  | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/007-todo-basic/)     | [Code](./projects/007-todo-basic)     |
 | 008 | **Digital Clock**     | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/008-digital-clock/)  | [Code](./projects/008-digital-clock)  |
-| 009 | **Next**              | ⏳           | -                                                                                       | -                                     |
+| 009 | **Digital Clock**     | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/009-stopwatch-app/)  | [Code](./projects/009-stopwatch-app)  |
+| 010 | **Next**              | ⏳           | -                                                                                       | -                                     |
 
 ## 🚀 Getting Started
 
