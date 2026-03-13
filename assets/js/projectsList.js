@@ -87,4 +87,14 @@ const projects = [
     folder: "008-digital-clock",
     status: "completed",
   },
+  {
+    number: "009",
+    name: "Stopwatch",
+    emoji: "⏱️",
+    description: "Functional stopwatch with start, stop, reset",
+    difficulty: "Beginner",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    folder: "009-stopwatch-app",
+    status: "completed",
+  },
 ];
