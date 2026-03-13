@@ -1,3 +1,5 @@
+// Version 1.0.0 is ready to push to dev branch
+
 //creating references for dom elements by classes and ids
 const btnStop = document.querySelector(".btn-stop");
 const btnStart = document.querySelector(".btn-start");
