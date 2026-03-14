@@ -76,21 +76,85 @@
       const minutesEl = document.querySelector(".minutes");
       const secondsEl = document.querySelector(".seconds");
 
+      const hoursInputEl = document.querySelector("#hours");
+      const minutesInputEl = document.querySelector("#minutes");
+      const secondsInputEl = document.querySelector("#seconds");
+      const inputGroup = document.querySelectorAll(".input-group");
+
       startBtn.addEventListener("click", startTimer);
       stopBtn.addEventListener("click", stopTimer);
       resetBtn.addEventListener("click", resetTimer);
+      inputGroup.forEach((input) => {
+        input.addEventListener("change", calculateCounter);
+      });
 
       //   GLOBAL variable
-      let counter;
+      let counter = 0;
+      function calculateCounter() {
+        counter =
+          Number(hoursInputEl.value) * 3600 +
+          Number(minutesInputEl.value) * 60 +
+          Number(secondsInputEl.value);
+        updateTime();
+      }
 
+      let isRunning;
+      const INTERVAL_DURATION = 1000;
+      let seconds = 0;
+      let minutes = 0;
+      let hours = 0;
+      let intervalId;
       function pad(n) {
         return String(n).padStart(2, "0");
       }
-      function updateUI() {}
 
-      function startTimer() {}
-      function stopTimer() {}
-      function resetTimer() {}
+      function updateUI() {
+        secondsEl.textContent = pad(Math.floor(seconds));
+        minutesEl.textContent = pad(Math.floor(minutes));
+        hoursEl.textContent = pad(Math.floor(hours));
+      }
+      function updateTime() {
+        seconds = Math.floor(counter) % 60;
+        minutes = Math.floor(counter / 60) % 60;
+        hours = Math.floor(counter / 3600) % 60;
+        updateUI();
+      }
+      function startTimer() {
+        if (!isRunning) {
+          isRunning = true;
+          intervalId = setInterval(() => {
+            counter--;
+            updateTime();
+
+            if (counter <= 0) {
+              stopTimer();
+              return;
+            }
+            updateUI();
+          }, INTERVAL_DURATION);
+        }
+      }
+      function stopTimer() {
+        clearInterval(intervalId);
+        isRunning = false;
+        intervalId = null;
+      }
+      function resetTimer() {
+        clearInterval(intervalId);
+        resetState();
+        isRunning = false;
+        intervalId = null;
+        updateUI();
+      }
+      function resetState() {
+        counter = 0;
+        minutes = 0;
+        seconds = 0;
+        hours = 0;
+        hoursInputEl.value = 0;
+        minutesInputEl.value = 0;
+        secondsInputEl.value = 0;
+      }
     </script>
   </body>
 </html>
