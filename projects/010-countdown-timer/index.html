@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="100 Days JavaScript Commitment - A collection of 100 JavaScript projects"
+    />
+
+    <title>010 Countdown Timer</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="outer-body">
+        <div class="timer">
+          <h1 class="heading">Countdown Timer</h1>
+          <div class="timer-inputs">
+            <div class="input-group">
+              <label for="hours">Hours</label>
+              <input
+                type="number"
+                id="hours"
+                min="0"
+                max="23"
+                placeholder="00"
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="minutes">Minutes</label>
+              <input
+                type="number"
+                id="minutes"
+                min="0"
+                max="59"
+                placeholder="00"
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="seconds">Seconds</label>
+              <input
+                type="number"
+                id="seconds"
+                min="0"
+                max="59"
+                placeholder="00"
+              />
+            </div>
+          </div>
+          <div class="display-time">
+            <span class="hours">00</span>
+            <span class="separator">:</span>
+            <span class="minutes">00</span>
+            <span class="separator">:</span>
+            <span class="seconds">00</span>
+          </div>
+          <div class="button-container">
+            <button class="btn btn-start">Start Countdown</button>
+            <button class="btn btn-stop">Stop</button>
+            <button class="btn btn-reset">Reset</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- <script src="script.js"></script> -->
+    <script>
+      const startBtn = document.querySelector(".btn-start");
+      const stopBtn = document.querySelector(".btn-stop");
+      const resetBtn = document.querySelector(".btn-reset");
+
+      const hoursEl = document.querySelector(".hours");
+      const minutesEl = document.querySelector(".minutes");
+      const secondsEl = document.querySelector(".seconds");
+
+      startBtn.addEventListener("click", startTimer);
+      stopBtn.addEventListener("click", stopTimer);
+      resetBtn.addEventListener("click", resetTimer);
+
+      //   GLOBAL variable
+      let counter;
+
+      function pad(n) {
+        return String(n).padStart(2, "0");
+      }
+      function updateUI() {}
+
+      function startTimer() {}
+      function stopTimer() {}
+      function resetTimer() {}
+    </script>
+  </body>
+</html>
