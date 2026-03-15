@@ -7,6 +7,13 @@
       name="description"
       content="100 Days JavaScript Commitment - A collection of 100 JavaScript projects"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <title>010 Countdown Timer</title>
 
@@ -26,6 +33,7 @@
                 min="0"
                 max="23"
                 placeholder="00"
+                step="1"
               />
             </div>
 
@@ -37,6 +45,7 @@
                 min="0"
                 max="59"
                 placeholder="00"
+                step="1"
               />
             </div>
 
@@ -48,21 +57,30 @@
                 min="0"
                 max="59"
                 placeholder="00"
+                step="1"
               />
             </div>
           </div>
           <div class="display-time">
-            <span class="hours">00</span>
+            <span class="time hours">00</span>
             <span class="separator">:</span>
-            <span class="minutes">00</span>
+            <span class="time minutes">00</span>
             <span class="separator">:</span>
-            <span class="seconds">00</span>
+            <span class="time seconds">00</span>
           </div>
           <div class="button-container">
             <button class="btn btn-start">Start Countdown</button>
             <button class="btn btn-stop">Stop</button>
             <button class="btn btn-reset">Reset</button>
           </div>
+          <audio
+            id="alarm-sound"
+            src="./alarm-sound.wav"
+            preload="auto"
+          ></audio>
+          <button class="btn audio-btn" type="button" aria-label="Alarm sound">
+            <i class="fa-solid fa-volume-high"></i> Pause
+          </button>
         </div>
       </div>
     </main>
@@ -80,6 +98,8 @@
       const minutesInputEl = document.querySelector("#minutes");
       const secondsInputEl = document.querySelector("#seconds");
       const inputGroup = document.querySelectorAll(".input-group");
+      const audioPause = document.querySelector(".audio-btn");
+      const audioEl = document.querySelector("#alarm-sound");
 
       startBtn.addEventListener("click", startTimer);
       stopBtn.addEventListener("click", stopTimer);
@@ -91,15 +111,27 @@
       //   GLOBAL variable
       let counter = 0;
       function calculateCounter() {
+        checkUserInput();
+        updateTime();
+      }
+
+      function checkUserInput() {
+        if (hoursInputEl.value > 24) {
+          hoursInputEl.value = 23;
+        }
+        if (minutesInputEl.value > 60) {
+          minutesInputEl.value = 59;
+        }
+        if (secondsInputEl.value > 60) {
+          secondsInputEl.value = 59;
+        }
         counter =
           Number(hoursInputEl.value) * 3600 +
           Number(minutesInputEl.value) * 60 +
           Number(secondsInputEl.value);
-        updateTime();
       }
 
       let isRunning;
-      const INTERVAL_DURATION = 1000;
       let seconds = 0;
       let minutes = 0;
       let hours = 0;
@@ -113,14 +145,39 @@
         minutesEl.textContent = pad(Math.floor(minutes));
         hoursEl.textContent = pad(Math.floor(hours));
       }
+
       function updateTime() {
         seconds = Math.floor(counter) % 60;
         minutes = Math.floor(counter / 60) % 60;
         hours = Math.floor(counter / 3600) % 60;
+        // call from here
+        if (counter === 0) {
+          ringTheAlarm();
+        }
         updateUI();
       }
+      //   stop the alarm sound when pause button click
+      document.querySelector(".audio-btn").addEventListener("click", () => {
+        audioEl.currentTime = 0;
+        audioEl.pause();
+      });
+
+      function ringTheAlarm() {
+        const audioEl = document.querySelector("#alarm-sound");
+        // this ensure audio start fresh
+        audioEl.currentTime = 0;
+        audioEl.play();
+
+        setTimeout(() => {
+          audioEl.currentTime = 0;
+          audioEl.pause();
+        }, 10000);
+      }
+
       function startTimer() {
-        if (!isRunning) {
+        // if user input value value greater then 24hur, 60min,or 60sec
+        checkUserInput();
+        if (!isRunning && counter > 0) {
           isRunning = true;
           intervalId = setInterval(() => {
             counter--;
@@ -131,14 +188,16 @@
               return;
             }
             updateUI();
-          }, INTERVAL_DURATION);
+          }, 1000);
         }
       }
+
       function stopTimer() {
         clearInterval(intervalId);
         isRunning = false;
         intervalId = null;
       }
+
       function resetTimer() {
         clearInterval(intervalId);
         resetState();
@@ -146,14 +205,15 @@
         intervalId = null;
         updateUI();
       }
+
       function resetState() {
         counter = 0;
         minutes = 0;
         seconds = 0;
         hours = 0;
-        hoursInputEl.value = 0;
-        minutesInputEl.value = 0;
-        secondsInputEl.value = 0;
+        hoursInputEl.value = "00";
+        minutesInputEl.value = "00";
+        secondsInputEl.value = "00";
       }
     </script>
   </body>
