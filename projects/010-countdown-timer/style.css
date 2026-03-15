@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  background: rgb(142, 219, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer {
+  font-family: "DSEG7Classic-Regular", monospace;
+  font-weight: 900;
+  color: #0099ff;
+  text-shadow: 2px 2px 2px white;
+  padding: 1rem;
+  max-width: 750px;
+  min-height: 350px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.heading {
+  font-family: "DSEG7Classic-Regular", monospace;
+  font-size: 40px;
+  width: 650px;
+  text-align: center;
+  color: white;
+  border-radius: 15px;
+  padding: 1rem 2rem;
+  margin-top: 10px;
+  text-shadow: 4px 4px 20px #015266;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button-container .btn {
+  padding: 0.5rem 2rem;
+  border: none;
+  background: none;
+  font-size: 20px;
+  border-radius: 5px;
+  color: white;
+  background-color: #288374;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.button-container .btn:hover {
+  box-shadow: 4px 0px 10px #000000;
+  /* color: black; */
+}
+
+.timer-inputs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.timer-inputs input {
+  padding: 0.4rem 0.2rem;
+  font-size: 20px;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  color: #686868;
+  text-align: center;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.display-time {
+  font-size: 100px;
+  color: white;
+  text-shadow: 8px 8px 20px #015266;
+  display: flex;
+  gap: 2px;
+}
+
+#audio-alarm .fa-volume {
+  color: black;
+}
+
+.audio-btn {
+  margin-bottom: 10px;
+  padding: 1rem;
+  display: flex;
+  border-radius: 10px;
+  border: none;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  color: #2c2c2c;
+}
+
+.audio-btn i {
+  border: none;
+  color: blue;
+  background: none;
+}
