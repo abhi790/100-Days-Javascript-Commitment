@@ -97,4 +97,15 @@ const projects = [
     folder: "009-stopwatch-app",
     status: "completed",
   },
+  {
+    number: "010",
+    name: "Countdown Timer",
+    emoji: "⏳",
+    description:
+      "Set custom countdown timers with visual progress and alert notifications when time expires",
+    difficulty: "Beginner",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    folder: "010-countdown-timer",
+    status: "completed",
+  },
 ];
