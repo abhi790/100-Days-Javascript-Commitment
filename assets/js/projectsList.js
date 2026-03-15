@@ -108,4 +108,15 @@ const projects = [
     folder: "010-countdown-timer",
     status: "completed",
   },
+  {
+    number: "011",
+    name: "BMI Calculator",
+    emoji: "⚖️",
+    description:
+      "Calculate Body Mass Index with height and weight inputs, displaying health category results",
+    difficulty: "Beginner",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    folder: "011-bmi-calculator",
+    status: "completed",
+  },
 ];

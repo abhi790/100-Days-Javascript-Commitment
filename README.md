@@ -58,7 +58,8 @@ A collection of 100+ JavaScript projects built with Vanilla JavaScript, and late
 | 008 | **Digital Clock**     | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/008-digital-clock/)   | [Code](./projects/008-digital-clock)   |
 | 009 | **Stopwatch App**     | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/009-stopwatch-app/)   | [Code](./projects/009-stopwatch-app)   |
 | 010 | **Countdown Timer**   | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/010-countdown-timer/) | [Code](./projects/010-countdown-timer) |
-| 011 | **Next**              | ⏳           | -                                                                                        | -                                      |
+| 011 | **BMI Calculator**    | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/011-bmi-calculator/)  | [Code](./projects/011-bmi-calculator)  |
+| 012 | **Next**              | ⏳           | -                                                                                        | -                                      |
 
 ## 🚀 Getting Started
 
@@ -92,9 +93,9 @@ Projects are deployed on:
 
 ## 📈 Progress Tracker
 
-- **Completed**: 10/100
-- **Remaining**: 90/100
-- **Progress**: 10%
+- **Completed**: 11/100
+- **Remaining**: 89/100
+- **Progress**: 11%
 
 ## 👤 Author
 
