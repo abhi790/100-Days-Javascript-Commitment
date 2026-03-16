@@ -65,48 +65,48 @@ function showImperialInput() {
   isMetric = false;
   metricsContainer.className = "imperial";
   metricsContainer.innerHTML = `<div class="cont weight-container">
-              <label for="weight">Weight(lbs)</label>
-              <input
-                type="number"
-                id="weight-lbs"
-                placeholder="00"
-                step="1"
-                value="100"
-              />
-            </div>
-            <div class="cont height-container">
-  <label for="height-foot">Height (ft / in)</label>
-  <div class="height-inputs">
-    <input type="number" id="height-foot" placeholder="5" value="5" />
-    <input type="number" id="height-inch" placeholder="7"  value="5"/>
-  </div>
-</div>`;
-  inputContainer.insertAdjacentElement("beforeend", metricsContainer);
+                                    <label for="weight">Weight(lbs)</label>
+                                    <input
+                                        type="number"
+                                        id="weight-lbs"
+                                        placeholder="00"
+                                        step="1"
+                                        value="100"
+                                    />
+                                </div>
+                                <div class="cont height-container">
+                                    <label for="height-foot">Height (ft / in)</label>
+                                    <div class="height-inputs">
+                                        <input type="number" id="height-foot" placeholder="5" value="5" />
+                                        <input type="number" id="height-inch" placeholder="7"  value="5"/>
+                                    </div>
+                                </div>`;
+  inputContainer.appendChild(metricsContainer);
 }
 function showMetricsInput() {
   isMetric = true;
   metricsContainer.className = "metrics";
   metricsContainer.innerHTML = `<div class="cont weight-container">
-              <label for="weight">Weight(Kg)</label>
-              <input
-                type="number"
-                id="weight"
-                placeholder="00"
-                step="1"
-                value="45"
-              />
-            </div>
-            <div class="cont height-container">
-              <label for="Height">Height(cm)</label>
-              <input
-                type="number"
-                id="height"
-                placeholder="00"
-                step="1"
-                value="155"
-              />
-            </div>`;
-  inputContainer.insertAdjacentElement("beforeend", metricsContainer);
+                                    <label for="weight">Weight(Kg)</label>
+                                    <input
+                                        type="number"
+                                        id="weight"
+                                        placeholder="00"
+                                        step="1"
+                                        value="45"
+                                    />
+                                </div>
+                                <div class="cont height-container">
+                                    <label for="Height">Height(cm)</label>
+                                    <input
+                                        type="number"
+                                        id="height"
+                                        placeholder="00"
+                                        step="1"
+                                        value="155"
+                                    />
+                                </div>`;
+  inputContainer.appendChild(metricsContainer);
 }
 
 calculateBtn.addEventListener("click", calculateBMI);
@@ -148,6 +148,11 @@ function showCategory() {
     categoryCont.insertAdjacentElement("beforeend", category);
   });
 }
+
+// on pressing enter we need to calculate the BMI
+document.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") calculateBMI();
+});
 
 showMetricsInput();
 calculateBMI();
