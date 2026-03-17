@@ -63,6 +63,8 @@ const metricsContainer = document.createElement("div");
 
 function showImperialInput() {
   isMetric = false;
+  metrics.classList.remove("active");
+  imperial.classList.add("active");
   metricsContainer.className = "imperial";
   metricsContainer.innerHTML = `<div class="cont weight-container">
                                     <label for="weight">Weight(lbs)</label>
@@ -85,6 +87,8 @@ function showImperialInput() {
 }
 function showMetricsInput() {
   isMetric = true;
+  imperial.classList.remove("active");
+  metrics.classList.add("active");
   metricsContainer.className = "metrics";
   metricsContainer.innerHTML = `<div class="cont weight-container">
                                     <label for="weight">Weight(Kg)</label>
