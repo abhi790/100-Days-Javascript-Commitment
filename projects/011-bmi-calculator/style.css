@@ -58,6 +58,14 @@ body {
   border-radius: 10px;
   border: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.btn i {
+  color: blue;
+  font-size: 25px;
 }
 .choose-metrics {
   display: flex;
@@ -75,10 +83,6 @@ body {
   margin-top: 20px;
   gap: 10px;
   /* background-color: red; */
-}
-.imperial .height-container {
-  /* background-color: red; */
-  /* width: 100%; */
 }
 .imperial .weight-container {
   /* display: flex; */
