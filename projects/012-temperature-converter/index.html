@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1 class="heading">Temperature Converter</h1>
+        <div class="input-output-container">
+          <div class="input">
+            <label for="input">Input</label>
+            <input class="text" type="number" name="input" id="input" />
+          </div>
+          <div class="output">
+            <label for="output">Output</label>
+            <input
+              class="text"
+              type="number"
+              name="output"
+              id="output"
+              value=""
+            />
+          </div>
+        </div>
+        <div class="parent-button-container">
+          <div class="button-container">
+            <button class="btn input" data-unit="C">C</button>
+            <button class="btn input" data-unit="F">F</button>
+            <button class="btn input" data-unit="K">K</button>
+          </div>
+          <span class="btn swap">Swap</span>
+          <div class="button-container">
+            <button class="btn output" data-unit="C">C</button>
+            <button class="btn output" data-unit="F">F</button>
+            <button class="btn output" data-unit="K">K</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>

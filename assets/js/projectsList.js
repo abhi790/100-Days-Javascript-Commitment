@@ -119,4 +119,15 @@ const projects = [
     folder: "011-bmi-calculator",
     status: "completed",
   },
+  {
+    number: "012",
+    name: "Temperature Converter",
+    emoji: "🌡️",
+    description:
+      "Convert between Celsius, Fahrenheit, and Kelvin temperature scales instantly",
+    difficulty: "Beginner",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    folder: "012-temperature-converter",
+    status: "completed",
+  },
 ];
