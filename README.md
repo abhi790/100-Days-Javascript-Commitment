@@ -46,20 +46,21 @@ A collection of 100+ JavaScript projects built with Vanilla JavaScript, and late
 
 <!-- Update this table as you complete projects -->
 
-| #   | Project Name          | Status       | Live                                                                                     | Source Code                            |
-| --- | --------------------- | ------------ | ---------------------------------------------------------------------------------------- | -------------------------------------- |
-| 001 | **Counter App**       | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/001-counter-app/)     | [Code](./projects/001-counter-app)     |
-| 002 | **Color Flipper App** | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/002-color-flipper/)   | [Code](./projects/002-color-flipper)   |
-| 003 | **Tip Calculator**    | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/003-tip-calculator/)  | [Code](./projects/003-tip-calculator)  |
-| 004 | **Random Quote**      | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/004-random-quote/)    | [Code](./projects/004-random-quote)    |
-| 005 | **Modal Popup**       | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/005-modal-popup/)     | [Code](./projects/005-modal-popup)     |
-| 006 | **Accordian Menu**    | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/006-accordion-menu/)  | [Code](./projects/006-accordion-menu)  |
-| 007 | **Todo List Basics**  | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/007-todo-basic/)      | [Code](./projects/007-todo-basic)      |
-| 008 | **Digital Clock**     | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/008-digital-clock/)   | [Code](./projects/008-digital-clock)   |
-| 009 | **Stopwatch App**     | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/009-stopwatch-app/)   | [Code](./projects/009-stopwatch-app)   |
-| 010 | **Countdown Timer**   | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/010-countdown-timer/) | [Code](./projects/010-countdown-timer) |
-| 011 | **BMI Calculator**    | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/011-bmi-calculator/)  | [Code](./projects/011-bmi-calculator)  |
-| 012 | **Next**              | ⏳           | -                                                                                        | -                                      |
+| #   | Project Name              | Status       | Live                                                                                           | Source Code                                  |
+| --- | ------------------------- | ------------ | ---------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| 001 | **Counter App**           | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/001-counter-app/)           | [Code](./projects/001-counter-app)           |
+| 002 | **Color Flipper App**     | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/002-color-flipper/)         | [Code](./projects/002-color-flipper)         |
+| 003 | **Tip Calculator**        | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/003-tip-calculator/)        | [Code](./projects/003-tip-calculator)        |
+| 004 | **Random Quote**          | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/004-random-quote/)          | [Code](./projects/004-random-quote)          |
+| 005 | **Modal Popup**           | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/005-modal-popup/)           | [Code](./projects/005-modal-popup)           |
+| 006 | **Accordian Menu**        | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/006-accordion-menu/)        | [Code](./projects/006-accordion-menu)        |
+| 007 | **Todo List Basics**      | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/007-todo-basic/)            | [Code](./projects/007-todo-basic)            |
+| 008 | **Digital Clock**         | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/008-digital-clock/)         | [Code](./projects/008-digital-clock)         |
+| 009 | **Stopwatch App**         | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/009-stopwatch-app/)         | [Code](./projects/009-stopwatch-app)         |
+| 010 | **Countdown Timer**       | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/010-countdown-timer/)       | [Code](./projects/010-countdown-timer)       |
+| 011 | **BMI Calculator**        | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/011-bmi-calculator/)        | [Code](./projects/011-bmi-calculator)        |
+| 012 | **Temperature Converter** | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/012-temperature-converter/) | [Code](./projects/012-temperature-converter) |
+| 013 | **Next**                  | ⏳           | -                                                                                              | -                                            |
 
 ## 🚀 Getting Started
 
@@ -93,9 +94,9 @@ Projects are deployed on:
 
 ## 📈 Progress Tracker
 
-- **Completed**: 11/100
-- **Remaining**: 89/100
-- **Progress**: 11%
+- **Completed**: 12/100
+- **Remaining**: 88/100
+- **Progress**: 12%
 
 ## 👤 Author
 
