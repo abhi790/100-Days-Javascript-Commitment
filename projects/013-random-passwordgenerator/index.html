@@ -1,0 +1,434 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="100 Days JavaScript Commitment - A collection of 100 JavaScript projects"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>013 Random Password Generator</title>
+
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      :root {
+        --text-primary: #e900dd;
+        --text-secondary: #4d4d4d;
+        --text-tertiary: #868686;
+        --btn-primary-shadow: #ff00f2;
+        --btn-danger: #ff0000;
+        --btn-safe: #00ff00;
+        --btn-reset: #000;
+        --shadow-primary: #42003f;
+        --indicator-weak: #ff0000;
+        --indicator-medium: #ffe600;
+        --indicator-strong: #05eeff;
+        --indicator-super-strong: #00ff22;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        min-height: 100vh;
+        background: rgb(142, 219, 255);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .card {
+        font-family: "DSEG7Classic-Regular", monospace;
+        max-width: 600px;
+        min-height: 450px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 25px;
+        box-shadow: 20px 25px 20px rgba(225, 0, 255, 0.251);
+        padding: 1rem;
+      }
+      .heading {
+        font-size: 30px;
+        font-weight: 600;
+        color: var(--text-primary);
+
+        text-shadow: 5px 5px 10px var(--shadow-primary);
+        border-radius: 10px;
+
+        /* box-shadow: 5px 5px 15px var(--btn-primary-shadow); */
+      }
+      .btn {
+        border: 1px solid rgb(164, 164, 164);
+        border-radius: 10px;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+      }
+      .generate-btn {
+        width: 90%;
+        background-color: #0000ad;
+        color: white;
+        font-size: 24px;
+      }
+      .clear {
+        border-radius: 5px;
+        padding: 1rem;
+      }
+      .length-section {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+      }
+      .password-selection label {
+        color: grey;
+        font-size: 20px;
+      }
+
+      .length-indicator {
+        font-size: 20px;
+      }
+      .password-length {
+        width: 100%;
+      }
+      .options-section {
+        display: flex;
+        gap: 20px;
+        font-size: 30px;
+        flex-wrap: wrap;
+        width: 90%;
+      }
+
+      .result-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        padding: 0.3rem 0;
+        background-color: #dddddd;
+        border-radius: 10px;
+      }
+      .result-container .display-result {
+        flex: 1;
+        text-wrap: wrap;
+        padding: 1rem;
+        overflow: hidden;
+      }
+      .result-container span {
+        color: green;
+        transition: all 0.3s ease;
+      }
+      .result-container span:hover {
+        background-color: #cecece;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .display-result + span {
+        /* background-color: green; */
+        padding: 1rem;
+      }
+
+      .indicator-container {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        gap: 20px;
+      }
+      .left {
+        flex: 1;
+      }
+      .indicator {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 20px;
+        background-color: rgb(37, 37, 37);
+      }
+      .indicator p {
+        font-size: 16px;
+        text-align: center;
+      }
+      .indicator .box {
+        height: 20px;
+      }
+
+      .indicator .weak {
+        background-color: var(--indicator-weak);
+      }
+      .weak + p {
+        color: var(--indicator-weak);
+      }
+      .medium + p {
+        color: var(--indicator-medium);
+      }
+      .strong + p {
+        color: var(--indicator-strong);
+      }
+      .super-strong + p {
+        color: var(--indicator-super-strong);
+      }
+      .indicator .medium {
+        background-color: var(--indicator-medium);
+      }
+      .indicator .strong {
+        background-color: var(--indicator-strong);
+      }
+      .indicator .super-strong {
+        background-color: var(--indicator-super-strong);
+      }
+      .left {
+        display: flex;
+      }
+
+      @media (max-width: 768px) {
+        .card {
+          max-width: 460px;
+          min-height: 350px;
+        }
+        .card .heading {
+          font-size: 32px;
+        }
+        .input-output-container div {
+          gap: 3px;
+        }
+        .input-output-container .text {
+          font-size: 30px;
+          padding: 0.5rem 1rem;
+          width: 100%;
+        }
+        .input-output-container {
+          width: 90%;
+        }
+        .input-output-container label {
+          font-size: 20px;
+        }
+        .swap {
+          font-size: 20px;
+        }
+        .input-btn,
+        .output-btn {
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 430px) {
+        .card {
+          max-width: 250px;
+          min-height: 350px;
+          gap: 5px;
+        }
+        .card .heading {
+          font-size: 16px;
+        }
+        .input-output-container {
+          flex-direction: column;
+          gap: 5px;
+        }
+        .input-output-container div {
+          gap: 1px;
+        }
+        .input-output-container .text {
+          font-size: 16px;
+          padding: 0.5rem 1rem;
+          width: 100%;
+        }
+        .input-output-container label {
+          font-size: 12px;
+          width: 100%;
+        }
+        .swap {
+          font-size: 8px;
+          height: 30px;
+          width: 50px;
+        }
+        .input-btn,
+        .output-btn,
+        .swap,
+        .btn-reset {
+          font-size: 10px;
+          box-shadow: inset 0.5px 0.5px 0.5px var(--text-secondary);
+          transition: all 0.3s ease;
+        }
+        .input-btn:hover,
+        .output-btn:hover,
+        .swap:hover,
+        .btn-reset:hover {
+          box-shadow: none;
+        }
+        .parent-button-container {
+          flex-direction: column;
+          align-items: center;
+          background-color: #ececec;
+          border-radius: 15px;
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="card">
+        <div class="heading">Random Password Generator</div>
+        <!-- password selection -->
+        <div class="length-section">
+          <div class="password-selection">
+            <label>Password Length : </label>
+            <span class="length-indicator">12</span>
+          </div>
+          <input
+            type="range"
+            min="8"
+            max="128"
+            value="8"
+            id="password-length"
+          />
+        </div>
+        <!-- checkboxes -->
+        <div class="options-section">
+          <label
+            ><input class="checkbox" type="checkbox" data-char="uppercase" />
+            Uppercase</label
+          >
+          <label
+            ><input class="checkbox" type="checkbox" data-char="lowercase" />
+            Lowercase</label
+          >
+          <label
+            ><input class="checkbox" type="checkbox" data-char="numbers" />
+            Numbers</label
+          >
+          <label
+            ><input class="checkbox" type="checkbox" data-char="symbols" />
+            Symbols</label
+          >
+          <span class="error"></span>
+        </div>
+        <button class="btn generate-btn">Generate Password</button>
+        <div class="result-container">
+          <p class="display-result">vL5$3!mRfbn!8aG</p>
+          <span><i class="fa-solid fa-paste"></i></span>
+        </div>
+        <div class="indicator-container">
+          <div class="left">
+            <div class="indicator">
+              <div class="box weak"></div>
+              <p>Weak</p>
+            </div>
+            <div class="indicator">
+              <div class="box medium"></div>
+              <p>Medium</p>
+            </div>
+            <div class="indicator">
+              <div class="box strong"></div>
+              <p>Strong</p>
+            </div>
+            <div class="indicator">
+              <div class="box super-strong"></div>
+              <p>Super</p>
+            </div>
+          </div>
+          <button class="btn clear">Clear</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- <script src="script.js"></script> -->
+    <script>
+      let state = {
+        // password length
+        passwordLength: 8,
+
+        // tracking checkboxes tick /untick
+        isUppercase: false,
+        isLowercase: false,
+        isNumber: false,
+        isSymbol: false,
+      };
+      //   constant define
+      const DOM = {
+        generateBtn: document.querySelector(".generate-btn"),
+        passwordLengthEl: document.querySelector("#password-length"),
+        checkboxesEl: document.querySelectorAll(".checkbox"),
+        lengthIndicator: document.querySelector(".length-indicator"),
+        displayEle: document.querySelector(".display-result"),
+      };
+      const eventListeners = {
+        handlePasswordLenghtChange: function (e) {
+          state.passwordLength = Number(e.target.value);
+          DOM.lengthIndicator.textContent = state.passwordLength;
+          //   console.log("Password length", e.target.value);
+        },
+        handleGeneratePasswordEvent: function (e) {
+          const length = state.passwordLength;
+          let password = "";
+          for (let i = 0; i < length; i++) {
+            password +=
+              passwordString[Math.floor(Math.random() * passwordString.length)];
+          }
+          DOM.displayEle.textContent = password;
+        },
+        handleCheckboxEvent: function (e) {
+          console.log(e.target.dataset.char);
+          const element = e.target.dataset.char;
+
+          if (element === "uppercase") {
+            state.isUppercase = !state.isUppercase;
+          } else if (element === "lowercase") {
+            state.isLowercase = !state.isLowercase;
+          } else if (element === "numbers") {
+            state.isNumber = !state.isNumber;
+          } else {
+            state.isSymbol = !state.isSymbol;
+          }
+          console.log(state);
+        },
+      };
+      function renderApp() {}
+
+      const passwordString =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:";
+      function attachEventListeners() {
+        DOM.passwordLengthEl.addEventListener(
+          "input",
+          eventListeners.handlePasswordLenghtChange,
+        );
+        DOM.generateBtn.addEventListener(
+          "click",
+          eventListeners.handleGeneratePasswordEvent,
+        );
+        DOM.checkboxesEl.forEach((checkbox) => {
+          checkbox.addEventListener(
+            "click",
+            eventListeners.handleCheckboxEvent,
+          );
+        });
+      }
+      attachEventListeners();
+      DOM.lengthIndicator.textContent = state.passwordLength;
+    </script>
+  </body>
+</html>

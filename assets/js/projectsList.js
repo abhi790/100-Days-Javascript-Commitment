@@ -130,4 +130,15 @@ const projects = [
     folder: "012-temperature-converter",
     status: "completed",
   },
+  {
+    number: "013",
+    name: "Random Password Generator",
+    emoji: "🔐",
+    description:
+      "Generate secure passwords with customizable length and character type options",
+    difficulty: "Beginner",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    folder: "013-random-passwordgenerator",
+    status: "completed",
+  },
 ];
