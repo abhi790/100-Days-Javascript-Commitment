@@ -141,4 +141,15 @@ const projects = [
     folder: "013-random-passwordgenerator",
     status: "completed",
   },
+  {
+    number: "014",
+    name: "Character Counter",
+    emoji: "🔤",
+    description:
+      "Real-time character and word count tracker for text input with remaining character display",
+    difficulty: "Beginner",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    folder: "014-character-counter",
+    status: "completed",
+  },
 ];
