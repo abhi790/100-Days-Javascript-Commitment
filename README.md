@@ -61,7 +61,8 @@ A collection of 100+ JavaScript projects built with Vanilla JavaScript, and late
 | 011 | **BMI Calculator**            | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/011-bmi-calculator/)           | [Code](./projects/011-bmi-calculator)           |
 | 012 | **Temperature Converter**     | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/012-temperature-converter/)    | [Code](./projects/012-temperature-converter)    |
 | 013 | **Random Password Generator** | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/013-random-passwordgenerator/) | [Code](./projects/013-random-passwordgenerator) |
-| 014 | **Next**                      | ⏳           | -                                                                                                 | -                                               |
+| 014 | **Character Counter**         | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/014-character-counter/)        | [Code](./projects/014-character-counter)        |
+| 015 | **Next**                      | ⏳           | -                                                                                                 | -                                               |
 
 ## 🚀 Getting Started
 
