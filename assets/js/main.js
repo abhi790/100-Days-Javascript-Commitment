@@ -32,8 +32,7 @@ function createProjectCard(project, index) {
       />
       <div class="card-content">
       <div class="temp">
-        <span>${project.emoji}</span>
-        <h2>${project.name}</h2>
+        <h2>${project.emoji}_${project.number}-${project.name}</h2>
       </div>
         <p>${project.description}</p>
 
