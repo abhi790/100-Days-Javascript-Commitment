@@ -63,7 +63,8 @@ A collection of 100+ JavaScript projects built with Vanilla JavaScript, and late
 | 013 | **Random Password Generator** | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/013-random-passwordgenerator/) | [Code](./projects/013-random-passwordgenerator) |
 | 014 | **Character Counter**         | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/014-character-counter/)        | [Code](./projects/014-character-counter)        |
 | 015 | **FAQ Collapse/Expand**       | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/015-faq-collapseexpand/)       | [Code](./projects/015-faq-collapseexpand)       |
-| 016 | **Next**                      | ⏳           | -                                                                                                 | -                                               |
+| 016 | **Image Slider**              | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/016-image-slider/)             | [Code](./projects/016-image-slider)             |
+| 017 | **Next**                      | ⏳           | -                                                                                                 | -                                               |
 
 ## 🚀 Getting Started
 
@@ -97,9 +98,9 @@ Projects are deployed on:
 
 ## 📈 Progress Tracker
 
-- **Completed**: 13/100
-- **Remaining**: 87/100
-- **Progress**: 13%
+- **Completed**: 16/100
+- **Remaining**: 84/100
+- **Progress**: 16%
 
 ## 👤 Author
 

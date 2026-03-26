@@ -163,4 +163,15 @@ const projects = [
     folder: "015-faq-collapseexpand",
     status: "inprogress",
   },
+  {
+    number: "016",
+    name: "Image Slider",
+    emoji: "🖼️",
+    description:
+      "Responsive image carousel with previous/next navigation and automatic slideshow features",
+    difficulty: "Beginner",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    folder: "016-image-slider",
+    status: "inprogress",
+  },
 ];
