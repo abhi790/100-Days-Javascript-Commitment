@@ -152,4 +152,15 @@ const projects = [
     folder: "014-character-counter",
     status: "completed",
   },
+  {
+    number: "015",
+    name: "FAQ Collapse/Expand",
+    emoji: "❓",
+    description:
+      "Interactive FAQ section with smooth expand/collapse animations for questions and answers",
+    difficulty: "Beginner",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    folder: "015-faq-collapseexpand",
+    status: "inprogress",
+  },
 ];
