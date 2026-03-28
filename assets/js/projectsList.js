@@ -174,4 +174,15 @@ const projects = [
     folder: "016-image-slider",
     status: "completed",
   },
+  {
+    number: "017",
+    name: "Tabs Component",
+    emoji: "📑",
+    description:
+      "Organize content into switchable tabs with active state highlighting and smooth transitions",
+    difficulty: "Beginner",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    folder: "017-tabs-component",
+    status: "completed",
+  },
 ];
