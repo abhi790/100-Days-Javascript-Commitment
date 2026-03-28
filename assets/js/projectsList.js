@@ -161,7 +161,7 @@ const projects = [
     difficulty: "Beginner",
     technologies: ["HTML", "CSS", "JavaScript"],
     folder: "015-faq-collapseexpand",
-    status: "inprogress",
+    status: "completed",
   },
   {
     number: "016",
@@ -172,6 +172,6 @@ const projects = [
     difficulty: "Beginner",
     technologies: ["HTML", "CSS", "JavaScript"],
     folder: "016-image-slider",
-    status: "inprogress",
+    status: "completed",
   },
 ];
