@@ -196,4 +196,15 @@ const projects = [
     folder: "018-navbar-toggle",
     status: "completed",
   },
+  {
+    number: "019",
+    name: "Dark/Light Mode Toggle",
+    emoji: "🌓",
+    description:
+      "Switch between dark and light themes with smooth transitions and persistent user preference storage",
+    difficulty: "Intermediate",
+    technologies: ["HTML", "CSS", "JavaScript", "localStorage"],
+    folder: "019-dark-lightmodetoggle",
+    status: "completed",
+  },
 ];
