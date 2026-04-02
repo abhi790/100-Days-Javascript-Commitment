@@ -185,4 +185,15 @@ const projects = [
     folder: "017-tabs-component",
     status: "completed",
   },
+  {
+    number: "018",
+    name: "Navbar Toggle",
+    emoji: "🍔",
+    description:
+      "Responsive hamburger menu that toggles navigation visibility on mobile devices",
+    difficulty: "Beginner",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    folder: "018-navbar-toggle",
+    status: "completed",
+  },
 ];

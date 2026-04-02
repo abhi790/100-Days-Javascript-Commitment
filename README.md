@@ -65,7 +65,8 @@ A collection of 100+ JavaScript projects built with Vanilla JavaScript, and late
 | 015 | **FAQ Collapse/Expand**       | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/015-faq-collapseexpand/)       | [Code](./projects/015-faq-collapseexpand)       |
 | 016 | **Image Slider**              | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/016-image-slider/)             | [Code](./projects/016-image-slider)             |
 | 017 | **Tabs Component**            | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/017-tabs-component/)           | [Code](./projects/017-tabs-component)           |
-| 018 | **Next**                      | ⏳           | -                                                                                                 | -                                               |
+| 018 | **Navbar Toggle**             | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/018-navbar-toggle/)            | [Code](./projects/018-navbar-toggle)            |
+| 019 | **Next**                      | ⏳           | -                                                                                                 | -                                               |
 
 ## 🚀 Getting Started
 
@@ -99,9 +100,9 @@ Projects are deployed on:
 
 ## 📈 Progress Tracker
 
-- **Completed**: 17/100
-- **Remaining**: 83/100
-- **Progress**: 17%
+- **Completed**: 18/100
+- **Remaining**: 82/100
+- **Progress**: 18%
 
 ## 👤 Author
 
