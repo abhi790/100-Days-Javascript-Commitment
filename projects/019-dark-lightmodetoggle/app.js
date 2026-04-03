@@ -114,10 +114,19 @@ const ThemeView = {
 
 const ThemeController = {
   init: function () {
+    // fetch the theme from local storage
+    const saved = localStorage.getItem("theme");
+    saved === "dark"
+      ? ThemeModel.setThemeState(false)
+      : ThemeModel.setThemeState(true);
+
     // initialize view
     ThemeView.init();
+    // updating UI with current theme state
     ThemeView.updateUI(ThemeModel.getThemeState());
+    // renderHero section
     ThemeView.renderHero();
+    // render price cards
     ThemeView.renderCards(ThemeModel.getPlans());
 
     //   attach listeners
@@ -129,6 +138,7 @@ const ThemeController = {
     handleToggleClick: function () {
       ThemeModel.toggleTheme();
       const themeState = ThemeModel.getThemeState();
+      localStorage.setItem("theme", themeState ? "light" : "dark");
       ThemeView.updateUI(themeState);
     },
   },
