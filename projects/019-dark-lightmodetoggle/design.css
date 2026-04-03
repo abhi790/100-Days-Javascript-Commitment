@@ -1,0 +1,402 @@
+/* ============================================================
+   LAYER 1 — THEME VARIABLES
+   All colors are defined here as CSS custom properties.
+   :root = Light mode (default)
+   body.dark = Dark mode (activated by JS class swap)
+   ============================================================ */
+
+:root {
+  /* --- Backgrounds --- */
+  --bg-primary: #faf8f4; /* page background */
+  --bg-card: #ffffff; /* card background */
+  --bg-toggle: #ffffff; /* toggle button background */
+
+  /* --- Text --- */
+  --text-primary: #1a1a1a; /* headings, price — loudest */
+  --text-secondary: #555770; /* subtitles, features — softer */
+  --text-muted: #888aa0; /* period, currency — softest */
+
+  /* --- Accent --- */
+  --accent: #10b981; /* buttons, icons, highlights */
+  --accent-hover: #059669; /* button hover — darker */
+
+  /* --- Border & Shadow --- */
+  --border-color: #e8e4de;
+  --shadow-color: rgba(0, 0, 0, 0.06);
+
+  /* --- Toggle Icon --- */
+  --icon-color: #f5a623; /* sun — warm orange */
+}
+
+/* Dark Mode — activated when JS adds .dark to <body> */
+body.dark {
+  /* --- Backgrounds --- */
+  --bg-primary: #1a1814; /* page background */
+  --bg-card: #26231e; /* card background */
+  --bg-toggle: #26231e; /* toggle button background */
+
+  /* --- Text --- */
+  --text-primary: #f1f5f9; /* headings, price */
+  --text-secondary: #a0998e; /* subtitles, features */
+  --text-muted: #6b6560; /* period, currency */
+
+  /* --- Accent --- */
+  --accent: #10b981; /* same green — works on both themes */
+  --accent-hover: #34d399; /* hover — lighter in dark mode */
+
+  /* --- Border & Shadow --- */
+  --border-color: #3a3530;
+  --shadow-color: rgba(0, 0, 0, 0.3); /* stronger shadow in dark */
+
+  /* --- Toggle Icon --- */
+  --icon-color: #a8c0ff; /* moon — cool blue */
+}
+
+/* ============================================================
+   LAYER 2 — RESET & BASE
+   Removes browser defaults and sets up base styles.
+   The transition on body gives us the smooth theme animation.
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; /* 1rem = 16px */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  /* This single transition gives us smooth theme switching */
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+ul {
+  list-style: none; /* removes default bullets from feature lists */
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit; /* buttons don't inherit font by default */
+}
+
+/* ============================================================
+   LAYER 3 — TOGGLE BUTTON
+   Fixed circle button in top-right corner.
+   Holds Sun/Moon icon from FontAwesome.
+   ============================================================ */
+
+#theme-toggle {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 1000; /* always on top */
+
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%; /* perfect circle */
+
+  background-color: var(--bg-toggle);
+  border: 1.5px solid var(--border-color);
+  box-shadow: 0 2px 12px var(--shadow-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.1); /* subtle grow on hover */
+}
+
+#theme-toggle:active {
+  transform: scale(0.95); /* press effect on click */
+}
+
+#theme-toggle i {
+  color: var(--icon-color);
+  transition:
+    color 0.3s ease,
+    transform 0.4s ease;
+}
+
+/* Moon gets a slight tilt in dark mode — small but nice detail */
+body.dark #theme-toggle i {
+  transform: rotate(20deg);
+}
+
+/* ============================================================
+   LAYER 4 — LAYOUT & GRID
+   Container constrains max width.
+   Cards grid uses fixed 3 columns on desktop.
+   ============================================================ */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* fixed 3 columns */
+  gap: 0.2rem;
+  align-items: start; /* cards don't stretch to match tallest */
+}
+
+/* ============================================================
+   LAYER 5 — HERO SECTION
+   Centered heading and subtitle above the cards.
+   ============================================================ */
+
+.hero {
+  text-align: center;
+  padding: 4rem 1rem 3rem;
+}
+
+.hero h1 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  margin-bottom: 1rem;
+  /* transition inherited from body */
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+  /* transition inherited from body */
+}
+
+/* ============================================================
+   LAYER 6 — CARD BASE
+   Base styles for all pricing cards.
+   All colors use CSS variables — theme switch is automatic.
+   ============================================================ */
+
+.card {
+  background-color: var(--bg-card);
+  border: 1.5px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 4px 24px var(--shadow-color);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+/* Plan name — e.g. STARTER, PRO */
+.card-plan {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Price — large and bold */
+.card-price {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+/* $ sign — smaller, superscript */
+.card-price .currency {
+  font-size: 1.5rem;
+  font-weight: 500;
+  vertical-align: super;
+  color: var(--text-secondary);
+}
+
+/* /mo — smallest, muted */
+.card-price .period {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+/* Feature list */
+.card-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  flex: 1; /* pushes CTA button to bottom */
+}
+
+.card-features li {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* Check icon — accent color */
+.card-features li i {
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+/* CTA Button — ghost style by default */
+.card-cta {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  background-color: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* CTA fills with accent color on hover */
+.card-cta:hover {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+/* ============================================================
+   LAYER 7 — FEATURED CARD
+   Pro card gets special treatment —
+   green background, lifted, white text, Most Popular badge.
+   ============================================================ */
+
+.card.featured {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.35);
+  position: relative; /* needed for badge positioning */
+}
+
+/* Most Popular badge — pure CSS, no extra HTML needed */
+.badge {
+  position: absolute;
+  top: -0.85rem;
+  left: 50%;
+  transform: translateX(-50%); /* centers the badge */
+
+  background-color: #ffffff;
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.25rem 0.85rem;
+  border-radius: 2rem;
+  white-space: nowrap;
+}
+
+/* Text color overrides — white on green background */
+.card.featured .card-plan {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.card.featured .card-price {
+  color: #ffffff;
+}
+
+.card.featured .card-price .currency {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.card.featured .card-price .period {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.card.featured .card-features li {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.card.featured .card-features li i {
+  color: #ffffff;
+}
+
+/* CTA inverted on featured card — white bg, green text */
+.card.featured .card-cta {
+  background-color: #ffffff;
+  color: var(--accent);
+  border-color: #ffffff;
+}
+
+.card.featured .card-cta:hover {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+/* ============================================================
+   LAYER 8 — RESPONSIVE
+   Below 680px — single column layout, centered content.
+   ============================================================ */
+
+@media (max-width: 680px) {
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card {
+    text-align: center;
+  }
+
+  /* Features list left aligned rahegi */
+  .card-features {
+    text-align: left;
+    display: inline-flex; /* shrink to content width */
+    flex-direction: column;
+    gap: 0.65rem;
+    flex: 1;
+    align-self: center; /* block itself center mein */
+  }
+
+  .card-features li {
+    justify-content: flex-start; /* left se start hoga */
+  }
+
+  .card.featured {
+    transform: translateY(0);
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
