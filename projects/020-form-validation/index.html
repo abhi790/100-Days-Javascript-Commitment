@@ -4,6 +4,148 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>020 - Form Validation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <form id="registrationForm" novalidate>
+        <h1>Create Account</h1>
+
+        <!-- Name -->
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <div class="input-wrapper">
+            <div class="icon-box">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <input type="text" id="name" name="name" placeholder="John Doe" />
+          </div>
+          <span class="error-message" id="nameError"></span>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <div class="input-wrapper">
+            <div class="icon-box">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="john@example.com"
+            />
+          </div>
+          <span class="error-message" id="emailError"></span>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-wrapper">
+            <div class="icon-box">
+              <i class="fa-solid fa-lock"></i>
+            </div>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+            />
+          </div>
+          <span class="error-message" id="passwordError"></span>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <div class="input-wrapper">
+            <div class="icon-box">
+              <i class="fa-solid fa-lock"></i>
+            </div>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              placeholder="Re-enter your password"
+            />
+          </div>
+          <span class="error-message" id="confirmPasswordError"></span>
+        </div>
+
+        <button type="submit">Register</button>
+      </form>
+    </div>
+    <!-- <script src="script.js"></script> -->
+    <script>
+      const fieldNames = ["name", "email", "password", "confirmPassword"];
+
+      const fields = {};
+      const form = document.getElementById("registrationForm");
+
+      fieldNames.forEach((fieldName) => {
+        fields[fieldName] = {
+          input: document.getElementById(fieldName),
+          inputWrapper: document
+            .getElementById(fieldName)
+            .closest(".input-wrapper"),
+          errorSpan: document.getElementById(`${fieldName}Error`),
+        };
+      });
+
+      function showError(fieldName, message) {
+        fields[fieldName].errorSpan.textContent = message;
+      }
+
+      function clearError(fieldName) {
+        fields[fieldName].errorSpan.textContent = "";
+      }
+      function validateField(fieldName, value) {
+        if (value.trim() === "") {
+          //cover more then one empty space also
+          showError(fieldName, `${fieldName} is required`);
+        } else {
+          clearError(fieldName);
+        }
+      }
+      function handleSubmit(e) {
+        e.preventDefault();
+        // set error if any field is empty
+        fieldNames.forEach((fieldName) => {
+          validateField(fieldName, fields[fieldName].input.value);
+        });
+
+        // find if any error is present in the form
+        const hasError = fieldNames.some(
+          (fieldName) => fields[fieldName].errorSpan.textContent !== "",
+        );
+        // console.log(hasError);
+        if (!hasError) {
+          showSuccess();
+        }
+      }
+
+      function showSuccess() {
+        form.innerHTML = `
+    <div style="text-align: center; padding: 2rem;">
+      <h2>🎉 Account Created!</h2>
+      <p>You have successfully registered.</p>
+    </div>
+  `;
+      }
+
+      fieldNames.forEach((fieldName) => {
+        fields[fieldName].input.addEventListener("blur", (e) => {
+          validateField(fieldName, e.target.value);
+        });
+      });
+
+      form.addEventListener("submit", handleSubmit);
+    </script>
+  </body>
 </html>
