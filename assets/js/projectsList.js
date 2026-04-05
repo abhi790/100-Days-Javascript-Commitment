@@ -207,4 +207,15 @@ const projects = [
     folder: "019-dark-lightmodetoggle",
     status: "completed",
   },
+  {
+    number: "020",
+    name: "Form Validation",
+    emoji: "📝",
+    description:
+      "Validate form inputs with real-time error messages for email, password, and required fields",
+    difficulty: "Intermediate",
+    technologies: ["HTML", "CSS", "JavaScript", "Regex"],
+    folder: "020-form-validation",
+    status: "completed",
+  },
 ];
