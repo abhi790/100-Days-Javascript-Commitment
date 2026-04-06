@@ -229,4 +229,15 @@ const projects = [
     folder: "021-scroll-totopbutton",
     status: "completed",
   },
+  {
+    number: "022",
+    name: "Progress Bar",
+    emoji: "📊",
+    description:
+      "Dynamic progress indicator showing completion percentage with animated fill effects",
+    difficulty: "Beginner",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    folder: "022-progress-bar",
+    status: "completed",
+  },
 ];
