@@ -3,12 +3,175 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>021 Scroll To Top</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <title>Exploring the Himalayas</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+
+    <style>
+      :root {
+        --bg: #1a1a2e;
+        --text-primary: #e8c97e;
+        --text-secondary: #b8a86e;
+        --text-body: #c9d1d9;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        min-height: 100vh;
+        background: var(--bg);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 20px;
+      }
+
+      .heading {
+        font-size: 40px;
+        font-weight: 800;
+        color: var(--text-primary);
+        text-shadow: 5px 10px 20px rgba(0, 0, 0, 0.6);
+      }
+      .subtitle {
+        font-size: 18px;
+        color: var(--text-secondary);
+        font-style: italic;
+        opacity: 0.8;
+      }
+      .topic {
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--text-secondary);
+        margin-top: 25px;
+      }
+      p {
+        font-size: 18px;
+        color: var(--text-body);
+        line-height: 1.8;
+      }
+      img {
+        width: 100%;
+        border-radius: 15px;
+        object-fit: cover;
+      }
+      #scrollTopBtn {
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        font-size: 24px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: none;
+        background: var(--text-primary);
+        color: var(--bg);
+        transition: transform 0.4s ease;
+      }
+      #scrollTopBtn:active {
+        transform: scale(0.9);
+      }
+      #scrollTopBtn:hover {
+        background: var(--text-secondary);
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1 class="heading">Exploring the Himalayas</h1>
+      <p class="subtitle">
+        A journey through silence, snow, and self-discovery
+      </p>
+
+      <img
+        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200"
+        alt="Himalayan mountains"
+      />
+
+      <h2 class="topic">The First Call</h2>
+      <p>
+        The Himalayas have always called to those who seek something beyond the
+        ordinary — a place where the air is thin, the silence is loud, and every
+        step feels like a conversation with the earth itself. Most people hear
+        this call once. Some are lucky enough to answer it.
+      </p>
+
+      <p>
+        I remember the morning I first saw the peaks of Manali draped in fresh
+        snow. The bus had stopped at a small dhaba, steam rising from clay cups
+        of chai, and there it was — the mountain, just sitting there, unbothered
+        and eternal. No photograph had ever prepared me for that moment.
+      </p>
+
+      <h2 class="topic">The Road to Spiti</h2>
+      <p>
+        Trekking through Spiti Valley is not just a physical journey. The roads
+        are broken, the passes are dangerous, and the weather changes without
+        warning. But that is exactly what makes it unforgettable. You learn very
+        quickly that nature does not negotiate. It does not care about your
+        plans.
+      </p>
+
+      <p>
+        The Kunzum Pass sits at 4,590 metres. When you cross it, there is a
+        small temple where travellers stop and pray — not out of religion
+        necessarily, but out of pure, honest humility. You have just driven
+        through clouds. Of course you stop and pray.
+      </p>
+
+      <h2 class="topic">Villages Frozen in Time</h2>
+      <p>
+        Kaza, the district headquarters of Spiti, has one ATM, one main road,
+        and the warmest people I have ever met. A family invited me for dinner
+        without knowing my name. We sat on the floor, ate dal and rice, and
+        talked through broken Hindi and hand gestures until midnight.
+      </p>
+
+      <p>
+        Ki Monastery stands on a hilltop like it has always been there — because
+        it has, for nearly a thousand years. Monks as young as eight years old
+        walk its corridors with the quiet confidence of people who have figured
+        something out that the rest of us are still searching for.
+      </p>
+
+      <h2 class="topic">What the Mountains Teach</h2>
+      <p>
+        If there is one thing the Himalayas teach you, it is patience. The
+        mountains have been here for millions of years. Your deadline, your
+        meeting, your anxiety — none of it matters at 14,000 feet. And somehow,
+        that is the most freeing feeling in the world.
+      </p>
+
+      <p>
+        I came back a different person. Not dramatically — I still drink too
+        much coffee and check my phone too often. But somewhere inside,
+        something shifted. A quietness settled in. And on difficult days, I
+        close my eyes and go back to that dhaba, that chai, that mountain — just
+        sitting there, unbothered and eternal.
+      </p>
+
+      <h2 class="topic">Should You Go?</h2>
+      <p>
+        Yes. Without question, yes. Go in summer when the roads are open. Carry
+        a warm layer even in July. Learn five words of Hindi and five of Spitian
+        — people will love you for trying. Eat the local food. Sleep in
+        homestays. Turn your phone off for at least one full day.
+      </p>
+
+      <p>
+        The Himalayas are not going anywhere. But you — you are always running
+        out of time. So go. Answer the call. The mountains are waiting.
+      </p>
+    </div>
+
+    <button id="scrollTopBtn">&#8679;</button>
+
+    <script src="script.js"></script>
+  </body>
 </html>
