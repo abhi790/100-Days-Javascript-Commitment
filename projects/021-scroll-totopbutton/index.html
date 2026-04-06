@@ -73,6 +73,8 @@
         background: var(--text-primary);
         color: var(--bg);
         transition: transform 0.4s ease;
+        opacity: 0;
+        visibility: hidden;
       }
       #scrollTopBtn:active {
         transform: scale(0.9);
@@ -172,6 +174,31 @@
 
     <button id="scrollTopBtn">&#8679;</button>
 
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <script>
+      const btn = document.getElementById("scrollTopBtn");
+      function showButton() {
+        btn.style.opacity = 1;
+        btn.style.visibility = "visible";
+      }
+      function hideButton() {
+        btn.style.opacity = 0;
+        btn.style.visibility = "hidden";
+      }
+      function handleButtonClick() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      btn.addEventListener("click", () => {
+        handleButtonClick();
+      });
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          showButton();
+        } else {
+          hideButton();
+        }
+      });
+    </script>
   </body>
 </html>
