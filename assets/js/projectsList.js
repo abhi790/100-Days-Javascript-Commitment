@@ -218,4 +218,15 @@ const projects = [
     folder: "020-form-validation",
     status: "completed",
   },
+  {
+    number: "021",
+    name: "Scroll to Top Button",
+    emoji: "⬆️",
+    description:
+      "Smooth scrolling button that appears when user scrolls down and returns to page top",
+    difficulty: "Beginner",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    folder: "021-scroll-totopbutton",
+    status: "completed",
+  },
 ];

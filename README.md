@@ -67,8 +67,9 @@ A collection of 100+ JavaScript projects built with Vanilla JavaScript, and late
 | 017 | **Tabs Component**            | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/017-tabs-component/)           | [Code](./projects/017-tabs-component)           |
 | 018 | **Navbar Toggle**             | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/018-navbar-toggle/)            | [Code](./projects/018-navbar-toggle)            |
 | 019 | **Theme Toggle**              | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/019-dark-lightmodetoggle/)     | [Code](./projects/019-dark-lightmodetoggle)     |
-| 020 | **Theme Toggle**              | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/020-form-validation/)          | [Code](./projects/020-form-validation)          |
-| 021 | **Next**                      | ⏳           | -                                                                                                 | -                                               |
+| 020 | **Form Basic Validation**     | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/020-form-validation/)          | [Code](./projects/020-form-validation)          |
+| 021 | **Scroll To Top**             | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/021-scroll-totopbutton/)       | [Code](./projects/021-scroll-totopbutton)       |
+| 022 | **Next**                      | ⏳           | -                                                                                                 | -                                               |
 
 ## 🚀 Getting Started
 
