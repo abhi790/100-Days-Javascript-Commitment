@@ -46,7 +46,9 @@
 
       h1 {
         color: var(--text-primary);
-        font-size: 24px;
+        font-size: 28px;
+        font-weight: 800;
+        letter-spacing: 1px;
       }
 
       .stars {
@@ -91,5 +93,32 @@
       </div>
       <p class="rating-text">Click to rate</p>
     </div>
+    <script>
+      const allStarsEle = document.querySelectorAll(".star");
+      //   console.log(allStarsEle);
+      const textEle = document.querySelector(".rating-text");
+      //   console.log(textEle);
+
+      allStarsEle.forEach((star) => {
+        star.addEventListener("click", () => {
+          const item = star.dataset;
+
+          //   remove every active class
+          allStarsEle.forEach((star) => {
+            star.classList.remove("active");
+          });
+
+          let length = Number(item.value);
+          for (let i = 0; i < length; i++) {
+            allStarsEle[i].classList.add("active");
+          }
+          const message =
+            length === 5
+              ? `Fabolous ${length} star`
+              : `You rated ${length} out of 5`;
+          textEle.textContent = message;
+        });
+      });
+    </script>
   </body>
 </html>
