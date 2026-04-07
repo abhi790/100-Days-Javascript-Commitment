@@ -8,7 +8,82 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <title>022 - Progress Bar</title>
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      :root {
+        --bg: #2c3e50;
+        --bg-container: #34495e;
+        --bg-track: rgba(255, 255, 255, 0.173);
+        --text-primary: #e8c97e;
+        --text-secondary: #b8a86e;
+        --text-body: #c9d1d9;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        min-height: 100vh;
+        background: var(--bg);
+        display: flex;
+        align-items: center;
+      }
+
+      .container {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 60px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        border-radius: 15px;
+        border: 2px solid #6e6e6e;
+        background-color: var(--bg-container);
+        box-shadow: 5px 5px 15px var(--text-primary);
+      }
+      h1 {
+        color: var(--text-secondary);
+      }
+      .progress-bar {
+        max-width: 600px;
+        width: 100%;
+        height: 20px;
+        border-radius: 10px;
+        background-color: var(--bg-track);
+        overflow: hidden;
+      }
+      .progress-fill {
+        width: 0%;
+        height: 100%;
+        background-color: var(--text-primary);
+        border-radius: 10px;
+        transition: width 0.1s ease;
+      }
+      .percentage {
+        font-size: 24px;
+        color: var(--text-primary);
+        font-weight: 700;
+      }
+      .controls {
+        display: flex;
+        gap: 15px;
+      }
+      button {
+        color: var(--bg);
+        padding: 10px 30px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: var(--text-secondary);
+        font-weight: 700;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
