@@ -240,4 +240,15 @@ const projects = [
     folder: "022-progress-bar",
     status: "completed",
   },
+  {
+    number: "023",
+    name: "Star Rating Component",
+    emoji: "⭐",
+    description:
+      "Interactive star rating system with hover effects and clickable rating submission",
+    difficulty: "Beginner",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    folder: "023-star-ratingcomponent",
+    status: "completed",
+  },
 ];
