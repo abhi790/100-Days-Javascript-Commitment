@@ -69,7 +69,8 @@ A collection of 100+ JavaScript projects built with Vanilla JavaScript, and late
 | 019 | **Theme Toggle**              | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/019-dark-lightmodetoggle/)     | [Code](./projects/019-dark-lightmodetoggle)     |
 | 020 | **Form Basic Validation**     | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/020-form-validation/)          | [Code](./projects/020-form-validation)          |
 | 021 | **Scroll To Top**             | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/021-scroll-totopbutton/)       | [Code](./projects/021-scroll-totopbutton)       |
-| 022 | **Next**                      | ⏳           | -                                                                                                 | -                                               |
+| 022 | **Progress Bar**              | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/022-progress-bar/)             | [Code](./projects/022-progress-bar)             |
+| 023 | **Next**                      | ⏳           | -                                                                                                 | -                                               |
 
 ## 🚀 Getting Started
 
@@ -103,9 +104,9 @@ Projects are deployed on:
 
 ## 📈 Progress Tracker
 
-- **Completed**: 21/100
-- **Remaining**: 79/100
-- **Progress**: 21%
+- **Completed**: 22/100
+- **Remaining**: 78/100
+- **Progress**: 22%
 
 ## 👤 Author
 
