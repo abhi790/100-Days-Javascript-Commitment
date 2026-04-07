@@ -8,7 +8,75 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      :root {
+        --bg: #f9f9f9;
+        --bg-container: #ffffff;
+        --text-primary: #333333;
+        --star-default: #d3d3d3;
+        --star-active: #f5a623;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        min-height: 100vh;
+        background: var(--bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        background: var(--bg-container);
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      h1 {
+        color: var(--text-primary);
+        font-size: 24px;
+      }
+
+      .stars {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem;
+      }
+
+      .star {
+        font-size: 32px;
+        color: var(--star-default);
+        cursor: pointer;
+        transition: color 0.2s ease;
+      }
+
+      .star:hover {
+        color: var(--star-active);
+      }
+
+      .star.active {
+        color: var(--star-active);
+      }
+
+      .rating-text {
+        font-size: 16px;
+        color: var(--text-primary);
+        font-weight: 500;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -23,6 +91,5 @@
       </div>
       <p class="rating-text">Click to rate</p>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
