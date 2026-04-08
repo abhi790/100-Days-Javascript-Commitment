@@ -70,7 +70,7 @@ A collection of 100+ JavaScript projects built with Vanilla JavaScript, and late
 | 020 | **Form Basic Validation**     | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/020-form-validation/)          | [Code](./projects/020-form-validation)          |
 | 021 | **Scroll To Top**             | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/021-scroll-totopbutton/)       | [Code](./projects/021-scroll-totopbutton)       |
 | 022 | **Progress Bar**              | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/022-progress-bar/)             | [Code](./projects/022-progress-bar)             |
-| 023 | **Star Rating**               | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/023-star-ratingcomponent/)              | [Code](./projects/023-star-ratingcomponent)     |
+| 023 | **Star Rating**               | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/023-star-ratingcomponent/)     | [Code](./projects/023-star-ratingcomponent)     |
 | 024 | **Next**                      | ⏳           | -                                                                                                 | -                                               |
 
 ## 🚀 Getting Started
