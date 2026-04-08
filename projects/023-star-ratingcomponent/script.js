@@ -1,70 +1,133 @@
-const allStarsEle = document.querySelectorAll(".star");
-//   console.log(allStarsEle);
-const textEle = document.querySelector(".rating-text");
-//   console.log(textEle);
-let selectedRating = 0;
-//   highlight stars only
-function highlightStars(length) {
-  for (let i = 0; i < length; i++) {
-    allStarsEle[i].classList.add("active");
-  }
-}
-function removeActiveClass() {
-  allStarsEle.forEach((star) => star.classList.remove("active"));
-}
+// function highlightStars(length) {
+//   for (let i = 0; i < length; i++) {
+//     allStarsEle[i].classList.add("active");
+//   }
+// }
+// function removeActiveClass() {
+//   allStarsEle.forEach((star) => star.classList.remove("active"));
+// }
 
-//   update stars
-function updateStars(length) {
-  removeActiveClass();
-  highlightStars(length);
-}
-//   show only the text message
-function updateText(length) {
-  const message =
-    length === 5 ? `Fabolous ${length} star` : `You rated ${length} out of 5`;
-  textEle.textContent = message;
-}
+// //   update stars
+// function updateStars(length) {
+//   removeActiveClass();
+//   highlightStars(length);
+// }
+// //   show only the text message
+// function updateText(length) {
+//   const message =
+//     length === 5 ? `Fabolous ${length} star` : `You rated ${length} out of 5`;
+//   textEle.textContent = message;
+// }
 
-function markRating(star) {
-  //1. take the datavalue selected
-  let length = Number(star.dataset.value);
+// function markRating(star) {
 
-  //2. update the selectedRating state
-  selectedRating = length;
+// }
 
-  //3.   remove every active class
-  //4. Add active class till(including) selected star
-  updateStars(length);
+// function showRatingOnMousehover(star) {
+//   // 1. length hovered
+//   const length = Number(star.dataset.value);
 
-  //5. update message
-  updateText(length);
-}
+//   //2. remove all active class
+//   //3.show star hover and below rating filled
+//   updateStars(length);
+// }
 
-function showRatingOnMousehover(star) {
-  // 1. length hovered
-  const length = Number(star.dataset.value);
+// function resetOnMouseOut() {
+//   //1. remove all active class
+//   //2. show star hover and below rating filled
+//   updateStars(selectedRating);
+// }
 
-  //2. remove all active class
-  //3.show star hover and below rating filled
-  updateStars(length);
-}
+const StarModel = {
+  _selectedRating: 0,
 
-function resetOnMouseOut() {
-  //1. remove all active class
-  //2. show star hover and below rating filled
-  updateStars(selectedRating);
-}
+  getSelectedRating() {
+    return this._selectedRating;
+  },
+  setSelectedRating(value) {
+    this._selectedRating = value;
+  },
+};
 
-allStarsEle.forEach((star) => {
-  star.addEventListener("click", () => {
-    markRating(star);
-  });
+const StarView = {
+  elements: {
+    allStarsEle: null,
+    textEle: null,
+  },
 
-  star.addEventListener("mouseover", () => {
-    showRatingOnMousehover(star);
-  });
+  init() {
+    this.elements.allStarsEle = document.querySelectorAll(".star");
+    this.elements.textEle = document.querySelector(".rating-text");
+  },
+  removeActiveClass() {
+    this.elements.allStarsEle.forEach((star) =>
+      star.classList.remove("active"),
+    );
+  },
+  highlightStars(length) {
+    for (let i = 0; i < length; i++) {
+      this.elements.allStarsEle[i].classList.add("active");
+    }
+  },
+  updateStars(length) {
+    this.removeActiveClass();
+    this.highlightStars(length);
+  },
+  updateText(length) {
+    const message =
+      length === 5 ? `Fabolous ${length} star` : `You rated ${length} out of 5`;
+    this.elements.textEle.textContent = message;
+  },
+};
 
-  star.addEventListener("mouseout", () => {
-    resetOnMouseOut();
-  });
+const StarController = {
+  init() {
+    StarView.init();
+    this.attachEventListeners();
+  },
+
+  handlers: {
+    handleClick(star) {
+      //1,2. update the selectedRating state
+      StarModel.setSelectedRating(Number(star.dataset.value));
+
+      //3.   remove every active class
+      //4. Add active class till(including) selected star
+      StarView.updateStars(StarModel.getSelectedRating());
+
+      //5. update message
+      StarView.updateText(StarModel.getSelectedRating());
+    },
+    handleMouseover(star) {
+      // 1. length hovered
+      const length = Number(star.dataset.value);
+
+      //2. remove all active class
+      //3.show star hover and below rating filled
+      StarView.updateStars(length);
+    },
+    handleMouseout() {
+      //1. remove all active class
+      //2. show star hover and below rating filled
+      StarView.updateStars(StarModel.getSelectedRating());
+    },
+  },
+
+  attachEventListeners() {
+    StarView.elements.allStarsEle.forEach((star) => {
+      star.addEventListener("click", () => {
+        this.handlers.handleClick(star);
+      });
+      star.addEventListener("mouseover", () => {
+        this.handlers.handleMouseover(star);
+      });
+      star.addEventListener("mouseout", () => {
+        this.handlers.handleMouseout();
+      });
+    });
+  },
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  StarController.init();
 });
