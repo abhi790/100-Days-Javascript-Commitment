@@ -14,6 +14,7 @@
         --bg: #f9f9f9;
         --bg-container: #ffffff;
         --text-primary: #333333;
+        --text-heading: #f5a623;
         --star-default: #d3d3d3;
         --star-active: #f5a623;
       }
@@ -37,7 +38,7 @@
         background: var(--bg-container);
         padding: 40px;
         border-radius: 15px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -45,7 +46,7 @@
       }
 
       h1 {
-        color: var(--text-primary);
+        color: var(--text-heading);
         font-size: 28px;
         font-weight: 800;
         letter-spacing: 1px;
@@ -98,25 +99,72 @@
       //   console.log(allStarsEle);
       const textEle = document.querySelector(".rating-text");
       //   console.log(textEle);
+      let selectedRating = 0;
+      //   highlight stars only
+      function highlightStars(length) {
+        for (let i = 0; i < length; i++) {
+          allStarsEle[i].classList.add("active");
+        }
+      }
+      function removeActiveClass() {
+        allStarsEle.forEach((star) => star.classList.remove("active"));
+      }
+
+      //   update stars
+      function updateStars(length) {
+        removeActiveClass();
+        highlightStars(length);
+      }
+      //   show only the text message
+      function updateText(length) {
+        const message =
+          length === 5
+            ? `Fabolous ${length} star`
+            : `You rated ${length} out of 5`;
+        textEle.textContent = message;
+      }
+
+      function markRating(star) {
+        //1. take the datavalue selected
+        let length = Number(star.dataset.value);
+
+        //2. update the selectedRating state
+        selectedRating = length;
+
+        //3.   remove every active class
+        //4. Add active class till(including) selected star
+        updateStars(length);
+
+        //5. update message
+        updateText(length);
+      }
+
+      function showRatingOnMousehover(star) {
+        // 1. length hovered
+        const length = Number(star.dataset.value);
+
+        //2. remove all active class
+        //3.show star hover and below rating filled
+        updateStars(length);
+      }
+
+      function resetOnMouseOut() {
+        //1. remove all active class
+        //2. show star hover and below rating filled
+        updateStars(selectedRating);
+      }
 
       allStarsEle.forEach((star) => {
         star.addEventListener("click", () => {
-          const item = star.dataset;
+          markRating(star);
+        });
 
-          //   remove every active class
-          allStarsEle.forEach((star) => {
-            star.classList.remove("active");
-          });
+        star.addEventListener("mouseover", () => {
+          showRatingOnMousehover(star);
+        });
 
-          let length = Number(item.value);
-          for (let i = 0; i < length; i++) {
-            allStarsEle[i].classList.add("active");
-          }
-          const message =
-            length === 5
-              ? `Fabolous ${length} star`
-              : `You rated ${length} out of 5`;
-          textEle.textContent = message;
+        star.addEventListener("mouseout", () => {
+          resetOnMouseOut();
         });
       });
     </script>
