@@ -71,7 +71,8 @@ A collection of 100+ JavaScript projects built with Vanilla JavaScript, and late
 | 021 | **Scroll To Top**             | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/021-scroll-totopbutton/)       | [Code](./projects/021-scroll-totopbutton)       |
 | 022 | **Progress Bar**              | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/022-progress-bar/)             | [Code](./projects/022-progress-bar)             |
 | 023 | **Star Rating**               | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/023-star-ratingcomponent/)     | [Code](./projects/023-star-ratingcomponent)     |
-| 024 | **Next**                      | ⏳           | -                                                                                                 | -                                               |
+| 024 | **Star Rating**               | ✅ Completed | [Live](https://100-days-javascript-commitment.netlify.app/projects/024-sticky-navbar/)            | [Code](./projects/024-sticky-navbar)            |
+| 025 | **Next**                      | ⏳           | -                                                                                                 | -                                               |
 
 ## 🚀 Getting Started
 
@@ -105,9 +106,9 @@ Projects are deployed on:
 
 ## 📈 Progress Tracker
 
-- **Completed**: 23/100
-- **Remaining**: 77/100
-- **Progress**: 23%
+- **Completed**: 24/100
+- **Remaining**: 76/100
+- **Progress**: 24%
 
 ## 👤 Author
 

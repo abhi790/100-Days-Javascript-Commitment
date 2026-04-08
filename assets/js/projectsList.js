@@ -251,4 +251,15 @@ const projects = [
     folder: "023-star-ratingcomponent",
     status: "completed",
   },
+  {
+    number: "024",
+    name: "Sticky Navbar",
+    emoji: "📌",
+    description:
+      "Navigation bar that remains fixed at the top when scrolling past a certain point",
+    difficulty: "Beginner",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    folder: "024-sticky-navbar",
+    status: "completed",
+  },
 ];
