@@ -1,1 +1,153 @@
-/* app design */
+:root {
+  --bg: #f5f0e8;
+  --bg-secondary: #e8e0d0;
+  --bg-navbar: #2c2416;
+  --bg-topbar: #1a1a0f;
+  --text-primary: #2c2416;
+  --text-secondary: #6b5c45;
+  --text-light: #f5f0e8;
+  --accent: #c17f24;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg);
+  min-height: 100vh;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.top-bar {
+  padding: 1.5rem;
+  background-color: var(--bg-topbar);
+  color: var(--text-light);
+  text-align: center;
+}
+.navbar {
+  background-color: var(--bg-navbar);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+.navbar.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+.logo {
+  color: var(--text-light);
+  font-size: 22px;
+  font-weight: 700;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.nav-links a:hover {
+  color: var(--accent);
+  transition: color 0.2s ease;
+}
+.hero-container {
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  overflow: hidden;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--text-light);
+}
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 800;
+  text-shadow: 2px 2px 10px #00000099;
+  letter-spacing: 2px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  text-shadow: 1px 1px 5px #000000e8;
+  margin-top: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+/* animal container */
+.animal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 1.5rem 1rem;
+}
+.animal-card {
+  display: flex;
+  gap: 10px;
+  background-color: var(--bg-secondary);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 2px 2px 10px #0b0b0b86;
+}
+.animal-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.animal-card img {
+  width: 300px;
+  object-fit: cover;
+  /* align-self: flex-start; */
+  aspect-ratio: 1.2;
+}
+.animal-card h2 {
+  color: var(--text-primary);
+  text-align: center;
+}
+.animal-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.animal-card.reverse {
+  flex-direction: row-reverse;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+footer h2 {
+  color: var(--text-primary);
+}
+footer p {
+  color: var(--text-secondary);
+}
